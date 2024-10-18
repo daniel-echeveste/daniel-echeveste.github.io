@@ -3,75 +3,29 @@ import { XR, createXRStore } from '@react-three/xr'
 import { useState } from 'react'
 import { SphereGeometry, } from 'three'
 import { OrbitControls, Html,Float, Stage, } from '@react-three/drei'
+import AppAframe from './AppAframe.jsx'
+import AppXR from './AppXR.jsx'
 
-const store = createXRStore()
+import ReactDOM from 'react-dom/client'
+
 
 export default function App() {
-  const [red, setRed] = useState(true)
-  const [isVR, setIsVR] = useState(false);
-  const [isAR, setIsAR] = useState(false);
-  const [isXR, setIsXR] = useState(false);
-  const [showIframe, setShowIframe] = useState(false) // Add state to track iframe visibility
-  const handleClickBall = () => {
-    setShowIframe(!showIframe); // Toggle iframe visibility on sphere click
-    setRed(!red)
-  }
-  const enterAR = ()=>{
-    store.enterAR()
-    setIsAR(true);
-    console.log(store.getState());
-  }
-  const enterVR = ()=>{
-    store.enterVR()
-    setIsVR(true);
-    console.log(store.getState());
+  const [XR, setIsXR] = useState(false)
+  const [Aframe, setIsAframe] = useState(false);
+  const enterAframe = ()=>{
+    setIsAframe(!Aframe);
   }
   const enterXR = ()=>{
-    store.enterXR()
-    setIsXR(true);
-    console.log(store.getState());
+    setIsXR(!XR);
   }
+  
+  
   return (
     <>
-      {!isVR && <button onClick={enterVR} className='vr-button'>Enter VR</button>}
-      {!isAR && <button onClick={enterAR} className='ar-button'>Enter AR</button>}
-      {!isXR && <button onClick={enterXR} className='xr-button'>Eenter XR</button>}
-
-      <Canvas>
-        <XR store={store}>
-
-        <Stage
-            shadows={{ type: 'contact', opacity: 0.2, blur: 3 }}
-            environment="sunset"
-            preset="portrait"
-            intensity={7}
-        >
-          <OrbitControls></OrbitControls>
-          <mesh pointerEventsType={{ deny: 'grab' }} onClick={handleClickBall} position={[0, 3, -5]}>
-            <boxGeometry />
-            <meshStandardMaterial color={red ? 'red' : 'green'} />
-          </mesh>
-          <mesh pointerEventsType={{ deny: 'grab' }} position={[3, 3, -5]} onClick={() => setRed(!red)} >
-            <sphereGeometry />
-            <meshStandardMaterial color={red ? 'red' : 'blue'} />
-          </mesh>
-         
-          {showIframe && (
-              <Float>
-                <Html
-                  transform
-                  wrapperClass='htmlScreen'
-                  distanceFactor={1.17}
-                  position={[0, 5, -2]}
-                >
-                  <iframe src="https://bruno-simon.com/html/" />
-                </Html>
-              </Float>
-            )}
-
-        </Stage>
-        </XR>
-      </Canvas>
+            {!Aframe && <button onClick={enterXR} className='enter-xr-button'>Enter VR</button>}
+            {XR && <AppXR></AppXR>} 
+            {!XR && <button onClick={enterAframe} className='enter-vr-button'>Enter AR</button> }
+            {Aframe && <AppAframe></AppAframe>}
     </>
   )
 }

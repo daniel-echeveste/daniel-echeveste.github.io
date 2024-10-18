@@ -2,10 +2,10 @@
 export default function AppAframe() {
     return (
         <>
+        
             <a-scene cursor="rayOrigin:xrselect;" raycaster="objects: [mixin=mouseover]">
                 <a-assets>
                     <a-mixin id='mouseover'>
-                         
                     </a-mixin>
                 </a-assets>
                 <a-box position="-3 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
