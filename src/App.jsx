@@ -15,12 +15,12 @@ export default function App() {
     setRed(!red)
   }
   const enterXR = ()=>{
-    store.enterVR()
+    store.enterAR()
     setIsVR(true);
     console.log(store.getState());
   }
   const exitXR = ()=>{
-    store.enterVR()
+    store.enterAR()
     setIsVR(true);
     console.log(store.getState());
   }
@@ -38,11 +38,11 @@ export default function App() {
             intensity={7}
         >
           <OrbitControls></OrbitControls>
-          <mesh pointerEventsType={{ deny: 'grab' }} onClick={handleClickBall} position={[0, 1, -1]}>
+          <mesh pointerEventsType={{ deny: 'grab' }} onClick={handleClickBall} position={[0, 3, -5]}>
             <boxGeometry />
             <meshStandardMaterial color={red ? 'red' : 'green'} />
           </mesh>
-          <mesh pointerEventsType={{ deny: 'grab' }} position={[3, 1, -2]} onClick={() => setRed(!red)} >
+          <mesh pointerEventsType={{ deny: 'grab' }} position={[3, 3, -5]} onClick={() => setRed(!red)} >
             <sphereGeometry />
             <meshStandardMaterial color={red ? 'red' : 'blue'} />
           </mesh>
@@ -53,7 +53,7 @@ export default function App() {
                   transform
                   wrapperClass='htmlScreen'
                   distanceFactor={1.17}
-                  position={[0, 3, -2]}
+                  position={[0, 5, -2]}
                 >
                   <iframe src="https://bruno-simon.com/html/" />
                 </Html>
