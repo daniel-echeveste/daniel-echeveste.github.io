@@ -23,19 +23,31 @@ body,
 }
 .xr-button{
     position: absolute;
-    left: 25%;
+    right: 25%;
     top:20px;
     z-index: 50;
 }
 .ar-button{
     position: absolute;
-    left: 20%;
+    right: 20%;
     top:20px;
     z-index: 50;
 }
 .vr-button{
     position: absolute;
+    right: 30%;
+    top:20px;
+    z-index: 50;
+}
+.enter-vr-button{
+    position: absolute;
     left: 30%;
+    top:20px;
+    z-index: 50;
+}
+.enter-xr-button{
+    position: absolute;
+    left: 25%;
     top:20px;
     z-index: 50;
 }
