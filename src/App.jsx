@@ -9,25 +9,34 @@ const store = createXRStore()
 export default function App() {
   const [red, setRed] = useState(true)
   const [isVR, setIsVR] = useState(false);
+  const [isAR, setIsAR] = useState(false);
+  const [isXR, setIsXR] = useState(false);
   const [showIframe, setShowIframe] = useState(false) // Add state to track iframe visibility
   const handleClickBall = () => {
     setShowIframe(!showIframe); // Toggle iframe visibility on sphere click
     setRed(!red)
   }
-  const enterXR = ()=>{
+  const enterAR = ()=>{
     store.enterAR()
+    setIsAR(true);
+    console.log(store.getState());
+  }
+  const enterVR = ()=>{
+    store.enterVR()
     setIsVR(true);
     console.log(store.getState());
   }
-  const exitXR = ()=>{
-    store.enterAR()
-    setIsVR(true);
+  const enterXR = ()=>{
+    store.enterXR()
+    setIsXR(true);
     console.log(store.getState());
   }
   return (
     <>
-       {!isVR && <button onClick={enterXR} className='xr-button'>Enter VR</button>}
-      {isVR && <button onClick={exitXR} className='xr-button'>Exit VR</button>}
+      {!isVR && <button onClick={enterVR} className='vr-button'>Enter VR</button>}
+      {!isAR && <button onClick={enterAR} className='ar-button'>Enter AR</button>}
+      {!isXR && <button onClick={enterXR} className='xr-button'>Eenter XR</button>}
+
       <Canvas>
         <XR store={store}>
 
