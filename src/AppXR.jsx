@@ -6,7 +6,8 @@ import { OrbitControls, Html, Float, Stage, } from '@react-three/drei'
 
 
 
-export default function AppXR() {
+export default function AppXR() { 
+  
   const store = createXRStore()
   const [red, setRed] = useState(true)
   const [isVR, setIsVR] = useState(false);
@@ -27,8 +28,13 @@ export default function AppXR() {
     setIsVR(true);
     console.log(store.getState());
   }
-  const enterXR = () => {
-    store.enterXR()
+  const enterXRAR = () => {
+    store.enterXR('immersive-ar')
+    setIsXR(true);
+    console.log(store.getState());
+  }
+  const enterXRVR = () => {
+    store.enterXR('immersive-vr')
     setIsXR(true);
     console.log(store.getState());
   }
@@ -56,7 +62,8 @@ export default function AppXR() {
       {!isAR && <button onClick={enterAR} className='ar-button'>Enter AR</button>}
       {!isXR && <button onClick={enterXR} className='xr-button'>Eenter XR</button>} */}
       <button onClick={enterVR} className='vr-button'>Enter VR</button>
-      <button onClick={enterXR} className='xr-button'>Eenter XR</button>
+      <button onClick={enterXRAR} className='xr-button'>Enter XRAR</button>
+      <button onClick={enterXRVR} className='xr2-button'>Enter XRVR</button>
       <button onClick={enterAR} className='ar-button'>Enter AR</button>
       <Canvas>
         <XR store={store}>
@@ -66,7 +73,7 @@ export default function AppXR() {
             preset="portrait"
             intensity={7}
           >
-            <OrbitControls></OrbitControls>
+            {/* <OrbitControls></OrbitControls> */}
             <mesh pointerEventsType={{ deny: 'grab' }} onClick={handleClickBall} position={[0, 3, -5]}>
               <boxGeometry />
               <meshStandardMaterial color={red ? 'red' : 'green'} />
