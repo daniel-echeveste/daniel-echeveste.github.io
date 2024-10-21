@@ -5,36 +5,46 @@ import { SphereGeometry, } from 'three'
 import { OrbitControls, Html,Float, Stage, } from '@react-three/drei'
 
 
-
+const store = createXRStore()
 export default function AppXR() {
-  const store = createXRStore()
-  const [red, setRed] = useState(true)
-  const [isVR, setIsVR] = useState(false);
-  const [isAR, setIsAR] = useState(false);
-  const [isXR, setIsXR] = useState(false);
-  const [showIframe, setShowIframe] = useState(false) // Add state to track iframe visibility
-  const handleClickBall = () => {
-    setShowIframe(!showIframe); // Toggle iframe visibility on sphere click
-    setRed(!red)
-  }
-  const enterAR = ()=>{
-    store.enterAR()
-    setIsAR(true);
-    console.log(store.getState());
-  }
-  const enterVR = ()=>{
-    store.enterVR()
-    setIsVR(true);
-    console.log(store.getState());
-  }
-  const enterXR = ()=>{
-    store.enterXR()
-    setIsXR(true);
-    console.log(store.getState());
-  }
+ 
+//   const [red, setRed] = useState(true)
+//   const [isVR, setIsVR] = useState(false);
+//   const [isAR, setIsAR] = useState(false);
+//   const [isXR, setIsXR] = useState(false);
+//   const [showIframe, setShowIframe] = useState(false) // Add state to track iframe visibility
+//   const handleClickBall = () => {
+//     setShowIframe(!showIframe); // Toggle iframe visibility on sphere click
+//     setRed(!red)
+//   }
+//   const enterAR = ()=>{
+//     store.enterAR()
+//     setIsAR(true);
+//     console.log(store.getState());
+//   }
+//   const enterVR = ()=>{
+//     store.enterVR()
+//     setIsVR(true);
+//     console.log(store.getState());
+//   }
+//   const enterXR = ()=>{
+//     store.enterXR()
+//     setIsXR(true);
+//     console.log(store.getState());
+//   }
+const [red, setRed] = useState(false)
+
   return (
     <>
-      {!isVR && <button onClick={enterVR} className='vr-button'>Enter VR</button>}
+     <Canvas>
+      <XR store={store}>
+        <mesh pointerEventsType={{ deny: 'grab' }} onClick={() => setRed(!red)} position={[0, 1, -1]}>
+          <boxGeometry />
+          <meshBasicMaterial color={red ? 'red' : 'blue'} />
+        </mesh>
+      </XR>
+    </Canvas>
+      {/* {!isVR && <button onClick={enterVR} className='vr-button'>Enter VR</button>}
       {!isAR && <button onClick={enterAR} className='ar-button'>Enter AR</button>}
       {!isXR && <button onClick={enterXR} className='xr-button'>Eenter XR</button>}
 
@@ -70,7 +80,7 @@ export default function AppXR() {
 
         </Stage>
         </XR>
-      </Canvas>
+      </Canvas> */}
     </>
   )
 }
