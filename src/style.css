@@ -51,3 +51,9 @@ body,
     top:20px;
     z-index: 50;
 }
+.xr2-button{
+    position: absolute;
+    left: 25%;
+    top:40px;
+    z-index: 50;
+}
