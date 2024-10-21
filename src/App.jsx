@@ -22,10 +22,11 @@ export default function App() {
   
   return (
     <>
-            {!Aframe && <button onClick={enterXR} className='enter-xr-button'>Enter VR</button>}
-            {XR && <AppXR></AppXR>} 
+    <AppXR></AppXR>
+            {/* {!Aframe && <button onClick={enterXR} className='enter-xr-button'>Enter VR</button>} */}
+            {/* {XR && <AppXR></AppXR>} 
             {!XR && <button onClick={enterAframe} className='enter-vr-button'>Enter AR</button> }
-            {Aframe && <AppAframe></AppAframe>}
+            {Aframe && <AppAframe></AppAframe>} */}
     </>
   )
 }
