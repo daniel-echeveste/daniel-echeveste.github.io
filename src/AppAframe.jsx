@@ -3,7 +3,7 @@ export default function AppAframe() {
     return (
         <>
         
-            <a-scene cursor="rayOrigin:xrselect;" raycaster="objects: [mixin=mouseover]" arjs="sourceType: webcam;">
+            <a-scene embedded xr-mode="ar" cursor="rayOrigin:xrselect;" raycaster="objects: [mixin=mouseover]" arjs="sourceType: webcam;">
                 <a-assets>
                     <a-mixin id='mouseover'>
                     </a-mixin>

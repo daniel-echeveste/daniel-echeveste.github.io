@@ -36,7 +36,14 @@ const [red, setRed] = useState(false)
 
   return (
     <>
-        <button onClick={() => store.enterAR()}>Enter AR</button>
+        <button onClick={() =>{
+          try {
+            store.enterAR()
+          }catch(e) {
+            console.log('pepe')
+            alert(e)
+          }
+        }}>Enter AR</button>
      <Canvas>
       <XR store={store}>
         <mesh pointerEventsType={{ deny: 'grab' }} onClick={() => setRed(!red)} position={[0, 1, -1]}>
