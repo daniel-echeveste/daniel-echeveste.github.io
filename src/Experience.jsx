@@ -1,12 +1,12 @@
 import { useThree, useFrame } from '@react-three/fiber'
-import { VRButton } from 'three/addons/webxr/VRButton.js';
 import { Stage, Lightformer, Environment, Sky, ContactShadows, RandomizedLight, AccumulativeShadows, SoftShadows, BakeShadows, useHelper, OrbitControls } from '@react-three/drei'
 import { useEffect, useRef } from 'react'
 import { Perf } from 'r3f-perf'
 import * as THREE from 'three'
 import { useControls } from 'leva'
 
-export default function Experience() {
+export default function Experience()
+{
     const directionalLight = useRef()
     useHelper(directionalLight, THREE.DirectionalLightHelper, 1)
 
@@ -17,7 +17,7 @@ export default function Experience() {
     })
 
     const { sunPosition } = useControls('sky', {
-        sunPosition: { value: [1, 2, 3] }
+        sunPosition: { value: [ 1, 2, 3 ] }
     })
 
     const { envMapIntensity, envMapHeight, envMapRadius, envMapScale } = useControls('environment map', {
@@ -33,39 +33,23 @@ export default function Experience() {
     //     scene.environmentIntensity = envMapIntensity
     // }, [ envMapIntensity ])
 
-
     const cube = useRef()
-
-    useFrame((state, delta) => {
+    
+    useFrame((state, delta) =>
+    {
         // const time = state.clock.elapsedTime
         // cube.current.position.x = 2 + Math.sin(time)
         cube.current.rotation.y += delta * 0.2
     })
-    const state = useThree()
-    const params = (new URL(document.location)).searchParams;
-    const allowvr = params.get('allowvr') === 'true';
-    let controls = false
-    if (allowvr) {
-        state.xr.enabled = true;
-        // document.body.appendChild(VRButton.createButton(renderer));
-        document.querySelector('#vr').style.display = 'none';
-        controls = false;
-    } else {
-        // no VR, add some controls
-        controls = true;
-        //   controls.target.set(0, 1.6, -2);
-        //   controls.update();
-        document.querySelector('#nonvr').style.display = 'none';
-    }
 
     return <>
 
-        <color args={['ivory']} attach="background" />
+        <color args={ [ 'ivory' ] } attach="background" />
 
-        <Perf position="top-left" />
+        {/* <Perf position="top-left" /> */}
 
-        {controls && <OrbitControls makeDefault />}
-
+        <OrbitControls makeDefault />
+        
         {/* <BakeShadows /> */}
         {/* <SoftShadows size={ 25 } samples={ 10 } focus={ 0 } /> */}
 
@@ -152,17 +136,17 @@ export default function Experience() {
         /> */}
 
         <Stage
-            shadows={{ type: 'contact', opacity: 0.2, blur: 3 }}
+            shadows={ { type: 'contact', opacity: 0.2, blur: 3 } }
             environment="sunset"
             preset="portrait"
-            intensity={envMapIntensity}
+            intensity={ envMapIntensity }
         >
-            <mesh position-y={1} position-x={- 2}>
+            <mesh position-y={ 1 } position-x={ - 2 }>
                 <sphereGeometry />
                 <meshStandardMaterial color="orange" />
             </mesh>
 
-            <mesh ref={cube} position-y={1} position-x={2} scale={1.5}>
+            <mesh ref={ cube } position-y={ 1 } position-x={ 2 } scale={ 1.5 }>
                 <boxGeometry />
                 <meshStandardMaterial color="mediumpurple" />
             </mesh>
