@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react'
+import basicSsl from '@vitejs/plugin-basic-ssl'
 import { transformWithEsbuild } from 'vite'
 import restart from 'vite-plugin-restart'
 
@@ -12,7 +13,7 @@ export default {
 
         // React support
         react(),
-
+        basicSsl(),
         // .js file support as if it was JSX
         {
             name: 'load+transform-js-files-as-jsx',
