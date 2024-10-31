@@ -13,7 +13,7 @@ export default function PatternsShaderMaterial() {
     const controls = useControls({
         pattern:
         {
-            value: 12,
+            value: 23,
             min: 5,
             max: 50,
             step: 1

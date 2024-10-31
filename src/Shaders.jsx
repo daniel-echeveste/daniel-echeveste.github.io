@@ -6,6 +6,7 @@ import { useMemo, useState, useRef } from 'react'
 import { useFrame, } from '@react-three/fiber'
 import Flag from './shaders/test/shader'
 import PatternsShaderMaterial from './shaders/patterns/shader'
+import RagingSea from './shaders/ragingSea/shader'
 
 
 export default function Shaders() {
@@ -29,7 +30,8 @@ export default function Shaders() {
         </Float >
         
         {/* <Flag></Flag> */}
-        <PatternsShaderMaterial></PatternsShaderMaterial> 
+        <RagingSea></RagingSea>
+        {/* <PatternsShaderMaterial></PatternsShaderMaterial>  */}
    
 
     </>
