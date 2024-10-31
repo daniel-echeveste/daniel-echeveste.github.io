@@ -8,8 +8,9 @@ import Shaders from './Shaders'
 
 
 export default function Experience() {
- 
+
     return <>
+    <Perf position="top-left" />
         <Shaders></Shaders>
     </>
 }

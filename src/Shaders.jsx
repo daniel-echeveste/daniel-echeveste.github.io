@@ -1,24 +1,36 @@
-import { OrbitControls, Float, Text, useGLTF, shaderMaterial, } from '@react-three/drei'
+import { OrbitControls, Float, Text, useGLTF, shaderMaterial, Html, } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
 import { Physics, RigidBody, CuboidCollider } from '@react-three/rapier'
 import * as THREE from 'three'
 import { useMemo, useState, useRef } from 'react'
-import { useFrame,  } from '@react-three/fiber'
-import CustomShaderMaterial from './shaders/test/shader'
+import { useFrame, } from '@react-three/fiber'
+import Flag from './shaders/test/shader'
+import PatternsShaderMaterial from './shaders/patterns/shader'
 
 
 export default function Shaders() {
     const click = () => {
     }
-   
+
     return <>
         <OrbitControls></OrbitControls>
-        <CustomShaderMaterial></CustomShaderMaterial>
-
-        {/* <mesh receiveShadow scale={2} onClick={click}>
-            <planeGeometry args={[3,1.5, 1]} />
-            <CustomShaderMaterial></CustomShaderMaterial>
-        </mesh> */}
+        <Float>
+            <Text
+                font="/bebas-neue-v9-latin-regular.woff"
+                scale={0.5}
+                lineHeight={0.75}
+                textAlign="right"
+                position={[0.75, 1.65, -1]}
+              
+            >
+                SHADERS PLAYGROUND
+                <meshBasicMaterial toneMapped={false} />
+            </Text>
+        </Float >
+        
+        {/* <Flag></Flag> */}
+        <PatternsShaderMaterial></PatternsShaderMaterial> 
+   
 
     </>
 }
