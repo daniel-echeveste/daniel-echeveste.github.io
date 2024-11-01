@@ -7,13 +7,30 @@ import { useFrame, } from '@react-three/fiber'
 import Flag from './shaders/test/shader'
 import PatternsShaderMaterial from './shaders/patterns/shader'
 import RagingSea from './shaders/ragingSea/shader'
+import Galaxy from './shaders/galaxy/shader'
 
 
 export default function Shaders() {
     const click = () => {
     }
 
+    const [selectedShader, setSelectedShader] = useState('galaxy')
+
+    const handleShaderChange = (event) => {
+        setSelectedShader(event.target.value)
+    }
     return <>
+
+        <Html position={[-1, 1.4, -1]}>
+            <div style={{ position: 'absolute', top: 20, left: 20, zIndex: 1 }}>
+                <select value={selectedShader} onChange={handleShaderChange}>
+                    <option value="flag">Flag Shader</option>
+                    <option value="ragingSea">Raging Sea Shader</option>
+                    <option value="patterns">Patterns Shader</option>
+                    <option value="galaxy">Galaxy Shader</option>
+                </select>
+            </div>
+        </Html>
         <OrbitControls></OrbitControls>
         <Float>
             <Text
@@ -22,17 +39,16 @@ export default function Shaders() {
                 lineHeight={0.75}
                 textAlign="right"
                 position={[0.75, 1.65, -1]}
-              
+
             >
                 SHADERS PLAYGROUND
                 <meshBasicMaterial toneMapped={false} />
             </Text>
         </Float >
-        
-        {/* <Flag></Flag> */}
-        <RagingSea></RagingSea>
-        {/* <PatternsShaderMaterial></PatternsShaderMaterial>  */}
-   
 
+        {selectedShader === 'flag' && <Flag />}
+        {selectedShader === 'ragingSea' && <RagingSea />}
+        {selectedShader === 'patterns' && <PatternsShaderMaterial />}
+        {selectedShader === 'galaxy' && <Galaxy />}
     </>
 }

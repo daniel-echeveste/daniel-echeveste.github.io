@@ -46,14 +46,7 @@ export default function ragingSea() {
     })
     const textureLoader = new THREE.TextureLoader()
     const flagTexture = textureLoader.load('/textures/can-flag.jpg')
-    // const CustomShaderMaterial = shaderMaterial(
-    //     { uFrequency: new THREE.Vector2(20,10) ,
-    //     uTime:  0 ,
-    //     uColor:  new THREE.Color('orange') ,
-    //     uTexture: flagTexture } , // uniforms
-    //     testVertexShader,
-    //     testFragmentShader
-    //   );
+
     const shaderMaterial = new THREE.ShaderMaterial({
         vertexShader: testVertexShader,
         fragmentShader: testFragmentShader,
@@ -79,17 +72,10 @@ export default function ragingSea() {
     })
     const geometry = new THREE.PlaneGeometry(2, 2, 500, 500)
 
-    // const count = geometry.attributes.position.count
-    // const randoms = new Float32Array(count) 
-    // for (let i = 0; i < count; i++) {
-    //     randoms[i] = Math.random()
-    // }
-
-    // geometry.setAttribute('aRandom', new THREE.BufferAttribute(randoms, 1))
     extend({ shaderMaterial });
 
     return <>
-        {/* <Sky  ></Sky> */}
+   
         <mesh
             geometry={geometry}
             material={shaderMaterial}
