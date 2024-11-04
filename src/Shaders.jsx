@@ -39,10 +39,9 @@ export default function Shaders() {
                 lineHeight={0.75}
                 textAlign="right"
                 position={[0.75, 1.65, -1]}
-
             >
                 SHADERS PLAYGROUND
-                <meshBasicMaterial toneMapped={false} />
+                <meshBasicMaterial toneMapped={false} side={THREE.DoubleSide}/>
             </Text>
         </Float >
 

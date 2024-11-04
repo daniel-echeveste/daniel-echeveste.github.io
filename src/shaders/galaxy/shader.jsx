@@ -25,8 +25,8 @@ export default function Galaxy() {
         },
         count: {
             value: 900000,
-            min: -100000000,
-            max:    90000000,
+            min: 0,
+            max:    1800000,
             step: 100
         },
         radius: {
@@ -71,6 +71,12 @@ export default function Galaxy() {
             value: 0,
             min: -2,
             max: 2,
+            step: 0.01
+        },
+        speed: {
+            value: 1,
+            min: -5,
+            max: 10,
             step: 0.01
         },
     })
@@ -150,6 +156,7 @@ export default function Galaxy() {
         {
             uTime: { value: 0 },
             uSize: { value: 15 },
+            uSpeed: { value: controls.speed },
         }
     })
 
