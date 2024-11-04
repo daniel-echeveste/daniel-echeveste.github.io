@@ -12,8 +12,8 @@ export default function ragingSea() {
     const mesh = useRef()
 
     const controls = useControls({
-        uDepthColor:'#186691',
-        uSurfaceColor:'#9bd8ff',
+        uDepthColor:'#e5735e',
+        uSurfaceColor:'#000000',
         uBigWavesElevation:
         {
             value: 0.2,
