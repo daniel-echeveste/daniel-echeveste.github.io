@@ -8,13 +8,13 @@ import Flag from './shaders/test/shader'
 import PatternsShaderMaterial from './shaders/patterns/shader'
 import RagingSea from './shaders/ragingSea/shader'
 import Galaxy from './shaders/galaxy/shader'
-
+import ModifiedMaterials from './shaders/modifiedMaterials/shader'
 
 export default function Shaders() {
     const click = () => {
     }
 
-    const [selectedShader, setSelectedShader] = useState('galaxy')
+    const [selectedShader, setSelectedShader] = useState('modifiedMaterials')
 
     const handleShaderChange = (event) => {
         setSelectedShader(event.target.value)
@@ -28,6 +28,7 @@ export default function Shaders() {
                     <option value="ragingSea">Raging Sea Shader</option>
                     <option value="patterns">Patterns Shader</option>
                     <option value="galaxy">Galaxy Shader</option>
+                    <option value="modifiedMaterials">Modified Materials</option>
                 </select>
             </div>
         </Html>
@@ -49,5 +50,6 @@ export default function Shaders() {
         {selectedShader === 'ragingSea' && <RagingSea />}
         {selectedShader === 'patterns' && <PatternsShaderMaterial />}
         {selectedShader === 'galaxy' && <Galaxy />}
+        {selectedShader === 'modifiedMaterials' && <ModifiedMaterials />}
     </>
 }
