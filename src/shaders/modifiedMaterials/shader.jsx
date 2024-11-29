@@ -8,10 +8,11 @@ import {
   shaderMaterial,
   Sky,
   Environment,
+  
 } from "@react-three/drei";
 
 import { useMemo, useState, useRef, Suspense } from "react";
-import { useFrame, extend } from "@react-three/fiber";
+import { useFrame, extend, } from "@react-three/fiber";
 import Placeholder from "../../Placeholder";
 import HeadModel from "./headModel";
 // import testVertexShader from './vertex.glsl'
@@ -21,16 +22,22 @@ import { useControls } from "leva";
 export default function ModifiedMaterial() {
   return (
     <>
-        
+    <ambientLight intensity={0.5}></ambientLight>
+    <directionalLightHelper></directionalLightHelper>
+    <directionalLight castShadow position={[4, 2, - 2.25]} intensity={10}></directionalLight>
       <Environment
         files={"textures/environmentMaps/red_wall_4k.hdr"}
         background
+        
       ></Environment>
       <Suspense fallback={<Placeholder position-y={0.5} scale={[2, 3, 2]} />}>
-        <HeadModel></HeadModel>
+        <HeadModel ></HeadModel>
       </Suspense>
-
-      <mesh></mesh>
+      
+      <mesh position={[-5,0,-4]} rotation={[0,Math.PI/2,0]} scale={[15,15,15]} receiveShadow>
+        <planeGeometry></planeGeometry>
+        <meshStandardMaterial color={"white"}></meshStandardMaterial>
+      </mesh>
     </>
   );
 }
