@@ -20,7 +20,7 @@ export default function Shaders() {
         setSelectedShader(event.target.value)
     }
     return <>
-
+        
         <Html position={[-1, 1.4, -1]}>
             <div style={{ position: 'absolute', top: 20, left: 20, zIndex: 1 }}>
                 <select value={selectedShader} onChange={handleShaderChange}>

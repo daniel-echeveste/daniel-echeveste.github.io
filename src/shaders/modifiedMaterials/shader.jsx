@@ -23,7 +23,7 @@ export default function ModifiedMaterial() {
   return (
     <>
     <ambientLight intensity={0.5}></ambientLight>
-    <directionalLightHelper></directionalLightHelper>
+   
     <directionalLight castShadow position={[4, 2, - 2.25]} intensity={10}></directionalLight>
       <Environment
         files={"textures/environmentMaps/red_wall_4k.hdr"}
