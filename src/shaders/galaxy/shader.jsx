@@ -13,7 +13,7 @@ import testFragmentShader from './fragment.glsl'
 export default function Galaxy() {
 
     const { gl, camera } = useThree()
-    
+    const [introTime] = useState(() => performance.now() / 1000)
     const mesh = useRef()
     const controls = useControls({
         uSize:
@@ -80,11 +80,16 @@ export default function Galaxy() {
             step: 0.01
         },
     })
-
+    
+    
     useFrame((state, delta) => {
-        shaderMaterial.uniforms.uTime.value = state.clock.elapsedTime;
+        
+        shaderMaterial.uniforms.uTime.value = state.clock.elapsedTime - introTime;
+        console.log( introTime);
+        
     })
     useState(()=>{
+        
         camera.position.y += 0.8
     },[]) 
 

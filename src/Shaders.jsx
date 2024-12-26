@@ -9,7 +9,7 @@ import PatternsShaderMaterial from './shaders/patterns/shader'
 import RagingSea from './shaders/ragingSea/shader'
 import Galaxy from './shaders/galaxy/shader'
 import ModifiedMaterials from './shaders/modifiedMaterials/shader'
-
+import CoffeeMug from './shaders/coffeeMug/shader'
 export default function Shaders() {
     const click = () => {
     }
@@ -29,6 +29,7 @@ export default function Shaders() {
                     <option value="patterns">Patterns Shader</option>
                     <option value="galaxy">Galaxy Shader</option>
                     <option value="modifiedMaterials">Modified Materials</option>
+                    <option value="coffeeMug">Coffee Mug </option>
                 </select>
             </div>
         </Html>
@@ -51,5 +52,6 @@ export default function Shaders() {
         {selectedShader === 'patterns' && <PatternsShaderMaterial />}
         {selectedShader === 'galaxy' && <Galaxy />}
         {selectedShader === 'modifiedMaterials' && <ModifiedMaterials />}
+        {selectedShader === 'coffeeMug' && <CoffeeMug />}
     </>
 }
