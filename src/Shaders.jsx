@@ -21,8 +21,10 @@ export default function Shaders() {
     }
     return <>
         
-        <Html position={[-1, 1.4, -1]}>
-            <div style={{ position: 'absolute', top: 20, left: 20, zIndex: 1 }}>
+        <Html 
+        center
+        >
+            <div style={{ position: 'absolute', top: -450, left: 0, zIndex: 1 } }>
                 <select value={selectedShader} onChange={handleShaderChange}>
                     <option value="flag">Flag Shader</option>
                     <option value="ragingSea">Raging Sea Shader</option>
