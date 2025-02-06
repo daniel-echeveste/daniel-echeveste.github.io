@@ -3,10 +3,10 @@ import { useFrame } from "@react-three/fiber";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 export default function HeadModel(args){
-    //const model = useGLTF('models/LeePerrySmith/LeePerrySmith.glb')
+    const model = useGLTF('models/LeePerrySmith/LeePerrySmith.glb')
     // https://drive.google.com/file/d//view?usp=drive_link
     //https://drive.google.com/uc?export=download&id=177uJEdrBdmhCUCqCEEarenVaEDf2oGg-
-    const model = useGLTF('https://daniel-echeveste.github.io/models/LeePerrySmith/LeePerrySmith.glb')
+    // const model = useGLTF('https://daniel-echeveste.github.io/models/LeePerrySmith/LeePerrySmith.glb')
    
     console.log("modelo");
     console.log(model);

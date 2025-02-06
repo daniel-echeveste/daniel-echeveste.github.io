@@ -10,11 +10,13 @@ import RagingSea from './shaders/ragingSea/shader'
 import Galaxy from './shaders/galaxy/shader'
 import ModifiedMaterials from './shaders/modifiedMaterials/shader'
 import CoffeeMug from './shaders/coffeeMug/shader'
+import HolographicMaterial from './shaders/holographic/shader'
+
 export default function Shaders() {
     const click = () => {
     }
 
-    const [selectedShader, setSelectedShader] = useState('modifiedMaterials')
+    const [selectedShader, setSelectedShader] = useState('holographic')
 
     const handleShaderChange = (event) => {
         setSelectedShader(event.target.value)
@@ -32,6 +34,8 @@ export default function Shaders() {
                     <option value="galaxy">Galaxy Shader</option>
                     <option value="modifiedMaterials">Modified Materials</option>
                     <option value="coffeeMug">Coffee Mug </option>
+                    <option value="holographic">Holographic</option>
+
                 </select>
             </div>
         </Html>
@@ -55,5 +59,7 @@ export default function Shaders() {
         {selectedShader === 'galaxy' && <Galaxy />}
         {selectedShader === 'modifiedMaterials' && <ModifiedMaterials />}
         {selectedShader === 'coffeeMug' && <CoffeeMug />}
+        {selectedShader === 'holographic' && <HolographicMaterial />}
+
     </>
 }
