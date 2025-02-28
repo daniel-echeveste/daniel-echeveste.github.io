@@ -14,7 +14,7 @@ import {
 import { useMemo, useState, useRef, Suspense } from "react";
 import { useFrame, extend, } from "@react-three/fiber";
 import Placeholder from "../../Placeholder";
-import HeadModel from "./headModel";
+import HeadModel from "../../models/HeadModel";
 // import testVertexShader from './vertex.glsl'
 // import testFragmentShader from './fragment.glsl'
 import { useControls } from "leva";

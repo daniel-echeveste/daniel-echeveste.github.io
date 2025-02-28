@@ -11,12 +11,14 @@ import Galaxy from './shaders/galaxy/shader'
 import ModifiedMaterials from './shaders/modifiedMaterials/shader'
 import CoffeeMug from './shaders/coffeeMug/shader'
 import HolographicMaterial from './shaders/holographic/shader'
+import ArcaneMaterial from './shaders/arcane/shader'
+
 
 export default function Shaders() {
     const click = () => {
     }
 
-    const [selectedShader, setSelectedShader] = useState('holographic')
+    const [selectedShader, setSelectedShader] = useState('arcane2')
 
     const handleShaderChange = (event) => {
         setSelectedShader(event.target.value)
@@ -35,7 +37,7 @@ export default function Shaders() {
                     <option value="modifiedMaterials">Modified Materials</option>
                     <option value="coffeeMug">Coffee Mug </option>
                     <option value="holographic">Holographic</option>
-
+                    <option value="arcane">arcane</option>
                 </select>
             </div>
         </Html>
@@ -60,6 +62,6 @@ export default function Shaders() {
         {selectedShader === 'modifiedMaterials' && <ModifiedMaterials />}
         {selectedShader === 'coffeeMug' && <CoffeeMug />}
         {selectedShader === 'holographic' && <HolographicMaterial />}
-
+        {selectedShader === 'arcane' && <ArcaneMaterial/>}
     </>
 }

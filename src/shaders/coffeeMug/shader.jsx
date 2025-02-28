@@ -13,7 +13,7 @@ import {
 import { useMemo, useState, useRef, Suspense } from "react";
 import { useFrame, extend } from "@react-three/fiber";
 import Placeholder from "../../Placeholder";
-import CoffeeModel from "./coffeeMug";
+import CoffeeModel from "../../models/coffeeMug";
 import VertexShader from "./vertex.glsl";
 import FragmentShader from "./fragment.glsl";
 import { useControls } from "leva";
