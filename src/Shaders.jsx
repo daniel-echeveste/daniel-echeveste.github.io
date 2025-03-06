@@ -23,6 +23,7 @@ export default function Shaders() {
     const handleShaderChange = (event) => {
         setSelectedShader(event.target.value)
     }
+
     return <>
         
         <Html 
@@ -41,7 +42,6 @@ export default function Shaders() {
                 </select>
             </div>
         </Html>
-        <OrbitControls></OrbitControls>
         <Float>
             <Text
                 font="/bebas-neue-v9-latin-regular.woff"

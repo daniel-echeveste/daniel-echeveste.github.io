@@ -1,32 +1,39 @@
 import { Perf } from 'r3f-perf'
-import { useEffect, useState } from 'react'
+
 import { OrbitControls, } from '@react-three/drei'
 import OurSky from './Sky'
-import WorkingPlaceholder from './WorkingPlaceholder'
+import { useControls, folder, Leva} from "leva";
+import { useControlStore } from "./ZustandControls";
 import IntroIsland from './IntroIsland'
-import LevaControls from './LevaControls'
+import ControlsManager from './LevaControls';
+import CameraControls from './CameraControls';
+import IntroText from './Texts';
 
 export default function Experience() {
-    const [develop, setDevelop] = useState(false)
+    // const controls = useControlStore((state) => state.controls);
 
-    useEffect(() => {
-        if (window.location.hash === '#develop') {
-            setDevelop(true)
-        }
-    }, [])
-   
-      
+    // useControls se actualiza con los valores de Zustand
+    // useControls(controls);
+    
+    
+      const controls = ControlsManager()
     return (
         <>
-            <LevaControls></LevaControls>
+
             <OrbitControls makeDefault />
             <Perf position="top-left"></Perf>
             <directionalLight castShadow position={[1, 2, 3]} intensity={4.5} />
             <ambientLight intensity={1.5} />
-
-            {!develop && <WorkingPlaceholder></WorkingPlaceholder>} 
-            <OurSky></OurSky>
-            <IntroIsland></IntroIsland>
+            <CameraControls
+                controls={controls}
+            />
+            <OurSky
+                controls={controls}
+            />
+            <IntroIsland
+                controls={controls}
+            />
+            <IntroText></IntroText>
             {/* Renderizar shaders solo si la URL contiene #develop */}
             {/* {develop && <Shaders />}
             {showShaders &&  <Perf position="top-left" />} */}
