@@ -1,4 +1,4 @@
-import { useControls, folder } from "leva";
+import { useControls, folder, } from "leva";
 
 const ControlsManager = () => {
   const skyControls = useControls("Sky", {
@@ -15,18 +15,19 @@ const ControlsManager = () => {
     rayleigh: { value: 3, min: 0, max: 4 },
     turbidity: { value: 10, min: 0, max: 30 },
     Exposure: { value: 0.5, min: 0, max: 1 },
-  });
+  },{collapsed:true});
   const IslandControls = useControls("Island", {
     PositionX: {value: 0, min: -50, max: 2, step: 0.001  },
     PositionY: { value: -10, min: -50, max: 2, step: 0.001 },
     PositionZ: { value: 0, min: -50, max: 2, step: 0.001  },
     Scale: { value: 1, min: 0, max: 2, step: 0.001 },
-  });
+  },{collapsed:true});
   const CameraControls = useControls("Camera", {
     PositionX: {value: -250, min: -500, max: 500, step: 0.001  },
     PositionY: { value: -250, min: -500, max: 500, step: 0.001 },
     PositionZ: { value: -250, min: -500, max: 500, step: 0.001  },
-  });
+  },{collapsed:true});
+  
   return {
     skyControls: skyControls,
     IslandControls: IslandControls,

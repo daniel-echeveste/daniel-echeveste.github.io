@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import Experience from './Experience.jsx'
 import { useEffect, useState } from 'react'
 import WorkingPlaceholder from './WorkingPlaceholder'
+import { useControls, folder, Leva} from "leva";
 
 export default function App() {
     const [develop, setDevelop] = useState(false)
@@ -26,5 +27,9 @@ export default function App() {
             {!develop && <WorkingPlaceholder/>} 
             {develop &&  <Experience />} 
         </Canvas>
+        <Leva 
+            collapsed
+            
+        />
     </>
 }

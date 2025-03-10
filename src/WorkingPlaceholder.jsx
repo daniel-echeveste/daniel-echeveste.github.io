@@ -10,9 +10,12 @@ export default function WorkingPlaceholder() {
           window.location.reload(); // Recarga la página para aplicar el cambio
         }}
       >
-        <Float speed={0.3}>
+        <Float speed={0.3}
+         onPointerEnter={ () => { document.body.style.cursor = 'pointer' } }
+         onPointerLeave={ () => { document.body.style.cursor = 'default' } }
+        >
           <Text
-            font="/bebas-neue-v9-latin-regular.woff"
+            font="fonts/bebas-neue/bebas-neue-v9-latin-regular.woff"
             scale={0.3}
             lineHeight={0.75}
             textAlign="right"
@@ -23,7 +26,7 @@ export default function WorkingPlaceholder() {
             <meshBasicMaterial toneMapped={false} side={THREE.DoubleSide} />
           </Text>
           <Text
-            font="/bebas-neue-v9-latin-regular.woff"
+            font="fonts/bebas-neue/bebas-neue-v9-latin-regular.woff"
             scale={0.3}
             lineHeight={0.75}
             textAlign="right"
@@ -40,9 +43,10 @@ export default function WorkingPlaceholder() {
           </Text>
         </Float>
 
-        <Html center>
+        <Html center >
           <div
             style={{
+              cursor: "pointer",
               position: "fixed",
               top: "50%",
               left: "50%",
@@ -50,7 +54,10 @@ export default function WorkingPlaceholder() {
               zIndex: 10,
             }}
           >
-            <img src="working-on-it.gif" alt="Loading GIF" />
+            <img src="working-on-it.gif" alt="Loading GIF" onClick={() => {
+          window.location.hash = "#develop";
+          window.location.reload(); // Recarga la página para aplicar el cambio
+        }}/>
           </div>
         </Html>
       </group>

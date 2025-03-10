@@ -1,9 +1,7 @@
 import { Perf } from 'r3f-perf'
 
-import { OrbitControls, } from '@react-three/drei'
+import { OrbitControls, Text3D } from '@react-three/drei'
 import OurSky from './Sky'
-import { useControls, folder, Leva} from "leva";
-import { useControlStore } from "./ZustandControls";
 import IntroIsland from './IntroIsland'
 import ControlsManager from './LevaControls';
 import CameraControls from './CameraControls';
@@ -19,7 +17,7 @@ export default function Experience() {
       const controls = ControlsManager()
     return (
         <>
-
+        
             <OrbitControls makeDefault />
             <Perf position="top-left"></Perf>
             <directionalLight castShadow position={[1, 2, 3]} intensity={4.5} />
@@ -34,6 +32,7 @@ export default function Experience() {
                 controls={controls}
             />
             <IntroText></IntroText>
+            
             {/* Renderizar shaders solo si la URL contiene #develop */}
             {/* {develop && <Shaders />}
             {showShaders &&  <Perf position="top-left" />} */}
