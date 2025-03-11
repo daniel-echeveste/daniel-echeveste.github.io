@@ -14,42 +14,23 @@ import { Physics, RigidBody, CuboidCollider } from "@react-three/rapier";
 import * as THREE from "three";
 import { useMemo, useState, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import testVertexShader from "./shaders/ragingSea/vertex.glsl";
-import testFragmentShader from "./shaders/ragingSea/fragment.glsl";
+import ragingSeaMaterial from "./shaders/ragingSea/shaderMaterial";
 
 export default function IntroText({ controls }) {
   useFrame((state, delta) => {
     shaderMaterial.uniforms.uTime.value = state.clock.elapsedTime;
   });
 
-  const shaderMaterial = new THREE.ShaderMaterial({
-    vertexShader: testVertexShader,
-    fragmentShader: testFragmentShader,
-    side: THREE.DoubleSide,
-    uniforms: {
-      uFrequency: { value: new THREE.Vector2(10, 7) },
-      uTime: { value: 0 },
-      uColor: { value: new THREE.Color("orange") },
-      uBigWavesElevation: { value: 0.2 },
-      uBigWavesFrequency: { value: new THREE.Vector2(4, 1.2) },
-      uBigWavesSpeed: { value: 0.8 },
-      uDepthColor: { value: new THREE.Color("#e5735e") },
-      uSurfaceColor: { value: new THREE.Color("#000000") },
-      uColorOffset: { value: 0.25 },
-      uColorMultiplier: { value: 2.0 },
-      uSmallWavesElevation: { value: 0.15 },
-      uSmallWavesFrequency: { value: 3 },
-      uSmallWavesSpeed: { value: 0.2 },
-      uSmallIterations: { value: 3 },
-    },
-  });
+  const shaderMaterial = ragingSeaMaterial()
 
   return (
     <>
       
       <Float>
-        <Text
-          font="fonts/bebas-neue/bebas-neue-v9-latin-regular.woff"
+        <Text3D
+                  font="fonts/roboto/roboto.json"
+
+          // font="fonts/bebas-neue/bebas-neue-v9-latin-regular.woff"
           scale={8}
           lineHeight={0.75}
           textAlign="center"
@@ -57,9 +38,11 @@ export default function IntroText({ controls }) {
         >
           Welcome
           <meshBasicMaterial toneMapped={false} side={THREE.DoubleSide} />
-        </Text>
-        <Text
-          font="fonts/bebas-neue/bebas-neue-v9-latin-regular.woff"
+        </Text3D>
+        <Text3D
+                  font="fonts/roboto/roboto.json"
+
+          // font="fonts/bebas-neue/bebas-neue-v9-latin-regular.woff"
           scale={8}
           lineHeight={0.75}
           textAlign="center"
@@ -67,15 +50,15 @@ export default function IntroText({ controls }) {
         >
           To My
           <meshBasicMaterial toneMapped={false} side={THREE.DoubleSide} />
-        </Text>
+        </Text3D>
         <Text3D
-        //   font="fonts/roboto/roboto.json"
-          font="fonts/cloud1/Alphasmoke-OOX6.json"
+          font="fonts/roboto/roboto.json"
+          // font="fonts/cloud1/Alphasmoke-OOX6.json"
           scale={8}
         //   lineHeight={0.75}
         //   textAlign="center"
           position={[0, 40.65, 0]}
-        //   material={shaderMaterial}
+          // material={shaderMaterial}
         >
           Portfolio
           <meshBasicMaterial toneMapped={false} side={THREE.DoubleSide}/>

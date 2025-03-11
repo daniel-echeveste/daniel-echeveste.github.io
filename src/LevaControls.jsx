@@ -1,4 +1,11 @@
 import { useControls, folder, } from "leva";
+import * as THREE from "three";
+// CustomShaderMaterial.js
+import { OrbitControls, Float, Text, useGLTF, shaderMaterial, Sky } from '@react-three/drei'
+import { useMemo, useState, useRef,} from 'react'
+import { useFrame, extend } from '@react-three/fiber'
+
+
 
 const ControlsManager = () => {
   const skyControls = useControls("Sky", {
@@ -28,10 +35,54 @@ const ControlsManager = () => {
     PositionZ: { value: -250, min: -500, max: 500, step: 0.001  },
   },{collapsed:true});
   
+
+  const ShadersControls = useControls({
+    Shaders: folder(
+      {
+        param1: 10,
+        RagingSea: folder(
+            {
+                    uDepthColor:'#e5735e',
+                    uSurfaceColor:'#000000',
+                    uBigWavesElevation:
+                    {
+                        value: 0.2,
+                        min: 0,
+                        max: 1,
+                        step:0.1
+                    },
+                    uBigWavesFrequency:
+                    {
+                        value:new THREE.Vector2(4, 1.2),
+                    },
+                    uBigWavesSpeed:
+                    {
+                        value:0.8,
+                        min: 0,
+                        max: 10,
+                        step:0.1
+                    },
+                    uColorOffset: 0.8,
+                    uColorMultiplier: 5.0,
+                    uSmallWavesElevation: { value: 0.15 },
+                    uSmallWavesFrequency: { value: 3 },
+                    uSmallWavesSpeed: { value: 0.2 },
+                    uSmallIterations: { value: 3 },
+                },
+          { collapsed: true } // Subfolder colapsado por defecto
+        ),
+      },
+      { collapsed: true } // Main folder colapsado por defecto
+    ),
+  });
+
+
+
   return {
     skyControls: skyControls,
     IslandControls: IslandControls,
-    CameraControls: CameraControls
+    CameraControls: CameraControls,
+    ShadersControls: ShadersControls,
   };
 };
 
