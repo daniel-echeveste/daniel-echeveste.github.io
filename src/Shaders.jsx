@@ -26,7 +26,7 @@ export default function Shaders() {
 
     return <>
         
-        <Html 
+        {/* <Html 
         center
         >
             <div style={{ position: 'absolute', top: -450, left: 0, zIndex: 1 } }>
@@ -62,6 +62,6 @@ export default function Shaders() {
         {selectedShader === 'modifiedMaterials' && <ModifiedMaterials />}
         {selectedShader === 'coffeeMug' && <CoffeeMug />}
         {selectedShader === 'holographic' && <HolographicMaterial />}
-        {selectedShader === 'arcane' && <ArcaneMaterial/>}
+        {selectedShader === 'arcane' && <ArcaneMaterial/>} */}
     </>
 }

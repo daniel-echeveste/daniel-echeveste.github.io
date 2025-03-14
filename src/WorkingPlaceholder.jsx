@@ -1,66 +1,37 @@
-import { Float, Text, Html } from "@react-three/drei";
-import * as THREE from "three";
+import React from "react";
 
 export default function WorkingPlaceholder() {
-  return (
-    <>
-      <group
-        onClick={() => {
-          window.location.hash = "#develop";
-          window.location.reload(); // Recarga la página para aplicar el cambio
-        }}
-      >
-        <Float speed={0.3}
-         onPointerEnter={ () => { document.body.style.cursor = 'pointer' } }
-         onPointerLeave={ () => { document.body.style.cursor = 'default' } }
-        >
-          <Text
-            font="fonts/bebas-neue/bebas-neue-v9-latin-regular.woff"
-            scale={0.3}
-            lineHeight={0.75}
-            textAlign="right"
-            position={[0.75, 1.65, -1]}
-          >
-            I am currently working on this, if you want to see the progress
-            click
-            <meshBasicMaterial toneMapped={false} side={THREE.DoubleSide} />
-          </Text>
-          <Text
-            font="fonts/bebas-neue/bebas-neue-v9-latin-regular.woff"
-            scale={0.3}
-            lineHeight={0.75}
-            textAlign="right"
-            position={[0, 1.2, -1]}
-            pointer
-            className=" pointer"
-            onClick={() => {
-              window.location.hash = "#develop";
-              window.location.reload(); // Recarga la página para aplicar el cambio
-            }}
-          >
-            HERE
-            <meshBasicMaterial toneMapped={false} side={THREE.DoubleSide} />
-          </Text>
-        </Float>
+  const handleClick = () => {
+    window.location.hash = "#develop";
+    window.location.reload(); // Recarga la página para aplicar el cambio
+  };
 
-        <Html center >
-          <div
-            style={{
-              cursor: "pointer",
-              position: "fixed",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              zIndex: 10,
-            }}
+  return (
+    <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white">
+      <div className="text-center space-y-6">
+        <h1 className="text-3xl font-bold text-yellow-400">
+          We're working hard to bring something amazing!
+        </h1>
+        <p className="text-xl">
+          This page is under construction. Please check back soon!
+        </p>
+        <div className="space-y-4">
+          <img
+            src="/imgs/working-on-it.gif"
+            alt="Working on it"
+            className="mx-auto animate-pulse"
+          />
+          <button
+            onClick={handleClick}
+            className="mt-4 px-6 py-2 bg-yellow-400 text-black rounded-full hover:bg-yellow-500 transition-all"
           >
-            <img src="working-on-it.gif" alt="Loading GIF" onClick={() => {
-          window.location.hash = "#develop";
-          window.location.reload(); // Recarga la página para aplicar el cambio
-        }}/>
-          </div>
-        </Html>
-      </group>
-    </>
+            Check Progress
+          </button>
+        </div>
+        <p className="text-sm text-gray-400 mt-8">
+          © 2025 Daniel-Echeveste-Developer.
+        </p>
+      </div>
+    </div>
   );
 }

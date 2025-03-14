@@ -3,6 +3,8 @@ import basicSsl from '@vitejs/plugin-basic-ssl'
 import { transformWithEsbuild } from 'vite'
 import restart from 'vite-plugin-restart'
 import  glsl  from 'vite-plugin-glsl'
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
 
 export default {
     root: 'src/',
@@ -18,6 +20,8 @@ export default {
         basicSsl(),
         // shader files support 
         glsl(),
+        // Tailwind Support 
+        tailwindcss(),
         // .js file support as if it was JSX
         {
             name: 'load+transform-js-files-as-jsx',
