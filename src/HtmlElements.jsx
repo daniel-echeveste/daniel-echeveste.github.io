@@ -10,17 +10,17 @@ const Menu = () => {
         onClick={() => {
           cameraIntro();
         }}>
-          <a href="" className="block p-2">
+          <a href="#develop" className="block p-2">
             Home
           </a>
         </li>
         <li>
-          <a href="#about" className="block p-2">
+          <a href="#develop" className="block p-2">
             About
           </a>
         </li>
         <li>
-          <a href="#contact" className="block p-2">
+          <a href="#develop" className="block p-2">
             Contact
           </a>
         </li>
@@ -31,6 +31,16 @@ const Menu = () => {
         >
           <a href="#contact" className="block p-2">
             Projects
+          </a>
+        </li>
+        <li 
+         onClick={() => {
+          window.location.hash = "#portfolio";
+          window.location.reload();
+        }}
+        >
+          <a href="#portfolio" className="block p-2">
+            Portfolio
           </a>
         </li>
       </ul>

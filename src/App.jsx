@@ -6,12 +6,17 @@ import { useEffect, useState } from "react";
 import WorkingPlaceholder from "./WorkingPlaceholder";
 import { useControls, folder, Leva } from "leva";
 import Menu from "./HtmlElements.jsx";
+import Portfolio from "./BasicPortfolio.jsx";
+import WorkingPlaceholder2 from "./WorkingPlaceholder2.jsx";
 export default function App() {
   const [develop, setDevelop] = useState(false);
+  const [portfolio, setPortfolio] = useState(false);
 
   useEffect(() => {
     if (window.location.hash === "#develop") {
       setDevelop(true);
+    } else if (window.location.hash === "#portfolio") {
+      setPortfolio(true);
     }
   }, []);
   return (
@@ -30,13 +35,16 @@ export default function App() {
             <Experience />
           </Canvas>
           <Menu />
-          <Leva 
-          collapsed
-          />
+          <Leva collapsed />
         </>
       )}
-     
-      {!develop && <WorkingPlaceholder />}
+      {portfolio && (
+        <>
+          <Portfolio></Portfolio>
+        </>
+      )}
+      {!develop && !portfolio && <WorkingPlaceholder />}
+      {/* {!develop && !portfolio && <WorkingPlaceholder2 />} */}
     </>
   );
 }
