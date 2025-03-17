@@ -1,11 +1,16 @@
 import { cameraToShaders, cameraIntro } from "./CameraControls"; // Asegúrate de usar la ruta correcta
-
+import { useEffect, useRef, useState } from "react";
+import { useThree, useFrame } from "@react-three/fiber";
+import gsap from "gsap";
 const Menu = () => {
   return (
-    <div className="fixed top-0 right-0 p-4 bg-gray-800 text-white">
-      <ul>
-        <li>
-          <a href="#home" className="block p-2">
+    <div className="fixed top-0 left-0 p-2 bg-gray-800 text-white rounded-br-2xl">
+      <ul className=" inline-flex">
+        <li
+        onClick={() => {
+          cameraIntro();
+        }}>
+          <a href="" className="block p-2">
             Home
           </a>
         </li>
@@ -19,15 +24,29 @@ const Menu = () => {
             Contact
           </a>
         </li>
+        <li
+         onClick={() => {
+          cameraToShaders();
+        }}
+        >
+          <a href="#contact" className="block p-2">
+            Projects
+          </a>
+        </li>
       </ul>
     </div>
   );
 };
-export function Buttons() {
+export function Button({text, styles, funcion}) {
+  const [isActive, setActive] = useState(true);
+
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
   return (
     <div
       //  style={{ position: 'absolute', top: -450, left: 0, zIndex: 1} }
-      className=" absolute -top-[450px] left-0 z-10 bg-amber-50"
+      className= {` z-10 bg-amber-50 p-2 rounded-full ${styles} ${isActive?'':'hidden'}`}
       onPointerEnter={() => {
         document.body.style.cursor = "pointer";
       }}
@@ -36,25 +55,19 @@ export function Buttons() {
       }}
     >
       <button
-        onClick={() => {
-          cameraToShaders();
-        }}
-      >
-        toShaders
-      </button>
-      <button
-        onClick={() => {
+        onClick={(event) => {
+          console.log(event.target.parentElement);
           cameraIntro();
+          funcion();
+          // toggleClass()
         }}
       >
-        toIntro
+        {text}
       </button>
     </div>
   );
 }
-export function PlaceHolderImage() {
-  console.log('estoy');
-  
+export function PlaceHolderImage() {  
   return (
     <div className=" cursor-pointer fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
       <img src="./working-on-it.gif" alt="Loading GIF" />

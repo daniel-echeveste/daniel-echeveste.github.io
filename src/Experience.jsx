@@ -10,18 +10,12 @@ import CameraControls from './CameraControls';
 import IntroText from './Texts';
 import Interface from './Interface';
 export default function Experience() {
-    // const controls = useControlStore((state) => state.controls);
-
-    // useControls se actualiza con los valores de Zustand
-    // useControls(controls);
-    
-    
       const controls = ControlsManager();
       const Camera = useRef();
-     
     return (
         <>
-            <OrbitControls makeDefault />
+            {/* <OrbitControls makeDefault /> */}
+
             <Perf position="bottom-left"></Perf>
             <directionalLight castShadow position={[1, 2, 3]} intensity={4.5} />
             <ambientLight intensity={1.5} />
@@ -34,12 +28,8 @@ export default function Experience() {
             <IntroIsland
                 controls={controls}
             />
-            <IntroText></IntroText>
-            <Interface 
-            ></Interface>
-            {/* Renderizar shaders solo si la URL contiene #develop */}
-            {/* {develop && <Shaders />}
-            {showShaders &&  <Perf position="top-left" />} */}
+            <IntroText />
+            <Interface />
         </>
     )
 }

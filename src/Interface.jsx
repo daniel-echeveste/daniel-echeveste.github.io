@@ -4,15 +4,22 @@
 // import { addEffect } from '@react-three/fiber'
 
 import Menu from './HtmlElements';
-import {Buttons} from './HtmlElements';
+import {Button} from './HtmlElements';
 
 import { OrbitControls, Float, Text, useGLTF, shaderMaterial, Html, } from '@react-three/drei'
 export default function Interface() {
+    const pepe = ()=>{
+        console.log('pepe');
+    }
     return <>
         <Html 
         center
         >
-           <Buttons></Buttons>
+           <Button 
+            text= "Intro"
+            styles="rounded-xl"
+            funcion={pepe}
+           />
         </Html>
     </>
 }
