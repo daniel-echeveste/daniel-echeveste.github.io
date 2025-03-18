@@ -1,4 +1,4 @@
-import { cameraToShaders, cameraIntro } from "./CameraControls"; // Asegúrate de usar la ruta correcta
+import { cameraToShaders, cameraIntro } from "./camera/CameraControls"; // Asegúrate de usar la ruta correcta
 import { useEffect, useRef, useState } from "react";
 import { useThree, useFrame } from "@react-three/fiber";
 import gsap from "gsap";

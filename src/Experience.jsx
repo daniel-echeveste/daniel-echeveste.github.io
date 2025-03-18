@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react'
 import OurSky from './Sky'
 import IntroIsland from './IntroIsland'
 import ControlsManager from './LevaControls';
-import CameraControls from './CameraControls';
+import CameraControls from './camera/CameraControls';
 import IntroText from './Texts';
 import Interface from './Interface';
 export default function Experience() {

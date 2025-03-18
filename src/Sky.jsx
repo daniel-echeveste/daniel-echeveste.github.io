@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import ControlsManager from './LevaControls'; 
+import { useThree, useFrame } from "@react-three/fiber";
+
 import { Sky } from '@react-three/drei'
 
 export default function OurSky({controls}) {
 
     const sky = controls.skyControls
 
-console.log(sky);
 
     return (
         <Sky

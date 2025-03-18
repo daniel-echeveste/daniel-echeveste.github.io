@@ -4,7 +4,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white font-sans">
       {/* Navbar */}
-      <nav className="fixed top-0 w-full bg-gray-800/80 backdrop-blur-sm z-10">
+      {/* <nav className="fixed top-0 w-full bg-gray-800/80 backdrop-blur-sm z-10">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           
           <div className="space-x-6 mx-auto "> 
@@ -19,7 +19,7 @@ const Portfolio = () => {
             <a href="files/DanielEcheCVeng.pdf" className="hover:text-blue-300 transition-colors ">Download Resume</a>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center pt-16">
@@ -120,7 +120,7 @@ const Portfolio = () => {
       {/* Footer */}
       <footer className="py-6 text-center bg-gray-900 border-t border-gray-800">
         <p className="text-gray-400">
-          © {new Date().getFullYear()} Khushbakht. All rights reserved.
+          © {new Date().getFullYear()} 
         </p>
       </footer>
     </div>

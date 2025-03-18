@@ -32,12 +32,12 @@ export default function WorkingPlaceholder() {
           >
             Check 3D Portfolio Progress
           </button>
-          <button
+          {/* <button
             onClick={handleClick1}
             className="mt-4 px-6 py-2 bg-yellow-400 text-black rounded-full hover:bg-yellow-500 transition-all"
           >
             Check Traditional Portfolio Progress
-          </button>
+          </button> */}
         </div>
         <p className="text-sm text-gray-400 mt-8">
           © 2025 Daniel-Echeveste-Developer.
