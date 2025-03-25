@@ -13,6 +13,7 @@ import Portfolio from "./BasicPortfolio.jsx";
 export default function App() {
   const [develop, setDevelop] = useState(false);
   const [portfolio, setPortfolio] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     if (window.location.hash === "#develop") {
@@ -20,6 +21,17 @@ export default function App() {
     } else if (window.location.hash === "#portfolio") {
       setPortfolio(true);
     }
+    // Check if the user prefers dark mode
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDarkMode(mediaQuery.matches);
+
+    // Listen for changes in the preference
+    const handleChange = (e) => setIsDarkMode(e.matches);
+    mediaQuery.addEventListener('change', handleChange);
+    console.log(isDarkMode);
+    
+    // Cleanup the event listener on unmount
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
   return (
     <>

@@ -1,7 +1,22 @@
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 const NavBar = () => {
-  
   const [isPortfolioExpanded, setIsPortfolioExpanded] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('theme') === 'dark';
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [darkMode]);
+
   // Smooth scroll function
   const smoothScroll = (targetId) => {
     const target = document.querySelector(targetId);
@@ -20,17 +35,17 @@ const NavBar = () => {
       setIsPortfolioExpanded(true);
       isPortfolioSpanding = true;
       section = "home";
-      const body = document.querySelector('body')
-      const root = document.querySelector('#root')
-      const canvas = document.querySelector('#canvas')
-      root?.classList.remove('fixed')
-    //   canvas?.classList.add('hidden')
-    } else if(section == 'canvas'){
-        setIsPortfolioExpanded(false);
-        const canvas = document.querySelector('#canvas')
-        const root = document.querySelector('#root')
-        // root?.classList.add('fixed')
-        // canvas?.classList.remove('hidden')
+      const body = document.querySelector("body");
+      const root = document.querySelector("#root");
+      const canvas = document.querySelector("#canvas");
+      root?.classList.remove("fixed");
+      //   canvas?.classList.add('hidden')
+    } else if (section == "canvas") {
+      setIsPortfolioExpanded(false);
+      const canvas = document.querySelector("#canvas");
+      const root = document.querySelector("#root");
+      // root?.classList.add('fixed')
+      // canvas?.classList.remove('hidden')
     }
     if (isPortfolioExpanded || isPortfolioSpanding) {
       goToSection(section);
@@ -63,9 +78,9 @@ const NavBar = () => {
     <div className=" bg-gray-900 text-white font-sans ">
       {/* Navbar */}
       <nav
-        className={`fixed top-0 ${
-          isPortfolioExpanded ? "w-full" : " rounded-br-2xl"
-        }  bg-gray-800/80 backdrop-blur-sm z-10 transition-all duration-600 ease-linear`}
+        className={`fixed top-0  bg-gray-800/80 backdrop-blur-sm z-10 transition-all duration-700   ${
+          isPortfolioExpanded ? "w-full" : " rounded-br-2xl w-1/4"
+        }`}
       >
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="space-x-6 mx-auto ">
@@ -107,39 +122,59 @@ const NavBar = () => {
             </a>
             {isPortfolioExpanded && (
               <>
-                <a
+                <motion.a
                   href="#"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 1 }}
                   className="hover:text-blue-400 transition-colors"
                   onClick={(event) => {
                     handleNavBarClick(event, "canvas");
                   }}
                 >
                   3D Portfolio
-                </a>
-                <a
+                </motion.a>
+                <motion.a
                   target="_blank"
                   href="files/DanielEcheCVeng.pdf"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 1 }}
                   className="hover:text-blue-300 transition-colors "
                 >
                   Download Resume
-                </a>
+                </motion.a>
               </>
             )}
 
             {!isPortfolioExpanded && (
-              <a
+              <motion.a
                 href="#"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 1 }}
                 className="hover:text-blue-400 transition-colors"
                 onClick={(event) => {
                   handleNavBarClick(event, "traditional portfolio");
                 }}
               >
                 Traditional Portfolio
-              </a>
+              </motion.a>
             )}
+           
           </div>
         </div>
+        
       </nav>
+      <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="fixed top-1 right-4 px-4 py-2 bg-gray-700 text-white rounded-full shadow-md z-100 hover:bg-gray-600 transition"
+            >
+              {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+            </button>
     </div>
   );
 };
