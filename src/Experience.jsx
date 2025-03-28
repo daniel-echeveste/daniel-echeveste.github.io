@@ -1,14 +1,13 @@
 import { Perf } from 'r3f-perf'
-
-import { OrbitControls, Text3D } from '@react-three/drei'
 import { useEffect, useRef } from 'react'
-
 import OurSky from './Sky'
 import IntroIsland from './IntroIsland'
 import ControlsManager from './LevaControls';
 import CameraControls from './camera/CameraControls';
 import IntroText from './Texts';
 import Interface from './Interface';
+import Lights from './lights';
+
 export default function Experience() {
       const controls = ControlsManager();
       const Camera = useRef();
@@ -17,8 +16,7 @@ export default function Experience() {
             {/* <OrbitControls makeDefault /> */}
 
             <Perf position="bottom-left"></Perf>
-            <directionalLight castShadow position={[1, 2, 3]} intensity={4.5} />
-            <ambientLight intensity={1.5} />
+            <Lights controls={controls}></Lights>
             <CameraControls 
                 controls={controls}
             />

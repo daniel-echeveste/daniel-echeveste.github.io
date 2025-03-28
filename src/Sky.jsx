@@ -12,17 +12,17 @@ export default function OurSky({controls}) {
     return (
         <Sky
             
-            //    sunPosition={[sky.PositionX, sky.PositionY, sky.PositionZ]} 
-            // inclination={sky.Inclination}
+            // sunPosition={[sky.PositionX, sky.PositionY, sky.PositionZ]} 
+            inclination={sky.Inclination}
             
             //  elevation={sky.Elevation}
-            //  azimuth={sky.Azimuth}
-            // //  distance={sky.Distance}
-            //  mieCoefficient = {sky.mieCoefficient}
-            //  mieDirectionalG = {sky.mieDirectionalG}
-            //  rayleigh = {sky.rayleigh}
-            //  turbidity = {sky.turbidity}
-            //  exposure = {sky.Exposure}
+            azimuth={sky.Azimuth}
+             distance={sky.Distance}
+             mieCoefficient = {sky.mieCoefficient}
+             mieDirectionalG = {sky.mieDirectionalG}
+             rayleigh = {sky.rayleigh}
+             turbidity = {sky.turbidity}
+             exposure = {sky.Exposure}
         />
     );
 }
