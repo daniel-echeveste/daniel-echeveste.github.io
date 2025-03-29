@@ -13,7 +13,7 @@ const ControlsManager = () => {
     PositionY: { value: 0.5, min: -2, max: 2, step: 0.001 },
     PositionZ: { value: 0, min: -2, max: 2, step: 0.001 },
     // Intensity: { value: 1, min: 0, max: 3, step: 0.1 },
-    Azimuth: { value: 0.25, min: 0, max: 1, step: 0.001  },
+    Azimuth: { value: 0, min: 0, max: 1, step: 0.001  },
     Elevation: { value: 2, min: 0, max: 80 },
     Distance: { value: 450000, min: 0, max: 1000000 },
     Inclination: { value: 0.5, min: 0, max: 1 },
