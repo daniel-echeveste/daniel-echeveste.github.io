@@ -8,6 +8,7 @@ import {  Leva } from "leva";
 import Menu from "./HtmlElements.jsx";
 import NavBar from "./NavBar.jsx"
 import Portfolio from "./BasicPortfolio.jsx";
+import OverlayTransition from "./overlayExample.jsx";
 
 
 export default function App() {
@@ -35,38 +36,7 @@ export default function App() {
   }, []);
   return (
     <>
-      {develop && (
-        <>
-          <Canvas 
-          className="transition-all duration-600 ease-linear"
-          id="canvas"
-            shadows
-            camera={{
-              fov: 60,
-              near: 0.1,
-              far: 500,
-              position: [200, 15, 150],
-            }}
-          >
-            <Experience />
-          </Canvas>
-          {/* <Menu /> */}
-          <NavBar></NavBar>
-          <Leva collapsed />
-          <div className=" scroll-auto">
-            <Portfolio></Portfolio>
-          </div>
-        </>
-      )}
-      {portfolio && (
-        <>
-          <div className=" scroll-auto">
-            <Portfolio></Portfolio>
-          </div>
-        </>
-      )}
-      {!develop && !portfolio && <WorkingPlaceholder />}
-      {/* {!develop && !portfolio && <WorkingPlaceholder2 />} */}
+      <OverlayTransition></OverlayTransition>
     </>
   );
 }

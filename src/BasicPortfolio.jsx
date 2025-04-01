@@ -3,24 +3,6 @@ import React from 'react';
 const Portfolio = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white font-sans">
-      {/* Navbar */}
-      {/* <nav className="fixed top-0 w-full bg-gray-800/80 backdrop-blur-sm z-10">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          
-          <div className="space-x-6 mx-auto "> 
-            <a href="#home" className="hover:text-blue-400 transition-colors">Home</a>
-            <a href="#about" className="hover:text-blue-400 transition-colors">About</a>
-            <a href="#projects" className="hover:text-blue-400 transition-colors">Projects</a>
-            <a href="#contact" className="hover:text-blue-400 transition-colors">Contact</a>
-            <a href="#develop" className="hover:text-blue-400 transition-colors" onClick={() => {
-                window.location.hash = "#develop";
-                window.location.reload();
-                }}>3DSite</a>
-            <a href="files/DanielEcheCVeng.pdf" className="hover:text-blue-300 transition-colors ">Download Resume</a>
-          </div>
-        </div>
-      </nav> */}
-
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center pt-16">
         <div className="text-center">
