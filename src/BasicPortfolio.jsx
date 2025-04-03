@@ -2,7 +2,7 @@ import React from 'react';
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white font-sans">
+    <div className="min-h-screen bg-gray-900 text-white font-sans w-full">
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center pt-16">
         <div className="text-center">
