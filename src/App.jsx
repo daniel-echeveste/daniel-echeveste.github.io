@@ -68,11 +68,14 @@ export default function App() {
               position: [200, 15, 150],
             }}
           >
-            <Experience />
+            <Experience 
+              darkMode={isDarkMode}
+              onDarkModeToggle={toggleDarkMode} 
+            />
           </Canvas>
           <div
             className={`fixed inset-0 transition-transform duration-500 ease-in-out  ${
-              portfolio ? "translate-y-0 opacity-90" : "translate-y-full opacity-0 pointer-events-none"
+              portfolio ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none"
             }`}
             style={{ zIndex: 50 }}
           >

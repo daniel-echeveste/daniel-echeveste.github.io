@@ -2,7 +2,7 @@ import React from 'react';
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white font-sans w-full">
+    <div className="min-h-screen  text-white font-sans w-full">
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center pt-16">
         <div className="text-center">
@@ -48,7 +48,7 @@ const Portfolio = () => {
 {/* Experience Section */}
 <section id="experience" className="py-20">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Experience</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3].map((project) => (
               <div key={project} className="bg-gray-800 rounded-lg overflow-hidden">
@@ -71,7 +71,7 @@ const Portfolio = () => {
       {/* Education Section */}
 <section id="education" className="py-20">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Education</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3].map((project) => (
               <div key={project} className="bg-gray-800 rounded-lg overflow-hidden">
@@ -94,7 +94,7 @@ const Portfolio = () => {
 {/* skills Section */}
 <section id="skills" className="py-20">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3].map((project) => (
               <div key={project} className="bg-gray-800 rounded-lg overflow-hidden">
@@ -117,7 +117,7 @@ const Portfolio = () => {
 {/* certifications Section */}
 <section id="certifications" className="py-20">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Certifications</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3].map((project) => (
               <div key={project} className="bg-gray-800 rounded-lg overflow-hidden">

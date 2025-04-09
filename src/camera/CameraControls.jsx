@@ -94,6 +94,39 @@ export function cameraIntro() {
   }
 }
 
+export function lookDown() {
+  animating = true;
+  if (cameraRef && initialPosition) {
+    gsap.to(cameraBallRef.current.position, {
+      x: -20,
+      z: 15,
+      y:-1000,
+      duration: 2,
+    });
+  }
+}
+export function lookUp() {
+  animating = true;
+  if (cameraRef && initialPosition) {
+    gsap.to(cameraBallRef.current.position, {
+      x: -20,
+      z: 15,
+      y:1000,
+      duration: 2,
+    });
+  }
+}
+export function lookBack() {
+  animating = true;
+  if (cameraRef && initialPosition) {
+    gsap.to(cameraBallRef.current.position, {
+      x: 0,
+      z: 10015,
+      y:0,
+      duration: 2,
+    });
+  }
+}
 // Parallax function
 function CameraParallax(initialPositionRef) {
   const { camera } = useThree();

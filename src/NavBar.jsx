@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { cameraIntro, lookDown, lookBack, lookUp} from "./camera/CameraControls";
 
 const NavBar = ({ onNavClick, isPortfolioExpanded: parentPortfolioExpanded, darkMode, onDarkModeToggle }) => {
   const [localIsPortfolioExpanded, setLocalIsPortfolioExpanded] = useState(parentPortfolioExpanded || false);
@@ -8,15 +9,38 @@ const NavBar = ({ onNavClick, isPortfolioExpanded: parentPortfolioExpanded, dark
     setLocalIsPortfolioExpanded(parentPortfolioExpanded);
   }, [parentPortfolioExpanded]);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+  const moveCameraTo= (section)=>{
+    switch (section) {
+      case "Home":
+        cameraIntro()
+        break;
+    
+      default:
+        break;
+    }
+    cameraIntro()
+  };
   const handleNavBarClick = (e, section) => {
+    
     e.preventDefault();
     if (onNavClick) {
       if (section === "traditional portfolio") {
         onNavClick("portfolio"); // Tell App to show portfolio
+        lookBack()
       } else if (section === "canvas") {
         onNavClick("canvas"); // Tell App to show canvas
       } else {
-        onNavClick(section); // Handle other sections like home, about, etc.
+        if(localIsPortfolioExpanded){
+          scrollToSection(section); // Handle other sections like home, about, etc.
+        } else {
+          moveCameraTo(section);
+        }
       }
     }
   };
@@ -103,7 +127,11 @@ const NavBar = ({ onNavClick, isPortfolioExpanded: parentPortfolioExpanded, dark
         </div>
       </nav>
       <button
-        onClick={() => onDarkModeToggle(!darkMode)}
+        onClick={() => {
+          onDarkModeToggle(!darkMode)
+          console.log(darkMode?'light':'dark');
+
+        }}
         className="fixed top-1 right-4 px-4 py-2 bg-gray-700 text-white rounded-full shadow-md z-100 hover:bg-gray-600 transition"
       >
         {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}

@@ -8,20 +8,26 @@ import IntroText from './Texts';
 import Interface from './Interface';
 import Lights from './lights';
 
-export default function Experience() {
+export default function Experience({ darkMode }) {
       const controls = ControlsManager();
       const Camera = useRef();
+      console.log(darkMode?'oscuro':'claro');
+      
     return (
         <>
             {/* <OrbitControls makeDefault /> */}
 
             <Perf position="bottom-left"></Perf>
-            <Lights controls={controls}></Lights>
+            <Lights 
+                controls={controls} 
+                darkMode={darkMode}
+            ></Lights>
             <CameraControls 
                 controls={controls}
             />
             <OurSky
                 controls={controls}
+                darkMode={darkMode}
             />
             <IntroIsland
                 controls={controls}

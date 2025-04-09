@@ -17,7 +17,7 @@ const ControlsManager = () => {
     Elevation: { value: 2, min: 0, max: 80 },
     Distance: { value: 450000, min: 0, max: 1000000 },
     Inclination: { value: 0.5, min: 0, max: 1 },
-    mieCoefficient: { value: 0.005, min: 0, max: 0.1, step:0.001 },
+    mieCoefficient: { value: 0.005, min: 0, max: 10, step:0.001 },
     mieDirectionalG: { value: 0.7, min: 0, max: 1 },
     rayleigh: { value: 3, min: 0, max: 4 },
     turbidity: { value: 10, min: 0, max: 30 },
