@@ -28,7 +28,7 @@ export default function Fireworks() {
 
   return () => {
     window.removeEventListener("click", handleClick); // cleanup
-  };
+  }; 
 }, []);
   const textures = [
     textureLoader.load("./textures/particles/1.png"),
