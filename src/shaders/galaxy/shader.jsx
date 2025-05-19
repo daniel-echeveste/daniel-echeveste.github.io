@@ -90,7 +90,6 @@ export default function Galaxy() {
     })
     useState(()=>{
         
-        camera.position.y += 0.8
     },[]) 
 
 
@@ -161,7 +160,7 @@ export default function Galaxy() {
         {
             uTime: { value: 0 },
             uSize: { value: 15 },
-            uSpeed: { value: controls.speed },
+            uSpeed: { value: controls.speed * 2 },
         }
     })
 
@@ -170,7 +169,11 @@ export default function Galaxy() {
      */
     // points = new THREE.Points(geometry, material)
     return <>
-
+        <mesh>
+            <boxGeometry>
+            </boxGeometry>
+            <meshBasicMaterial></meshBasicMaterial>
+        </mesh>
         <points
             geometry={geometry}
             material={shaderMaterial}

@@ -12,13 +12,12 @@ import {
 
 import { useMemo, useState, useRef, Suspense } from "react";
 import { useFrame, extend } from "@react-three/fiber";
-import Placeholder from "../../Placeholder";
+import Placeholder from "../../models/Placeholder";
 import CoffeeModel from "../../models/coffeeMug";
 import VertexShader from "./vertex.glsl";
 import FragmentShader from "./fragment.glsl";
 import { useControls } from "leva";
 
-console.log(VertexShader);
 
 export default function CoffeeMug() {
   let uTime = 0;
@@ -30,9 +29,10 @@ export default function CoffeeMug() {
   perlinTexture.wrapT = THREE.RepeatWrapping
   const smokeMaterial = new THREE.ShaderMaterial({
     transparent: true,
+    depthWrite: false,
     vertexShader: VertexShader,
     fragmentShader: FragmentShader,
-    wireframe:true,
+    wireframe:false,
     side: THREE.DoubleSide,
     uniforms: {
       uTime: new THREE.Uniform(0),
@@ -62,6 +62,11 @@ export default function CoffeeMug() {
         position={[4, 2, -2.25]}
         intensity={10}
       ></directionalLight>
+         <Environment
+        files={"textures/environmentMaps/wood-cabin.hdr"}
+        background
+        
+      ></Environment>
       <Suspense fallback={<Placeholder position-y={0.5} scale={[2, 3, 2]} />}>
         <CoffeeModel position-z={0} position-y={-1} scale={0.5}></CoffeeModel>
       </Suspense>

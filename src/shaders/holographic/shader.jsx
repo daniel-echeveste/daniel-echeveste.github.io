@@ -12,7 +12,7 @@ import {
 
 import { useMemo, useState, useRef, Suspense } from "react";
 import { useFrame, extend } from "@react-three/fiber";
-import Placeholder from "../../Placeholder";
+import Placeholder from "../../models/Placeholder";
 import VertexShader from "./vertex.glsl";
 import FragmentShader from "./fragment.glsl";
 import { useControls } from "leva";

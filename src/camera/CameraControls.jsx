@@ -11,7 +11,7 @@ let initialPosition = null; // Will be initialized as a ref in CameraControls
 export default function CameraControls({ controls, orbitControls, parallax }) {
   const { camera } = useThree();
   const CameraBall = useRef();
-  initialPosition = useRef([200, 15, 150]); // Initialize global ref here
+  initialPosition = useRef([200, 20, 150]); // Initialize global ref here
 
   // Assign refs and initialize camera position
   useEffect(() => {
@@ -37,7 +37,8 @@ export default function CameraControls({ controls, orbitControls, parallax }) {
     <mesh
       ref={CameraBall}
       castShadow
-      position={[-20, 15, 0]}
+      visible={false}
+      position={[-20, 20, 0]}
       onClick={() => console.log(CameraBall.current.position)}
     >
       <sphereGeometry />
@@ -48,15 +49,17 @@ export default function CameraControls({ controls, orbitControls, parallax }) {
 
 // External camera animation functions
 export function cameraToShaders() {
+  console.log('camera animated to shaders');
+  
   if (cameraBallRef?.current && cameraRef && initialPosition) {
     gsap.to(cameraBallRef.current.position, {
-      x: -150,
+      x: -70,
       z: 35,
       duration: 2,
     });
     gsap.to(cameraRef.position, {
       x: -70,
-      z: 20,
+      z: 80,
       duration: 2,
       onComplete: () => {
         initialPosition.current = [
@@ -68,8 +71,55 @@ export function cameraToShaders() {
     });
   }
 }
-
+export function cameraIntoShaders() {
+  console.log('camera animated INto shaders');
+  
+  if (cameraBallRef?.current && cameraRef && initialPosition) {
+    gsap.to(cameraBallRef.current.position, {
+      x: -70,
+      z: 0,
+      
+      duration: 2,
+    });
+    gsap.to(cameraRef.position, {
+      x: -70,
+      z: 10,
+      
+      duration: 2,
+      onComplete: () => {
+        initialPosition.current = [
+          cameraRef.position.x,
+          cameraRef.position.y,
+          cameraRef.position.z,
+        ];
+      },
+    });
+  }
+}
+export function cameraShaders(){
+  if (cameraBallRef?.current && cameraRef && initialPosition) {
+    gsap.to(cameraBallRef.current.position, {
+      x: 0,
+      z: -8,
+      duration: 2,
+    });
+    gsap.to(cameraRef.position, {
+      x: 0,
+      z: 0,
+      duration: 2,
+      onComplete: () => {
+        initialPosition.current = [
+          cameraRef.position.x,
+          cameraRef.position.y,
+          cameraRef.position.z,
+        ];
+      },
+    });
+  }
+}
 export function cameraIntro() {
+  console.log('camera animated to intro');
+  
   animating = true;
   if (cameraRef && initialPosition) {
     gsap.to(cameraRef.position, {
@@ -127,6 +177,8 @@ export function lookBack() {
     });
   }
 }
+
+
 // Parallax function
 function CameraParallax(initialPositionRef) {
   const { camera } = useThree();

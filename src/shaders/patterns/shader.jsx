@@ -61,19 +61,7 @@ export default function PatternsShaderMaterial() {
     extend({ shaderMaterial });
 
     return <>
-        <Float speed={0.3}>
-            <Text
-                font="/bebas-neue-v9-latin-regular.woff"
-                scale={0.5}
-                lineHeight={0.75}
-                textAlign="right"
-                position={[0, -1.65, 0]}
-
-            >
-                PATTERNS
-                <meshBasicMaterial toneMapped={false} />
-            </Text>
-        </Float >
+       
         <mesh geometry={geometry} material={shaderMaterial} useRef={mesh} scale={new THREE.Vector3(2, 2, 2)} onClick={click} position={[0, 0, -1]}>
         </mesh>
         {/* <shaderMaterial attach="material" ref={material} /> */}

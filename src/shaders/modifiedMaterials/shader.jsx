@@ -13,7 +13,7 @@ import {
 
 import { useMemo, useState, useRef, Suspense } from "react";
 import { useFrame, extend, } from "@react-three/fiber";
-import Placeholder from "../../Placeholder";
+import Placeholder from "../../models/Placeholder";
 import HeadModel from "../../models/HeadModel";
 // import testVertexShader from './vertex.glsl'
 // import testFragmentShader from './fragment.glsl'
