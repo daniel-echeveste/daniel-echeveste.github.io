@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import WorkingPlaceholder from "./WorkingPlaceholder";
 import { Leva } from "leva";
 import NavBar from "./NavBar.jsx";
-import Portfolio from "./BasicPortfolio.jsx";
+import Portfolio from "./traditionalPortfolio/BasicPortfolio.jsx";
 import Shaders from "./Shaders.jsx";
 import CameraControls from "./camera/CameraControls";
 import ControlsManager from './LevaControls';

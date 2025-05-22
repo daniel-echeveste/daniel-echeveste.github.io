@@ -11,7 +11,7 @@ import testFragmentShader from './fragment.glsl'
 
 
 export default function Galaxy() {
-
+    
     const { gl, camera } = useThree()
     const [introTime] = useState(() => performance.now() / 1000)
     const mesh = useRef()
@@ -81,7 +81,7 @@ export default function Galaxy() {
         },
     })
     
-    
+    document.querySelector("#root").classList.add("bg-black");
     useFrame((state, delta) => {
         
         shaderMaterial.uniforms.uTime.value = state.clock.elapsedTime - introTime;

@@ -48,7 +48,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
 
     return (
 
-        <div className="bg-gray-900 text-white font-sans z-100">
+        <div className="bg-gray-900 text-white font-sans z-100 ">
             {/* Navbar */}
             <nav
                 className={`fixed top-0 bg-gray-800/80 backdrop-blur-sm z-100 transition-all duration-1000 ${!localIsExperienceExpanded ? "w-full" : "rounded-br-2xl w-1/4"
@@ -56,44 +56,64 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
             >
                 <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
                     <div className="space-x-6 mx-auto">
-                        {(localIsPortfolioExpanded || localIsExperienceExpanded) && (
+                    {localIsPortfolioExpanded && (
                             <>
-                                <a
+
+                                <motion.a
                                     href="#"
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 1 }}
                                     className="hover:text-blue-400 transition-colors"
-                                    onClick={(event) => handleNavBarClick(event, "home")}
+                                    onClick={(event) => handleNavBarClick(event, "experience")}
                                 >
-                                    Home
-                                </a>
-                                <a
+                                    Experience
+                                </motion.a>
+                                <motion.a
                                     href="#"
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 1 }}
                                     className="hover:text-blue-400 transition-colors"
-                                    onClick={(event) => handleNavBarClick(event, "about")}
+                                    onClick={(event) => handleNavBarClick(event, "education")}
                                 >
-                                    About
-                                </a>
-                                <a
+                                    Education
+                                </motion.a>
+                                <motion.a
                                     href="#"
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 1 }}
                                     className="hover:text-blue-400 transition-colors"
                                     onClick={(event) => handleNavBarClick(event, "projects")}
                                 >
                                     Projects
-                                </a>
-                                <a
+                                </motion.a>
+                                <motion.a
                                     href="#"
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 1 }}
                                     className="hover:text-blue-400 transition-colors"
-                                    onClick={(event) => handleNavBarClick(event, "contact")}
+                                    onClick={(event) => handleNavBarClick(event, "skills")}
                                 >
-                                    Contact
-                                </a>
-                               
-                            </>
-
-                        )}
-
-                        {localIsPortfolioExpanded && (
-                            <>
-                               
+                                    Skills
+                                </motion.a>
+                                <motion.a
+                                    href="#"
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 1 }}
+                                    className="hover:text-blue-400 transition-colors"
+                                    onClick={(event) => handleNavBarClick(event, "certifications")}
+                                >
+                                    Certifications
+                                </motion.a>
                                 <motion.a
                                     target="_blank"
                                     href="files/DanielEcheCVeng.pdf"
@@ -108,6 +128,36 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                             </>
                         )}
 
+                        {(localIsPortfolioExpanded || localIsExperienceExpanded) && (
+                            <>
+                                <motion.a
+                                    href="#"
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 1 }}
+                                    className="hover:text-blue-400 transition-colors"
+                                    onClick={(event) => handleNavBarClick(event, "about")}
+                                >
+                                    About
+                                </motion.a>
+                                <motion.a
+                                    href="#"
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 1 }}
+                                    className="hover:text-blue-400 transition-colors"
+                                    onClick={(event) => handleNavBarClick(event, "contact")}
+                                >
+                                    Contact
+                                </motion.a>
+
+                            </>
+
+                        )}
+
+                        
                         {!localIsPortfolioExpanded && (
                             <motion.a
                                 href="#"
@@ -121,7 +171,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                                 Traditional Portfolio
                             </motion.a>
                         )}
-                         {!localIsExperienceExpanded && (
+                        {!localIsExperienceExpanded && (
                             <motion.a
                                 href="#"
                                 initial={{ opacity: 0, y: -10 }}
@@ -131,7 +181,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                                 className="hover:text-blue-400 transition-colors"
                                 onClick={(event) => handleNavBarClick(event, "canvas")}
                             >
-                               3D Portfolio
+                                3D Portfolio
                             </motion.a>
                         )}
                         {!localIsShadersExpanded && (
@@ -147,7 +197,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                                 Shaders
                             </motion.a>
                         )}
-                      
+
                     </div>
                 </div>
             </nav>
@@ -157,7 +207,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                     console.log(darkMode ? 'light' : 'dark');
 
                 }}
-                className= {`fixed ${localIsExperienceExpanded ? "transition-all duration-1000  top-4 right-1/2 translate-x-1/2" : "transition-all duration-1000 top-2 right-4 "}  px-4 py-2 bg-gray-700 text-white rounded-full shadow-md z-100 hover:bg-gray-600 transition`} >
+                className={`fixed ${localIsExperienceExpanded ? "transition-all duration-1000  top-4 right-1/2 translate-x-1/2" : "transition-all duration-1000 top-2 right-4 "}  px-4 py-2 bg-gray-700 text-white rounded-full shadow-md z-100 hover:bg-gray-600 transition opacity-95`} >
                 {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
             </button>
         </div>
