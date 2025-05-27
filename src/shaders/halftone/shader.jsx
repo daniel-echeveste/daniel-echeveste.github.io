@@ -13,7 +13,7 @@ export default function HalftoneShader() {
     const cubeRef = useRef()
 
     const controls = useControls({
-        uColor: {value:"#ff794d"},
+        uShapeColor: {value:"#ff794d"},
         backgroundColor: {value:"#26132f"},
         uHalftoneColor: {value:"#8e19b8"},
         uRepetitions: {value:100, min:1, max:200, step:1},
@@ -31,7 +31,7 @@ export default function HalftoneShader() {
         vertexShader: vertexShader,
         fragmentShader: fragmentShader,
         uniforms: {
-            uColor :new THREE.Uniform(new THREE.Color(controls.uColor)),
+            uColor :new THREE.Uniform(new THREE.Color(controls.uShapeColor)),
             uResolution :new THREE.Uniform(new THREE.Vector2(window.innerWidth * pixelRatio, window.innerHeight * pixelRatio)),
             uRepetitions :new THREE.Uniform(controls.uRepetitions),
             uLow :new THREE.Uniform(controls.uLow),
@@ -46,11 +46,17 @@ export default function HalftoneShader() {
  
    useFrame(() => {
     halftoneMaterial.uniforms.uResolution.value.set(window.innerWidth * pixelRatio, window.innerHeight * pixelRatio)
+    sphereRef.current.rotation.x += 0.02;
+    sphereRef.current.rotation.y += 0.01;
+    torusKnotRef.current.rotation.x -= 0.014;
+    torusKnotRef.current.rotation.y += 0.01;
+    cubeRef.current.rotation.x -= 0.015;
+    cubeRef.current.rotation.y -= 0.01;
    })
     return (
         <>
            <mesh ref={sphereRef} position={[-3, 0, 0]} material={halftoneMaterial}>
-                   <sphereGeometry /> 
+                   <    torusGeometry /> 
                </mesh>
                {/* torus knot */}
                <mesh ref={torusKnotRef} position={[3, 0, 0]} material={halftoneMaterial}>

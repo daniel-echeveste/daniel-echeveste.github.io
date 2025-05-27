@@ -8,7 +8,7 @@ vec3 halftone(vec3 color, float repetitions, vec3 direction, float low, float hi
     uv = mod(uv, 1.0);
 
     float point = distance(uv, vec2(0.5));
-    point = 1.0 - stgep(0.5 * intensity, point);
+    point = 1.0 - step(0.5 * intensity, point);
    
     return mix(color, halftoneColor, point);
      

@@ -6,6 +6,7 @@ import { useFrame, extend, useThree } from '@react-three/fiber'
 import { useControls } from "leva";
 import testVertexShader from './vertex.glsl'
 import testFragmentShader from './fragment.glsl'
+import { Environment } from "@react-three/drei";
 
 
 
@@ -180,6 +181,12 @@ export default function Galaxy() {
             rotation={[controls.rotateX, controls.rotateY, controls.rotateZ]}>
 
         </points>
+        <Environment
+                      backgroundBlurriness={0}
+                        files={"textures/sun/stars.jpg"}
+                        background  
+                        encoding={THREE.sRGBEncoding}
+                      ></Environment>
         {/* <shaderMaterial attach="material" ref={material} /> */}
     </>
 }

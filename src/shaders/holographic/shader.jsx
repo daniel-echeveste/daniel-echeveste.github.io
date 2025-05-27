@@ -21,7 +21,7 @@ import { useControls } from "leva";
 export default function HolographicMaterial() {
   const torus = useRef()
   const controls = useControls({
-    uColor:"#ff0000"
+    uHolographicColor:"#0000ff"
   })
   let uTime = 0;
   const torusGeometry = new THREE.TorusKnotGeometry()
@@ -37,7 +37,7 @@ export default function HolographicMaterial() {
     uniforms: {
       uTime: new THREE.Uniform(0),
       uPerlinTexture: new THREE.Uniform(perlinTexture),
-      uColor :new THREE.Uniform(new THREE.Color(controls.uColor)),
+      uColor :new THREE.Uniform(new THREE.Color(controls.uHolographicColor)),
     },
     depthWrite:false,
     blending: THREE.AdditiveBlending,
