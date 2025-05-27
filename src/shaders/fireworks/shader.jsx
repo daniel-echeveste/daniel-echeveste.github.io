@@ -12,7 +12,7 @@ export default function Fireworks() {
   let fireworkCounter = 1
   const [fireworks, setFireworks] = useState([]);
   const { camera } = useThree();
-  document.querySelector("#root").classList.add("bg-black");
+ 
   const textureLoader = new THREE.TextureLoader();
   useEffect(() => {
   const handleClick = () => {

@@ -65,7 +65,7 @@ export default function Shaders({portalActive, setPortalActive, togglePortal, po
             <Center position={[0, 4, 0]}>
               <Text3D
                 position={[0, 4, 0]}
-                onClick={nextShader}
+                // onClick={nextShader}
                 font="fonts/roboto/roboto.json"
                 scale={1}
                 lineHeight={0.75}

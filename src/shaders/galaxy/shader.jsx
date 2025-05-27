@@ -81,7 +81,8 @@ export default function Galaxy() {
         },
     })
     
-    document.querySelector("#root").classList.add("bg-black");
+   
+    document.body.style.backgroundColor = "#000000"    
     useFrame((state, delta) => {
         
         shaderMaterial.uniforms.uTime.value = state.clock.elapsedTime - introTime;
@@ -169,11 +170,7 @@ export default function Galaxy() {
      */
     // points = new THREE.Points(geometry, material)
     return <>
-        <mesh>
-            <boxGeometry>
-            </boxGeometry>
-            <meshBasicMaterial></meshBasicMaterial>
-        </mesh>
+       
         <points
             geometry={geometry}
             material={shaderMaterial}

@@ -19,10 +19,12 @@ export default function PatternsShaderMaterial() {
             step: 1
         }
     })
+    
     const click = () => {
-        console.log('pepe');
-
+      shaderMaterial.uniforms.uPattern.value++;
+      if(shaderMaterial.uniforms.uPattern.value > 50) shaderMaterial.uniforms.uPattern.value = 5;
     }
+    
     // Add leva
     // gui.add(material.uniforms.uFrequency.value, 'x').min(0).max(20).step(0.01).name('frequencyX')
     // gui.add(material.uniforms.uFrequency.value, 'y').min(0).max(20).step(0.01).name('frequencyY')
@@ -62,7 +64,8 @@ export default function PatternsShaderMaterial() {
 
     return <>
        
-        <mesh geometry={geometry} material={shaderMaterial} useRef={mesh} scale={new THREE.Vector3(2, 2, 2)} onClick={click} position={[0, 0, -1]}>
+        <mesh geometry={geometry} material={shaderMaterial} useRef={mesh} scale={new THREE.Vector3(2, 2, 2)} onClick={click} position={[0, 0, -1]}
+         >
         </mesh>
         {/* <shaderMaterial attach="material" ref={material} /> */}
     </>

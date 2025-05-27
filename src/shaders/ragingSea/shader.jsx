@@ -10,7 +10,8 @@ import { useThree } from "@react-three/fiber";
 
 
 export default function ragingSea() {
-    document.querySelector("#root").classList.add("bg-black");
+    
+    document.body.style.backgroundColor = "#000000"    
 
     const mesh = useRef()
     const renderer = useThree((state) => state.gl)
