@@ -48,7 +48,7 @@ export default function Shaders({portalActive, setPortalActive, togglePortal, po
     <>
       <OrbitControls />
       <ambientLight intensity={0.5} />
-      <Environment preset="city" />
+      <Environment preset="city" background/>
       <spotLight
         castShadow
         intensity={2}

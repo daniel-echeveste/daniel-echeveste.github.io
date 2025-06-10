@@ -91,7 +91,7 @@ export default function Galaxy() {
         
     })
     useState(()=>{
-        
+        // shaderMaterial.uniforms.uTime.value = 0;
     },[]) 
 
 
