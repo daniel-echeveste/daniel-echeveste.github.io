@@ -47,12 +47,13 @@ export default function Shaders({portalActive, setPortalActive, togglePortal, po
   return (
     <>
       <OrbitControls />
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={0.2} />
       <Environment 
+      intensity={0.2} 
       preset="sunset" 
       // background
       />
-      <spotLight
+      {/* <spotLight
         castShadow
         intensity={2}
         position={[10, 10, 10]}
@@ -60,7 +61,7 @@ export default function Shaders({portalActive, setPortalActive, togglePortal, po
         penumbra={1}
         shadow-normalBias={0.05}
         shadow-bias={0.0001}
-      />
+      /> */}
       
       {shaders.length > 0 &&  ActiveShader && (
         <group>
