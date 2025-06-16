@@ -1,40 +1,49 @@
 
 
-export function About({darkMode}) {
+
+import RoundImage from "./roundImage";
+export function About({ darkMode }) {
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     };
-    
-    
 
     return (<>
         {/* Hero Section */}
         <section id="about" className="min-h-screen flex items-center justify-center pt-16 bg-amber-200 px-80">
-            <div className="bg-amber-100 w-full h-full flex gap-10">
-                <div className="w-1/2 h-full bg-amber-500">
-                    {/* image container */}
-                    <div className="h-full w-full bg-amber-600">
-                        <img src="/imgs/Concho-Pijama.jpeg" alt="" />
-                    </div>
+            <div className="bg-amber-200 w-full h-full flex gap-10 ">
+                {/* Image Section */}
+                <div className="w-1/3 h-full ">
+                    <RoundImage
+                        src1="/imgs/mebg.jpg"
+                        src2="/imgs/menobg.png"
+                        alt=""
+                        strength={6}
+                        parallax={true}
+                    />
                 </div>
-                <div className="w-1/2 h-full bg-amber-600 ">
-                    <div className="text-left bg-amber-300 h-full">
+
+                {/* Text Section */}
+                <div className="w-2/3 h-full p-5  ">
+            
+                    <div className="text-left bg-amber-200 h-full">
                         <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in ">
                             Hi, I'm <br></br>Daniel Echeveste
-                        </h1>                       
+                        </h1>
                     </div>
-                    <div className="text-center bg-amber-600 h-full">
-                        <p className="text-xl md:text-2xl text-gray-300 mb-6">
-                            Web & Mobile Application Developer
+                    <div className=" bg-amber-200 h-full">
+                        <p className="text-xl md:text-2xl mb-6 text-amber-950 font-bold">
+                        Full Stack Developer | Frontend Developer
                         </p>
-                        <p className="text-gray-300 text-lg leading-relaxed">
-                            With experience in Web and Mobile Application Development, I'm passionate
-                            about creating quality work and exploring all aspects of being a developer.
+                        <p className=" text-lg leading-relaxed   text-amber-950 ">
+                            I am passionate about  creative and interactives sites/apps and I enjoy working on them, using my skills in traditional development plus my knowledge in <span className="text-amber-950 font-bold">WEBGL</span> and <span className="text-amber-950 font-bold">SHADERS</span>,
+                            to create <span className="text-amber-950 font-bold">unique</span> and <span className="text-amber-950 font-bold">engaging</span> experiences for users. 
+                            I have experience in creating responsive and user-friendly <span className="text-amber-950 font-bold"> interfaces</span> as well as working in <span className="text-amber-950 font-bold">backend development</span> for web and mobile applications. 
+                            I am also a <span className="text-amber-950 font-bold">team player</span> and I enjoy working in a collaborative environment, <span className="text-amber-950 font-bold">quick learner</span> and I am always looking for new challenges to improve my skills.
                         </p>
-                        <button onClick={() => scrollToSection("contact")} className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full text-lg transition-colors">
+                        <button onClick={() => scrollToSection("contact")} className="bg-amber-800 hover:bg-amber-700 px-6 py-3 rounded-full text-lg transition-colors ml-[50%] translate-x-[-50%] mt-10">
                             Contact Me
                         </button>
                     </div>

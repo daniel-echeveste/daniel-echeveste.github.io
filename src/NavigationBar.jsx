@@ -56,6 +56,23 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
             >
                 <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
                     <div className="space-x-6 mx-auto">
+                    {(localIsPortfolioExpanded || localIsExperienceExpanded) && (
+                            <>
+                                <motion.a
+                                    href="#"
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 1 }}
+                                    className="hover:text-blue-400 transition-colors"
+                                    onClick={(event) => handleNavBarClick(event, "about")}
+                                >
+                                    About
+                                </motion.a>
+
+                            </>
+
+                        )}
                     {localIsPortfolioExpanded && (
                             <>
 
@@ -128,34 +145,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                             </>
                         )}
 
-                        {(localIsPortfolioExpanded || localIsExperienceExpanded) && (
-                            <>
-                                <motion.a
-                                    href="#"
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -10 }}
-                                    transition={{ duration: 1 }}
-                                    className="hover:text-blue-400 transition-colors"
-                                    onClick={(event) => handleNavBarClick(event, "about")}
-                                >
-                                    About
-                                </motion.a>
-                                <motion.a
-                                    href="#"
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -10 }}
-                                    transition={{ duration: 1 }}
-                                    className="hover:text-blue-400 transition-colors"
-                                    onClick={(event) => handleNavBarClick(event, "contact")}
-                                >
-                                    Contact
-                                </motion.a>
-
-                            </>
-
-                        )}
+                       
 
                         
                         {!localIsPortfolioExpanded && (
@@ -183,21 +173,24 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                             >
                                 3D Portfolio
                             </motion.a>
-                        )}
-                        {!localIsShadersExpanded && (
-                            <motion.a
-                                href="#"
-                                initial={{ opacity: 0, y: -10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -10 }}
-                                transition={{ duration: 1 }}
-                                className="hover:text-blue-400 transition-colors"
-                                onClick={(event) => handleNavBarClick(event, "shaders")}
-                            >
-                                Shaders
-                            </motion.a>
-                        )}
+                        )}        
+                        {(localIsPortfolioExpanded || localIsExperienceExpanded) && (
+                            <>
+                                <motion.a
+                                    href="#"
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -10 }}
+                                    transition={{ duration: 1 }}
+                                    className="hover:text-blue-400 transition-colors"
+                                    onClick={(event) => handleNavBarClick(event, "contact")}
+                                >
+                                    Contact
+                                </motion.a>
 
+                            </>
+
+                        )}           
                     </div>
                 </div>
             </nav>
