@@ -23,12 +23,10 @@ export default function RoundImage({ src1, src2, alt, strength, parallax }) {
             duration: 1,
             ease: "none",
             repeat: 1,
-            onUpdate: () => {
-                
+            onUpdate: () => {             
                 const radius = 0.1; // cuánto se moverá desde el centro (0.5)
                 const x = 0.5 + (radius * Math.sin(objAngle.angle));
                 const y = 0.5 + (radius * Math.cos(objAngle.angle));
-                console.log(x, y);
                 mouse.x.set(x);
                 mouse.y.set(y);
             }
