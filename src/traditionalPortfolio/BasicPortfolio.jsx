@@ -15,7 +15,6 @@ export default function Portfolio({ darkMode }) {
     <div className="min-h-screen  text-white font-sans w-full bg-amber-200">
 
       <FootprintTrail />
-
       {/* About Section */}
       <About darkMode={darkMode} />
       {/* Experience Section */}

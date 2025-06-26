@@ -97,7 +97,7 @@ function TrailDot({ x, y, angle, onFadeOut }) {
                 width: 32,
                 height: 32,
                 userSelect: "none",
-                transffgorm: `rotate(${angle + 90}deg)`,
+                transform: `rotate(${angle + 90}deg)`,
             }}
             draggable={false}
         />
