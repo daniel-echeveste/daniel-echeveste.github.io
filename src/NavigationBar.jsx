@@ -48,10 +48,10 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
 
     return (
 
-        <div className="bg-gray-900 text-white font-sans z-100 ">
+        <div className="bg-amber-950 text-white font-sans z-100  text-lg ">
             {/* Navbar */}
             <nav
-                className={`fixed top-0 bg-gray-800/80 backdrop-blur-sm z-100 transition-all duration-1000 ${!localIsExperienceExpanded ? "w-full" : "rounded-br-2xl w-1/4"
+                className={`fixed top-0 bg-amber-950/80 backdrop-blur-sm z-100 transition-all duration-1000 ${!localIsExperienceExpanded ? "w-full" : "rounded-br-2xl w-1/4"
                     }`}
             >
                 <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
@@ -64,7 +64,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 1 }}
-                                    className="hover:text-blue-400 transition-colors"
+                                    className="hover:text-amber-400 transition-colors"
                                     onClick={(event) => handleNavBarClick(event, "about")}
                                 >
                                     About
@@ -82,7 +82,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 1 }}
-                                    className="hover:text-blue-400 transition-colors"
+                                    className="hover:text-amber-400 transition-colors"
                                     onClick={(event) => handleNavBarClick(event, "experience")}
                                 >
                                     Experience
@@ -93,7 +93,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 1 }}
-                                    className="hover:text-blue-400 transition-colors"
+                                    className="hover:text-amber-400 transition-colors"
                                     onClick={(event) => handleNavBarClick(event, "education")}
                                 >
                                     Education
@@ -104,7 +104,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 1 }}
-                                    className="hover:text-blue-400 transition-colors"
+                                    className="hover:text-amber-400 transition-colors"
                                     onClick={(event) => handleNavBarClick(event, "projects")}
                                 >
                                     Projects
@@ -115,7 +115,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 1 }}
-                                    className="hover:text-blue-400 transition-colors"
+                                    className="hover:text-amber-400 transition-colors"
                                     onClick={(event) => handleNavBarClick(event, "skills")}
                                 >
                                     Skills
@@ -126,7 +126,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 1 }}
-                                    className="hover:text-blue-400 transition-colors"
+                                    className="hover:text-amber-400 transition-colors"
                                     onClick={(event) => handleNavBarClick(event, "certifications")}
                                 >
                                     Certifications
@@ -155,7 +155,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 1 }}
-                                className="hover:text-blue-400 transition-colors"
+                                className="hover:text-amber-400 transition-colors"
                                 onClick={(event) => handleNavBarClick(event, "traditional portfolio")}
                             >
                                 Traditional Portfolio
@@ -168,7 +168,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 1 }}
-                                className="hover:text-blue-400 transition-colors"
+                                className="hover:text-amber-400 transition-colors"
                                 onClick={(event) => handleNavBarClick(event, "canvas")}
                             >
                                 3D Portfolio
@@ -182,7 +182,7 @@ export default function NavigationBar({ darkMode, onNavClick, isPortfolioExpande
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 1 }}
-                                    className="hover:text-blue-400 transition-colors"
+                                    className="hover:text-amber-400 transition-colors"
                                     onClick={(event) => handleNavBarClick(event, "contact")}
                                 >
                                     Contact

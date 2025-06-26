@@ -19,6 +19,7 @@
     "vite-plugin-restart": "^0.4.1"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@react-three/drei": "^9.108.1",
     "@react-three/fiber": "^8.17.10",
     "@react-three/rapier": "1.4",
@@ -35,6 +36,7 @@
     "r3f-perf": "^7.2.1",
     "react": "18.3",
     "react-dom": "18.3",
+    "swiper": "^11.2.8",
     "tailwindcss": "^4.0.14",
     "three": "^0.166.1",
     "three-bvh-csg": "^0.0.16",

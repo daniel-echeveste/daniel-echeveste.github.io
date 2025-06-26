@@ -11,6 +11,7 @@ export function About({ darkMode }) {
     };
     
     return (<>
+    
         {/* Hero Section */}
         <section id="about" className="min-h-screen flex items-center justify-center pt-16 bg-amber-200 px-80">
             <div className="bg-amber-200 w-full h-full flex gap-10 ">
@@ -26,18 +27,19 @@ export function About({ darkMode }) {
                 </div>
 
                 {/* Text Section */}
-                <div className="w-2/3 h-full p-5  ">
+                <div className="w-2/3 h-full p-5  transition-all duration-300 ">
 
                     <div className="text-left bg-amber-200 h-full">
                         <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in ">
                             Hi, I'm <br></br>Daniel Echeveste
                         </h1>
                     </div>
-                    <div className=" bg-amber-200 h-full">
+                    {/* // hover:scale-100 transition-all duration-300  to remove the footprints  */}
+                    <div className=" bg-amber-200 h-full hover:scale-100  transition-all duration-300 "> 
                         <p className="text-xl md:text-2xl mb-6 text-amber-950 font-bold">
                             Full Stack Developer | Frontend Developer
                         </p>
-                        <p className=" text-lg leading-relaxed mb-10  text-amber-950 ">
+                        <p className=" text-lg leading-relaxed mb-10  text-amber-950  transition-all duration-300 rounded-xl p-2">
                             I am passionate about  creative and interactives sites/apps and I enjoy working on them, using my skills in traditional development plus my knowledge in <span className="text-amber-950 font-bold">WEBGL</span> and <span className="text-amber-950 font-bold">SHADERS</span>,
                             to create <span className="text-amber-950 font-bold">unique</span> and <span className="text-amber-950 font-bold">engaging</span> experiences for users.
                             I have experience in creating responsive and user-friendly <span className="text-amber-950 font-bold"> interfaces</span> as well as working in <span className="text-amber-950 font-bold">backend development</span> for web and mobile applications.
