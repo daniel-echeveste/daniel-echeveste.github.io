@@ -140,7 +140,7 @@ export default function App() {
                 style={{ zIndex: 50 }}
               >
                 <div className="absolute inset-0 overflow-y-auto ">
-                  <Portfolio/>
+                  <PortfolioHorizontal/>
                 </div>
               </div>
             </>

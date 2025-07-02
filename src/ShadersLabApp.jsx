@@ -2,8 +2,6 @@ import ReactDOM from "react-dom/client";
 import { Canvas } from "@react-three/fiber";
 import './styles/style.css'
 import Shaders from "./Shaders.jsx";
-
-
 const root = ReactDOM.createRoot(document.querySelector('#rootShaders'))
 root.render(<>
     <App2></App2>
