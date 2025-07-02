@@ -6,6 +6,7 @@ import WorkingPlaceholder from "./WorkingPlaceholder";
 import { Leva } from "leva";
 import NavBar from "./NavBar.jsx";
 import Portfolio from "./traditionalPortfolio/BasicPortfolio.jsx";
+import PortfolioHorizontal from "./traditionalPortfolio/BasicPortfolioHorizontal.jsx";
 import Shaders from "./Shaders.jsx";
 import CameraControls from "./camera/CameraControls";
 import ControlsManager from './LevaControls';
@@ -139,7 +140,7 @@ export default function App() {
                 style={{ zIndex: 50 }}
               >
                 <div className="absolute inset-0 overflow-y-auto ">
-                  <Portfolio />
+                  <Portfolio/>
                 </div>
               </div>
             </>
