@@ -3,7 +3,7 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import gsap from "gsap";
 
 
-export default function RoundImage({ src1, src2, alt, strength, parallax }) {
+export default function RoundImage({ src1, src2, alt, strength, parallax, darkMode }) {
     const containerRef = useRef(null);
 
 
@@ -54,7 +54,7 @@ export default function RoundImage({ src1, src2, alt, strength, parallax }) {
             ref={containerRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="relative aspect-square w-full fg border-amber-500 bg-amber-500 rounded-full overflow-hidden "
+            className={`relative aspect-square w-full fg ${darkMode ? "bg-white" : "bg-amber-200"} rounded-full overflow-hidden `}
         >
             <motion.div
                 style={{ rotateX, rotateY }}

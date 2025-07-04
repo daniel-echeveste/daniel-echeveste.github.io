@@ -15,3 +15,13 @@
   
   /* incluye utilidades */
   @import "tailwindcss/utilities";
+
+  @layer utilities {
+    .swiper-button-prev {
+      @apply !-left-3 z-100;
+    }
+  
+    .swiper-button-next {
+      @apply !-right-3 z-100;
+    }
+  }

@@ -1,37 +1,36 @@
 import React from 'react';
-import { About } from './components/about';
-import { Certifications } from './components/certifications';
-import { Experience } from './components/experience';
-import { Skills } from './components/skills';
-import { Projects } from './components/projects';
-import { Education } from './components/education';
-import { Footer } from './components/footer';
-import { FootprintTrail } from './components/footprints/footprintTrail';
-import { ContactForm } from './components/contact';
+import { About } from './sections/about';
+import { Certifications } from './sections/certifications';
+import { Experience } from './sections/experience';
+import { Skills } from './sections/skills';
+import { Projects } from './sections/projects';
+import { Education } from './sections/education';
+import { Footer } from './sections/footer';
+import { ContactForm } from './sections/contact';
 
-export default function Portfolio({ darkMode }) {
+export default function Portfolio({ darkMode,isHorizontal }) {
   return (
 
-    <div className="min-h-screen  text-white font-sans w-full bg-amber-200">
+    <div className={`min-h-screen ${darkMode ? "bg-gray-900" : "bg-amber-200"} text-white font-sans w-full`}>
 
       {/* <FootprintTrail /> */}
       {/* About Section */}
-      <About darkMode={darkMode} />
+      <About darkMode={darkMode} isHorizontal={isHorizontal} />
       {/* Experience Section */}
-      <Experience darkMode={darkMode} />
+      <Experience darkMode={darkMode} isHorizontal={isHorizontal} />
       {/* Education Section */}
-      <Education darkMode={darkMode} />
+      <Education darkMode={darkMode} isHorizontal={isHorizontal} />
       {/* Skills Section */}
-      <Skills darkMode={darkMode} />
+      <Skills darkMode={darkMode} isHorizontal={isHorizontal} />
       {/* Projects Section */}
-      <Projects darkMode={darkMode} />
+      <Projects darkMode={darkMode} isHorizontal={isHorizontal} />
       {/* Certifications Section */}
-      <Certifications darkMode={darkMode} />
+      <Certifications darkMode={darkMode} isHorizontal={isHorizontal} />
       {/* Contact Section */}
-      <ContactForm darkMode={darkMode} />
+      <ContactForm darkMode={darkMode} isHorizontal={isHorizontal} />
       {/* Globe Section */}
       {/* Footer */}
-      <Footer darkMode={darkMode} />
+      <Footer darkMode={darkMode} isHorizontal={isHorizontal} />
     </div>
   );
 };

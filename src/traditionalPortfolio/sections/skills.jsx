@@ -8,7 +8,7 @@ const skillsData = {
 };
 
 
-export function Skills({ darkMode }) {
+export function Skills({ darkMode, isHorizontal }) {
 
   const [activeTab, setActiveTab] = useState("frontend");
 
@@ -19,10 +19,10 @@ export function Skills({ darkMode }) {
   };
   return (<>
     {/* skills Section */}
-    <section id="skills" className="py-20 text-amber-950 min-h-screen max-h-screen">
-      <div className="max-w-6xl mx-auto px-4 pt-20">
-    <h2 className="text-4xl font-bold text-center mb-20 ">Skills</h2>
-      <div className="max-w-6xl mx-auto mt-10 p-4 bg-amber-200 shadow-lg hover:scale-100 hover:shadow-xl transition-all duration-300 rounded-xl">
+    <section id="skills" className={`py-20  ${isHorizontal ? "min-h-screen ":""} max-h-screen ${darkMode ? "text-white" : "text-amber-950"}`}>
+      <div className="max-w-6xl mx-auto px-4 pt-20 ">
+    <h2 className="text-4xl font-bold text-center mb-20  ">Skills</h2>
+      <div className={`max-w-6xl mx-auto mt-10 p-4 ${darkMode ? "bg-gray-700 " : "bg-amber-800 "} shadow-lg hover:scale-100 hover:shadow-xl transition-all duration-300 rounded-xl`}>
         {/* Tabs */}
         <div className="flex justify-center mb-5">
           {Object.entries(tabs).map(([key, label]) => (
@@ -30,15 +30,15 @@ export function Skills({ darkMode }) {
               key={key}
               onClick={() => setActiveTab(key)}
               className={`px-4 py-2 mx-4 rounded-full font-semibold transition ${activeTab === key
-                  ? "bg-amber-950 text-amber-100"
-                  : "bg-amber-300 text-amber-950"
+                  ? (darkMode ? "bg-gray-950 text-gray-100" : "bg-amber-600 text-amber-100")
+                  : (darkMode ? "bg-gray-800 text-gray-100 hover:bg-gray-950" : "bg-amber-950 text-amber-100 hover:bg-amber-600")
                 }`}
             >
               {label}
             </button>
           ))}
         </div>
-        <div className="w-full  flex justify-between mb-4 font-bold pl-5" > 
+        <div className={`w-full  flex justify-between mb-4 font-bold pl-5 ${darkMode ? "text-white" : "text-amber-100"}`} > 
           <div className="w-1/2"> Skill  </div>
           <div className="w-1/2"> Experience </div>
         </div>
@@ -50,7 +50,7 @@ export function Skills({ darkMode }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="list-disc pl-5   text-amber-950"
+            className={`list-disc pl-5   ${darkMode ? "text-white" : "text-amber-100"}`}
           >
             
             {skillsData[activeTab].map((skill, index) => (
@@ -60,7 +60,7 @@ export function Skills({ darkMode }) {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="mb-1 flex justify-between"
+                className={`mb-1 flex justify-between ${darkMode ? "text-white" : "text-amber-100"}`}
               >
                 <div className="w-1/2">{skill[0]}</div>
                 <div className="w-1/2">{skill[1]}</div>
