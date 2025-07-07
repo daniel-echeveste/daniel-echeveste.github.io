@@ -10,10 +10,17 @@ export function Projects({ darkMode, isHorizontal }) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className={`text-4xl font-bold text-center md:mb-15 mb-5 ${darkMode ? "text-white" : "text-amber-950"}`}
+          className={`text-4xl font-bold text-center md:mb-15 mb-5 ${darkMode ? "text-white" : "text-amber-950"} `}
         >
           Projects
         </motion.h2>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
 
         <Gallery
           darkMode={darkMode}
@@ -65,6 +72,7 @@ export function Projects({ darkMode, isHorizontal }) {
             // ...
           ]}
         />
+          </motion.div>
       </div>
 
 

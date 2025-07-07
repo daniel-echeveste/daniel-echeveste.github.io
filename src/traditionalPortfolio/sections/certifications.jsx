@@ -20,14 +20,12 @@ export function Certifications({ darkMode, isHorizontal }) {
       date: "Jun 2025",
       url: "https://threejs-journey.com/certificate/view/41769",
     },
-
-    // Añade más aquí si quieres
   ];
 
   return (
     <section
       id="certifications"
-      className={`py-20 ${darkMode ? "text-white" : "text-amber-950"} ${isHorizontal ? "min-h-screen ":""} max-h-screen `}
+      className={`py-20 ${darkMode ? "text-white" : "text-amber-950"} ${isHorizontal ? "min-h-screen" : ""} max-h-screen`}
     >
       <div className="max-w-6xl mx-auto px-4 pt-20">
         <motion.h2
@@ -39,10 +37,8 @@ export function Certifications({ darkMode, isHorizontal }) {
         >
           Certifications
         </motion.h2>
-        <div className="w-full h-full ">
+        <div className="w-full h-full">
           <div className="max-w-6xl mx-auto px-4">
-
-        
             {/* Tabla con grid */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -52,32 +48,41 @@ export function Certifications({ darkMode, isHorizontal }) {
               className={`rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 ${darkMode ? "bg-gray-950" : "bg-amber-500"}`}
             >
               {/* Encabezado */}
-              <div className={`grid grid-cols-4 gap-4 p-4 font-semibold text-center  text-white ${darkMode ? "bg-gray-950 text-white" : "bg-amber-600 text-amber-100"}`}>
+              <div className={`grid grid-cols-4 gap-4 p-4 font-semibold text-center text-white ${darkMode ? "bg-gray-950 text-white" : "bg-amber-600 text-amber-100"}`}>
                 <p>Certification</p>
                 <p>Issuer</p>
                 <p>Date</p>
                 <p>Verify</p>
               </div>
 
-              {/* Filas dinámicas */}
+              {/* Filas dinámicas con animación */}
               {certifications.map((cert, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className={`grid grid-cols-4 gap-4 p-4 text-center ${index % 2 === 0 ? (darkMode ? "bg-gray-700 hover:bg-gray-500" : "bg-amber-400 hover:bg-amber-200") : (darkMode ? "bg-gray-600 hover:bg-gray-500" : "bg-amber-300 hover:bg-amber-200")
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.2 }}
+                  className={`grid grid-cols-4 gap-4 p-4 text-center cursor-pointer
+                    ${index % 2 === 0
+                      ? (darkMode ? "bg-gray-700 hover:bg-gray-500" : "bg-amber-400 hover:bg-amber-200")
+                      : (darkMode ? "bg-gray-600 hover:bg-gray-500" : "bg-amber-300 hover:bg-amber-200")
                     }`}
                 >
                   <p>{cert.name}</p>
-                  <p>{cert.issuer}</p> 
+                  <p>{cert.issuer}</p>
                   <p>{cert.date}</p>
                   <a
                     href={cert.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className= {darkMode ? "text-blue-300 underline hover:text-blue-400 transition" : "text-blue-800 underline hover:text-blue-900 transition"}
+                    className={darkMode
+                      ? "text-blue-300 underline hover:text-blue-400 transition"
+                      : "text-blue-800 underline hover:text-blue-900 transition"}
                   >
                     Verify
                   </a>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
           </div>

@@ -12,7 +12,6 @@ export default function NavigationBar({ darkMode, onDarkModeToggle, isHorizontal
         }
     };
 
-
     const handleNavBarClick = (e, section) => {
         e.preventDefault();
         if (isHorizontal) {
@@ -21,7 +20,7 @@ export default function NavigationBar({ darkMode, onDarkModeToggle, isHorizontal
             scrollToSection(section);
         }
     };
-
+    
 
     const sections = ["about", "experience", "education", "projects", "skills", "certifications", "contact"];
 

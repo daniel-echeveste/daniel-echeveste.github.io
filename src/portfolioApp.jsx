@@ -10,8 +10,9 @@ root.render(<>
 </>
 )
 export default function PortfolioApp() {
-    const [isDarkMode, setIsDarkMode] = useState(true);
+    const [isDarkMode, setIsDarkMode] = useState(false);
     const [isHorizontal, setIsHorizontal] = useState(true);
+   
     const [currentSection, setCurrentSection] = useState('about');
 
     const toggleDarkMode = () => {
@@ -35,7 +36,7 @@ export default function PortfolioApp() {
                       />
             {/* <PortfolioHorizontal  darkMode={isDarkMode} currentSection={currentSection} isHorizontal={isHorizontal} /> */}
 
-          {isHorizontal ? <PortfolioHorizontal  darkMode={isDarkMode} currentSection={currentSection} isHorizontal={isHorizontal} /> : <Portfolio darkMode={isDarkMode} currentSection={currentSection} isHorizontal={isHorizontal} />}
+          {isHorizontal ? <PortfolioHorizontal  darkMode={isDarkMode} currentSection={currentSection} isHorizontal={isHorizontal} onSectionChange={handleSectionChange} /> : <Portfolio darkMode={isDarkMode} currentSection={currentSection} isHorizontal={isHorizontal} />}
         </>
     );
 }

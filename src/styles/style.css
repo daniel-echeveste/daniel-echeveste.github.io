@@ -37,4 +37,5 @@
     .swiper-pagination-bullet-active{
       @apply !bg-[#007aff];
     }
+    
   }

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation, Pagination, Parallax } from "swiper/modules";
+import { EffectCoverflow, Navigation, Pagination, Parallax, Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
@@ -26,11 +28,13 @@ export function Gallery({ projects = [], showGitHub = true, darkMode }) {
   }, []);
 
   return (
-    
-    <div className="w-full max-w-6xl px-4 py-12 mx-auto ">
+
+    <div
       
+      className="w-full max-w-6xl px-4 py-12 mx-auto ">
+
       <Swiper
-        modules={[EffectCoverflow, Navigation, Pagination, Parallax]}
+        modules={[EffectCoverflow, Navigation, Pagination, Parallax, Autoplay]}
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
@@ -38,8 +42,15 @@ export function Gallery({ projects = [], showGitHub = true, darkMode }) {
         direction={direction}
         slidesPerView={direction === "vertical" ? 1.2 : 3}
         loop={true}
-        navigation={direction === "horizontal" }
+        navigation={direction === "horizontal"}
         pagination={{ clickable: true }}
+        speed={2000}
+        autoplay={{
+          delay: 1200,
+          disableOnInteraction: true, // Se detiene cuando el usuario interactúa
+          stopOnLastSlide: true,     // O puedes ponerlo en true si quieres que pare tras mostrar 1 vuelta
+          pauseOnMouseEnter: true,
+        }}
         coverflowEffect={{
           rotate: 30,
           stretch: 0,
@@ -54,8 +65,8 @@ export function Gallery({ projects = [], showGitHub = true, darkMode }) {
           <SwiperSlide
             key={index}
             className={`w-80 rounded-xl p-4 shadow-lg flex flex-col justify-between ${darkMode
-                ? "bg-gray-800 hover:bg-gray-700"
-                : "bg-amber-900 hover:bg-amber-600"
+              ? "bg-gray-800 hover:bg-gray-700"
+              : "bg-amber-900 hover:bg-amber-600"
               } overflow-hidden`}
           >
             <img
