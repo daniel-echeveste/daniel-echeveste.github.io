@@ -8,9 +8,17 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export function Gallery({ projects = [], showGitHub = true }) {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   return (
     <div className="w-full max-w-6xl px-4 py-12 mx-auto">
-     
+    {/* Botones fuera del Swiper */}
+     <div className="absolute top-[50%] left-0 z-10 transform -translate-y-1/2">
+        <button ref={prevRef} className="bg-black/40 text-white px-3 py-2 rounded-full">‹</button>
+      </div>
+      <div className="absolute top-[50%] right-0 z-10 transform -translate-y-1/2">
+        <button ref={nextRef} className="bg-black/40 text-white px-3 py-2 rounded-full">›</button>
+      </div>
 
       <Swiper
         modules={[EffectCoverflow, Navigation, Pagination]}
@@ -19,7 +27,7 @@ export function Gallery({ projects = [], showGitHub = true }) {
         centeredSlides={true}
         slidesPerView={3}
         loop={true}
-        navigation={true}
+        navigation={{prevEl: prevRef.current, nextEl: nextRef.current}}
         pagination={{ clickable: true }}
         coverflowEffect={{
           rotate: 30,

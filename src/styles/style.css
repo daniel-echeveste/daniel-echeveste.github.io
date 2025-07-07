@@ -17,11 +17,24 @@
   @import "tailwindcss/utilities";
 
   @layer utilities {
-    .swiper-button-prev {
-      @apply !-left-3 z-100;
+    .light .swiper-button-prev  {
+      @apply  !text-amber-300 ;
     }
   
-    .swiper-button-next {
-      @apply !-right-3 z-100;
+    .light .swiper-button-next {
+      @apply  !text-amber-300;
+    }
+     .swiper-button-prev  {
+      @apply  !text-[#007aff] ;
+    }
+  
+     .swiper-button-next {
+      @apply  !text-[#007aff];
+    }
+    .light .swiper-pagination-bullet-active{
+      @apply !bg-amber-300;
+    }
+    .swiper-pagination-bullet-active{
+      @apply !bg-[#007aff];
     }
   }
