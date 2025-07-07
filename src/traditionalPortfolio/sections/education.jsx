@@ -65,7 +65,7 @@ export function Education({ darkMode, isHorizontal }) {
                                 2017 - 2019
                             </div>
                             <p className={`mt-4 ${darkMode ? "text-gray-300" : "text-amber-800"}`}>
-                                A brief description of the project goes here.
+                                tengo que poner que aprendi en cada cosa por aqui
                             </p>
                         </div>
                     </motion.div>
@@ -96,7 +96,7 @@ export function Education({ darkMode, isHorizontal }) {
                                 2019 - 2022
                             </div>
                             <p className={`mt-4 ${darkMode ? "text-gray-300" : "text-amber-800"}`}>
-                                A brief description of the project goes here.
+                                tengo que poner que aprendi en cada cosa por aqui
                             </p>
                         </div>
                     </motion.div>
