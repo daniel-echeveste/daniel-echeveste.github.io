@@ -73,12 +73,6 @@ export default function App() {
     <>
       {(experience || portfolio || shaders) && (
         <>
-          {/* <NavBar
-                onNavClick={handleNavClick}
-                isPortfolioExpanded={portfolio}
-                darkMode={isDarkMode}
-                onDarkModeToggle={toggleDarkMode}
-              /> */}
           <NavigationBar
             onNavClick={handleNavClick}
             isPortfolioExpanded={portfolio}

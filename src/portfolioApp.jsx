@@ -10,8 +10,8 @@ root.render(<>
 </>
 )
 export default function PortfolioApp() {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-    const [isHorizontal, setIsHorizontal] = useState(true);
+    const [isDarkMode, setIsDarkMode] = useState(true);
+    const [isHorizontal, setIsHorizontal] = useState(false);
    
     const [currentSection, setCurrentSection] = useState('about');
 

@@ -69,12 +69,12 @@ export function Experience({ darkMode, isHorizontal }) {
                                     <p>2022 - 2025</p>
                                 </div>
                                 <p className="text-sm md:text-base leading-relaxed">
-                                    Assist students in mastering core web development technologies.
-                                    Guiding them by troubleshooting technical challenges, deepening
-                                    their understanding of course material, and offering
-                                    comprehensive recaps of their assignments. Encourage
-                                    problem-solving skills and critical thinking by mentoring
-                                    students through complex projects.
+                                    Worked as a Full Stack Developer at Ovan Gmbh, where I
+                                    developed and maintained web applications. 
+                                    Collaborated with cross-functional teams to design and implement new features,
+                                    optimized application performance, and ensured code quality through 
+                                    code reviews. Contributed to the development of a scalable and secure   
+                                    web application that improved user experience and increased customer satisfaction.
                                 </p>
                             </div>
                         </div>
@@ -105,15 +105,13 @@ export function Experience({ darkMode, isHorizontal }) {
                                 <h3 className="text-2xl font-bold">Full Stack Developer</h3>
                                 <div className="flex justify-between text-sm md:text-base mt-1 mb-2">
                                     <h4>Worldsatnet</h4>
-                                    <p>2022 - 2025</p>
+                                    <p>2022 - 2022</p>
                                 </div>
                                 <p className="text-sm md:text-base leading-relaxed">
-                                    Assist students in mastering core web development technologies.
-                                    Guiding them by troubleshooting technical challenges, deepening
-                                    their understanding of course material, and offering
-                                    comprehensive recaps of their assignments. Encourage
-                                    problem-solving skills and critical thinking by mentoring
-                                    students through complex projects.
+                                    Created a comprehensive web application for a
+                                    telecommunications company, enabling the countant to
+                                    manage customer accounts, track payments, and generate
+                                    invoices.  improved customer service, and enhanced financial management.
                                 </p>
                             </div>
                         </div>

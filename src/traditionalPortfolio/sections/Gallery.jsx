@@ -73,9 +73,9 @@ export function Gallery({ projects = [], showGitHub = true, darkMode }) {
               src={project.image}
               alt={project.title}
               data-swiper-parallax="-10%"
-              className="w-full h-40 scale-125 rounded parallax-bg object-cover object-top mb-10"
+              className="w-full h-40 scale-150 rounded parallax-bg object-cover object-top mb-10"
             />
-            <div className="mt-3">
+            <div className="mt-6 pt-2">
               <h3
                 className={`text-xl font-semibold mb-1 ${darkMode ? "text-white" : "text-amber-100"
                   }`}
@@ -83,7 +83,7 @@ export function Gallery({ projects = [], showGitHub = true, darkMode }) {
                 {project.title}
               </h3>
               <p
-                className={`text-sm opacity-90 ${darkMode ? "text-white" : "text-amber-100"
+                className={`text-sm opacity-90  ${darkMode ? "text-white" : "text-amber-100"
                   }`}
               >
                 {project.description}
@@ -99,7 +99,7 @@ export function Gallery({ projects = [], showGitHub = true, darkMode }) {
                 </span>
               ))}
             </div>
-            <div className="mt-4 flex gap-3" data-swiper-parallax="100">
+            <div className="mt-4 flex gap-3" data-swiper-parallax="2">
               <a
                 href={project.link}
                 target="_blank"
