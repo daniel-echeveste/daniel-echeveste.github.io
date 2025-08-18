@@ -23,7 +23,7 @@ export default function App() {
 
   useEffect(() => {
     // Check URL hash on mount
-    if (window.location.hash === "#experience") {
+    if (window.location.hash === "#webgl") {
       setExperience(true);
       setPortfolio(false);
       setShaders(false);

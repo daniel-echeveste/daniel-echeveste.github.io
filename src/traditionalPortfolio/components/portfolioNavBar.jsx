@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // import { cameraIntro, cameraToShaders, lookDown, lookBack, lookUp } from "./camera/CameraControls";
 
-export default function NavigationBar({ darkMode, onDarkModeToggle, isHorizontal, onHorizontalToggle, currentSection, onSectionChange }) {
+export default function NavigationBar({ darkMode, onDarkModeToggle, isHorizontal, onHorizontalToggle, currentSection, onSectionChange, isWEBGL, onWebGLToggle }) {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const scrollToSection = (sectionId) => {
@@ -14,6 +14,9 @@ export default function NavigationBar({ darkMode, onDarkModeToggle, isHorizontal
 
     const handleNavBarClick = (e, section) => {
         e.preventDefault();
+        if (section === "webgl") {
+            onWebGLToggle(); // Toggle WebGL mode
+            }
         if (isHorizontal) {
             onSectionChange(section);
         } else {
@@ -32,8 +35,8 @@ export default function NavigationBar({ darkMode, onDarkModeToggle, isHorizontal
        z-[100]`}
             >
                 <motion.a
-                    href="/#experience"
-                    target="_blank"
+                    href="/"
+                    onClick={(e) => handleNavBarClick(e, "webgl")}
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
