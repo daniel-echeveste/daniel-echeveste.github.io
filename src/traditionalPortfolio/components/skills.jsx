@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const skillsData = {
-  frontend: [["React","2 years"], ["Tailwind CSS","2 years"], ["JavaScript","2 years"], ["HTML5","2 years"], ["CSS3","2 years"]],
-  backend: [["Node.js","2 years"], ["Express","2 years"], ["MongoDB","2 years"], ["SQL","2 years"], ["REST APIs","2 years"]],
+  frontend: [["TypeScript","3 years"],["React","2 years"], ["Tailwind CSS","2 years"], ["JavaScript","2 years"], ["HTML5","2 years"], ["CSS3","2 years"]],
+  backend: [["PHP, 3 years"], ["Node.js","2 years"], ["Express","2 years"], ["MongoDB","2 years"], ["SQL","2 years"], ["REST APIs","2 years"]],
   soft: [["Comunicación", "2 years"], ["Trabajo en equipo", "2 years"], ["Gestión del tiempo", "2 years"], ["Resolución de problemas", "2 years"]],
 };
 
 
-export function Skills({ darkMode }) {
+export function Skills({ darkMode, isEng }) {
 
   const [activeTab, setActiveTab] = useState("frontend");
 

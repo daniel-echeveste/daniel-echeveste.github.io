@@ -10,7 +10,7 @@ import Lights from './Lights';
 
 export default function Experience({ darkMode, Controls,  }) {
       const controls = ControlsManager();
-    //   const Camera = useRef();
+    // const Camera = useRef();
       console.log(darkMode?'oscuro':'claro');
       
     return (

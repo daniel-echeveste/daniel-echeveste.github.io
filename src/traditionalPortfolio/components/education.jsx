@@ -1,4 +1,4 @@
-export function Education({ darkMode }) {
+export function Education({ darkMode, isEng }) {
     return (<>
         {/* Education Section */}
         <section id="education" className="py-20 text-amber-950">

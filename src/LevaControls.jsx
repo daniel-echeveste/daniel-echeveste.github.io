@@ -30,6 +30,36 @@ const ControlsManager = () => {
     PositionZ: { value: 0, min: -50, max: 2, step: 0.001  },
     Scale: { value: 1, min: 0, max: 2, step: 0.001 },
   },{collapsed:true});
+ const Palm1Controls = useControls("palm1", {
+    PositionX: {value: 0, min: -500, max: 200, step: 0.001  },
+    PositionY: { value: 14, min: -500, max: 200, step: 0.001 },
+    PositionZ: { value: 0, min: -500, max: 200, step: 0.001  },
+    Scale: { value: 9, min: 0, max: 50, step: 0.001 },
+  },{collapsed:true});
+  const Palm2Controls = useControls("palm2", {
+    PositionX: {value: -5, min: -500, max: 200, step: 0.001  },
+    PositionY: { value: 14, min: -500, max: 200, step: 0.001 },
+    PositionZ: { value: 0, min: -500, max: 200, step: 0.001  },
+    Scale: { value: 9, min: 0, max: 50, step: 0.001 },
+  },{collapsed:true});
+  const Palm3Controls = useControls("palm3", {
+    PositionX: {value: -12, min: -500, max: 200, step: 0.001  },
+    PositionY: { value: 14, min: -500, max: 200, step: 0.001 },
+    PositionZ: { value: 0, min: -500, max: 200, step: 0.001  },
+    Scale: { value: 9, min: 0, max: 50, step: 0.001 },
+  },{collapsed:true});
+  const Palm4Controls = useControls("palm4", {
+    PositionX: {value: 32, min: -500, max: 200, step: 0.001  },
+    PositionY: { value: 14, min: -500, max: 200, step: 0.001 },
+    PositionZ: { value: 0, min: -500, max: 200, step: 0.001  },
+    Scale: { value: 9, min: 0, max: 50, step: 0.001 },
+  },{collapsed:true});
+  const Palm5Controls = useControls("palm5", {
+    PositionX: {value: 25, min: -500, max: 200, step: 0.001  },
+    PositionY: { value: 14, min: -500, max: 200, step: 0.001 },
+    PositionZ: { value: 0, min: -500, max: 200, step: 0.001  },
+    Scale: { value: 9, min: 0, max: 50, step: 0.001 },
+  },{collapsed:true});
 
   const CameraControls = useControls("Camera", {
     PositionX: {value: -250, min: -500, max: 500, step: 0.001  },
@@ -115,6 +145,11 @@ const ControlsManager = () => {
     CameraControls: CameraControls,
     ShadersControls: ShadersControls,
     Lights: LightsControls,
+    Palm1Controls: Palm1Controls,
+    Palm2Controls: Palm2Controls,
+    Palm3Controls: Palm3Controls, 
+    Palm4Controls: Palm4Controls,
+    Palm5Controls: Palm5Controls,  
   };
 };
 

@@ -1,7 +1,6 @@
-
-
-
 import RoundImage from "./roundImage";
+import translations from "./translations";
+import { useLanguage } from "../../hooks/languageContext";
 export function About({ darkMode }) {
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
@@ -9,7 +8,8 @@ export function About({ darkMode }) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     };
-    
+    const { lang, toggleLang } = useLanguage();
+    const aboutText = translations.aboutText;
     return (<>
     
         {/* Hero Section */}
@@ -40,10 +40,10 @@ export function About({ darkMode }) {
                             Full Stack Developer | Frontend Developer
                         </p>
                         <p className=" text-lg leading-relaxed mb-10  text-amber-950  transition-all duration-300 rounded-xl p-2">
-                            I am passionate about  creative and interactives sites/apps and I enjoy working on them, using my skills in traditional development plus my knowledge in <span className="text-amber-950 font-bold">WEBGL</span> and <span className="text-amber-950 font-bold">SHADERS</span>,
-                            to create <span className="text-amber-950 font-bold">unique</span> and <span className="text-amber-950 font-bold">engaging</span> experiences for users.
-                            I have experience in creating responsive and user-friendly <span className="text-amber-950 font-bold"> interfaces</span> as well as working in <span className="text-amber-950 font-bold">backend development</span> for web and mobile applications.
-                            I am also a <span className="text-amber-950 font-bold">team player</span> and I enjoy working in a collaborative environment, <span className="text-amber-950 font-bold">quick learner</span> and I am always looking for new challenges to improve my skills.
+                            { lang=="en" ?  
+                            aboutText.en
+                           :  aboutText.es}
+                            
                         </p>
                         {/* Links  */}
                         <div className="flex gap-4 mb-10">

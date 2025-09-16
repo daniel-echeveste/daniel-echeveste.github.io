@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import translations from "../components/translations";
+import { useLanguage } from "../../hooks/languageContext";
 
-const skillsData = {
-  frontend: [["React", "2 years"], ["Tailwind CSS", "2 years"], ["JavaScript", "2 years"], ["HTML5", "2 years"], ["CSS3", "2 years"]],
-  backend: [["Node.js", "2 years"], ["Express", "2 years"], ["MongoDB", "2 years"], ["SQL", "2 years"], ["REST APIs", "2 years"]],
-  soft: [["Comunicación", "2 years"], ["Trabajo en equipo", "2 years"], ["Gestión del tiempo", "2 years"], ["Resolución de problemas", "2 years"]],
-};
+
 
 export function Skills({ darkMode, isHorizontal }) {
-  const [activeTab, setActiveTab] = useState("frontend");
-
+  const [activeTab, setActiveTab] = useState("Frontend");
+  const { lang } = useLanguage();
   const tabs = {
-    frontend: "Frontend",
-    backend: "Backend",
-    soft: "Soft Skills",
+    Frontend: "Frontend",
+    Backend: "Backend",
+    SoftSkills: "Soft Skills",
   };
 
   const containerVariants = {
@@ -85,7 +83,8 @@ export function Skills({ darkMode, isHorizontal }) {
               transition={{ duration: 0.3 }}
               className={`pl-5 space-y-2 ${darkMode ? "text-white" : "text-amber-100"}`}
             >
-              {skillsData[activeTab].map(([skill, years], index) => (
+              { 
+                translations.Skills[activeTab][lang].map(([skill, years], index) => (
                 <motion.li
                   variants={itemVariants}
                   key={skill}
@@ -94,7 +93,9 @@ export function Skills({ darkMode, isHorizontal }) {
                   <div className="w-1/2">{skill}</div>
                   <div className="w-1/2">{years}</div>
                 </motion.li>
-              ))}
+              ))
+          
+            }
             </motion.ul>
           </AnimatePresence>
         </motion.div>

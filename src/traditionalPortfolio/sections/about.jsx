@@ -1,5 +1,7 @@
 import RoundImage from "../components/roundImage";
 import { motion } from "framer-motion";
+import translations from "../components/translations";
+import { useLanguage } from "../../hooks/languageContext";
 
 export function About({ darkMode, isHorizontal, onSectionChange }) {
     const scrollToSection = (sectionId) => {
@@ -11,6 +13,8 @@ export function About({ darkMode, isHorizontal, onSectionChange }) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     };
+    const { lang, toggleLang } = useLanguage();
+   
 
     return (
         <section
@@ -54,7 +58,9 @@ export function About({ darkMode, isHorizontal, onSectionChange }) {
                 >
                     <div className="text-center md:text-left">
                         <h1 className="text-5xl md:text-7xl font-bold mb-4">
-                            Hi, I'm <br />Daniel Echeveste
+                           { lang=="en" ?  
+                             translations.About.Intro.en
+                           :   translations.About.Intro.es}
                         </h1>
                     </div>
 
@@ -63,22 +69,9 @@ export function About({ darkMode, isHorizontal, onSectionChange }) {
                             Full Stack Developer | Frontend Developer
                         </p>
                         <p className="text-lg leading-relaxed mb-10 p-2 text-center md:text-left">
-                            I am passionate about creative and interactive sites/apps and I enjoy
-                            working on them, using my skills in traditional development plus my
-                            knowledge in <span className="font-bold">WEBGL</span> and{" "}
-                            <span className="font-bold">SHADERS</span>, to create{" "}
-                            <span className="font-bold">unique</span> and{" "}
-                            <span className="font-bold">engaging</span> experiences for users.
-                            <br />
-                            I have experience in creating responsive and user-friendly{" "}
-                            <span className="font-bold">interfaces</span> as well as working in{" "}
-                            <span className="font-bold">backend development</span> for web and
-                            mobile applications.
-                            <br />
-                            I am also a <span className="font-bold">team player</span> and enjoy
-                            working in a collaborative environment,{" "}
-                            <span className="font-bold">quick learner</span>, and always looking
-                            for new challenges to improve my skills.
+                           { lang=="en" ?  
+                             translations.About.Text.en
+                           :   translations.About.Text.es}
                         </p>
 
                         {/* Links */}

@@ -66,7 +66,7 @@ export function Button({text, styles, funcion}) {
       <button
         onClick={(event) => {
           console.log(event.target.parentElement);
-          cameraIntro();
+          // cameraIntro();
           funcion();
           // toggleClass()
         }}

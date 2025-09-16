@@ -49,8 +49,8 @@ export default function CameraControls({ controls, orbitControls, parallax }) {
 
 // External camera animation functions
 export function cameraToShaders() {
-  console.log('camera animated to shaders');
-  
+  console.log("camera animated to shaders");
+
   if (cameraBallRef?.current && cameraRef && initialPosition) {
     gsap.to(cameraBallRef.current.position, {
       x: -70,
@@ -72,19 +72,19 @@ export function cameraToShaders() {
   }
 }
 export function cameraIntoShaders() {
-  console.log('camera animated INto shaders');
-  
+  console.log("camera animated INto shaders");
+
   if (cameraBallRef?.current && cameraRef && initialPosition) {
     gsap.to(cameraBallRef.current.position, {
       x: -70,
       z: 0,
-      
+
       duration: 2,
     });
     gsap.to(cameraRef.position, {
       x: -70,
       z: 10,
-      
+
       duration: 2,
       onComplete: () => {
         initialPosition.current = [
@@ -96,7 +96,7 @@ export function cameraIntoShaders() {
     });
   }
 }
-export function cameraShaders(){
+export function cameraShaders() {
   if (cameraBallRef?.current && cameraRef && initialPosition) {
     gsap.to(cameraBallRef.current.position, {
       x: 0,
@@ -117,15 +117,15 @@ export function cameraShaders(){
     });
   }
 }
-export function cameraIntro() {
-  console.log('camera animated to intro');
-  
+export function cameraIntro(duration = 3) {
+  console.log("camera animated to intro");
+
   animating = true;
   if (cameraRef && initialPosition) {
     gsap.to(cameraRef.position, {
       x: 10,
       z: 100,
-      duration: 3,
+      duration: duration,
       onComplete: () => {
         console.log(cameraRef.position);
         initialPosition.current = [
@@ -137,9 +137,78 @@ export function cameraIntro() {
       },
     });
     gsap.to(cameraBallRef.current.position, {
-      x: -20,
+      x: -10,
       z: 15,
       duration: 2,
+    });
+  }
+}
+
+export function cameraIntoIsland(duration = 3) {
+  console.log("camera animated to into Island");
+
+  animating = true;
+  if (cameraRef && initialPosition) {
+    gsap.to(cameraRef.position, {
+      x: 10,
+      z: 60,
+      duration: duration,
+      onComplete: () => {
+        console.log(cameraRef.position);
+        initialPosition.current = [
+          cameraRef.position.x,
+          cameraRef.position.y,
+          cameraRef.position.z,
+        ];
+        animating = false;
+      },
+    });
+    gsap.to(cameraBallRef.current.position, {
+      x: 10,
+      z: 0,
+      duration: 2,
+    });
+  }
+}
+export function cameraIntoProjects(duration = 5) {
+  console.log("camera animated to into Island");
+
+  animating = true;
+  if (cameraRef && initialPosition) {
+    gsap.to(cameraBallRef.current.position, {
+      x: -80,
+      z: 10,
+      duration: 2,
+      onComplete: () => {
+        console.log(cameraBallRef.current.position);
+      },
+    });
+    gsap.to(cameraRef.position, {
+      z: 20,
+      duration: duration,
+      onComplete: () => {
+        gsap.to(cameraRef.position, {
+          x: -70,
+          duration: duration,
+          onComplete: () => {
+            gsap.to(cameraBallRef.current.position, {
+              x: -70,
+              z: -10,
+              duration: 2,
+              onComplete: () => {
+                console.log(cameraBallRef.current.position);
+              },
+            });
+            console.log(cameraRef.position);
+            initialPosition.current = [
+              cameraRef.position.x,
+              cameraRef.position.y,
+              cameraRef.position.z,
+            ];
+            animating = false;
+          },
+        });
+      },
     });
   }
 }
@@ -150,7 +219,7 @@ export function lookDown() {
     gsap.to(cameraBallRef.current.position, {
       x: -20,
       z: 15,
-      y:-1000,
+      y: -1000,
       duration: 2,
     });
   }
@@ -161,7 +230,7 @@ export function lookUp() {
     gsap.to(cameraBallRef.current.position, {
       x: -20,
       z: 15,
-      y:1000,
+      y: 1000,
       duration: 2,
     });
   }
@@ -172,12 +241,11 @@ export function lookBack() {
     gsap.to(cameraBallRef.current.position, {
       x: 0,
       z: 10015,
-      y:0,
+      y: 0,
       duration: 2,
     });
   }
 }
-
 
 // Parallax function
 function CameraParallax(initialPositionRef) {
@@ -199,14 +267,13 @@ function CameraParallax(initialPositionRef) {
   useFrame(() => {
     if (!animating && initialPositionRef.current) {
       const parallaxStrength = 5;
-      const targetX = initialPositionRef.current[0] - mouse.current.x * parallaxStrength;
-      const targetY = initialPositionRef.current[1] - mouse.current.y * parallaxStrength;
+      const targetX =
+        initialPositionRef.current[0] - mouse.current.x * parallaxStrength;
+      const targetY =
+        initialPositionRef.current[1] - mouse.current.y * parallaxStrength;
       const targetZ = initialPositionRef.current[2];
 
-      camera.position.lerp(
-        { x: targetX, y: targetY, z: targetZ },
-        0.05
-      );
+      camera.position.lerp({ x: targetX, y: targetY, z: targetZ }, 0.05);
 
       camera.rotation.x = mouse.current.y * 0.05;
       camera.rotation.y = mouse.current.x * 0.05;

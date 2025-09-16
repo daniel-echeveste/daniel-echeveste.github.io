@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import translations from "../components/translations";
+import { useLanguage } from "../../hooks/languageContext";
 
 export function Certifications({ darkMode, isHorizontal }) {
   const certifications = [
@@ -21,7 +23,7 @@ export function Certifications({ darkMode, isHorizontal }) {
       url: "https://threejs-journey.com/certificate/view/41769",
     },
   ];
-
+  const { lang } = useLanguage();
   return (
     <section
       id="certifications"
@@ -35,7 +37,7 @@ export function Certifications({ darkMode, isHorizontal }) {
           viewport={{ once: true }}
           className="text-4xl font-bold text-center mb-12"
         >
-          Certifications
+          {lang == "en" ? translations.Certifications.en : translations.Certifications.es}
         </motion.h2>
         <div className="w-full h-full">
           <div className="max-w-6xl mx-auto px-4">
@@ -49,10 +51,10 @@ export function Certifications({ darkMode, isHorizontal }) {
             >
               {/* Encabezado */}
               <div className={`grid grid-cols-4 gap-4 p-4 font-semibold text-center text-white ${darkMode ? "bg-gray-950 text-white" : "bg-amber-600 text-amber-100"}`}>
-                <p>Certification</p>
-                <p>Issuer</p>
-                <p>Date</p>
-                <p>Verify</p>
+                <p> {lang == "en" ? translations.Certifications.cert.en : translations.Certifications.cert.es} </p>
+                <p>{lang == "en" ? translations.Certifications.issuer.en : translations.Certifications.issuer.es}</p>
+                <p>{lang == "en" ? translations.Certifications.date.en : translations.Certifications.date.es}</p>
+                <p>{lang == "en" ? translations.Certifications.ver.en : translations.Certifications.ver.es}</p>
               </div>
 
               {/* Filas dinámicas con animación */}

@@ -6,6 +6,6 @@ export default function Island1(args){
     const model = useGLTF('models/floating_island.glb')
     console.log(args);
     
-    return <primitive object={model.scene} castShadow {...args}/>
+    return <primitive object={model.scene} castShadow  receiveShadow rec {...args}/>
 }
 useGLTF.preload('models/floating_island.glb')

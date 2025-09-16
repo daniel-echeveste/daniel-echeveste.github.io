@@ -3,6 +3,11 @@
 
 /* bloque theme para inyectar tus variables y keyframes */
 @theme {
+
+  
+  --breakpoint-l: 1500px;
+
+
     /* define animación */
     --animate-footstep: footstep 0.8s ease-out forwards;
     
@@ -39,3 +44,4 @@
     }
     
   }
+ 

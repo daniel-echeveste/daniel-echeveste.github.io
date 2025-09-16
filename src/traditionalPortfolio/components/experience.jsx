@@ -1,5 +1,5 @@
 import RoundImage from "./roundImage";
-export function Experience({ darkMode }) {
+export function Experience({ darkMode, isEng }) {
     return (<>
         <section id="experience" className="py-20 text-amber-950">
 

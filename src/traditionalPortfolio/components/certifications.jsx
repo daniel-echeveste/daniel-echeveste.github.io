@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export function Certifications({ darkMode }) {
+export function Certifications({ darkMode, isEng }) {
   const certifications = [
     {
       name: "THREE.JS",

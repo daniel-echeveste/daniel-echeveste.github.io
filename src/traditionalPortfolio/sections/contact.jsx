@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
+import translations from "../components/translations";
+import { useLanguage } from "../../hooks/languageContext";
+
 
 export function ContactForm( {darkMode, isHorizontal} ) {
     const form = useRef();
@@ -10,7 +13,7 @@ export function ContactForm( {darkMode, isHorizontal} ) {
         email: "",
         message: "",
     });
-
+    const { lang } = useLanguage();
     const validateForm = () => {
         if (!formData.name.trim()) return "El nombre es obligatorio.";
         if (!formData.email.trim()) return "El email es obligatorio.";
@@ -38,12 +41,12 @@ export function ContactForm( {darkMode, isHorizontal} ) {
             )
             .then(
                 () => {
-                    setStatus({ message: "Mensaje enviado correctamente!", type: "success" });
+                    setStatus({ message: lang == "en" ? translations.Contact.success.en : translations.Contact.success.es, type: "success" });
                     setFormData({ name: "", email: "", message: "" });
                     form.current.reset();
                 },
                 (error) => {
-                    setStatus({ message: "Error al enviar: " + error.text, type: "error" });
+                    setStatus({ message: lang == "en" ? translations.Contact.error.en : translations.Contact.error.es + error.text, type: "error" });
                 }
             );
     };
@@ -51,14 +54,14 @@ export function ContactForm( {darkMode, isHorizontal} ) {
     return (
         <section id="contact" className={` py-20 max-h-screen ${isHorizontal ? "min-h-screen ":""} ${darkMode ? "text-white" : "text-amber-950"}`}>
             <div className="max-w-6xl mx-auto px-4 pt-20">  
-            <h2 className="text-4xl font-bold text-center mb-12" >Contact</h2>
+            <h2 className="text-4xl font-bold text-center mb-12" >{lang == "en" ? translations.Contact.en : translations.Contact.es}</h2>
             <form
                 ref={form}
                 onSubmit={sendEmail}
                 className={`max-w-6xl mx-auto p-6  rounded-xl shadow-lg ${darkMode ? "text-white bg-gray-800" : "text-amber-50 bg-amber-950"}`}
             >
                 <label className="block mb-3">
-                    Nombre:
+                   {lang == "en" ? translations.Contact.name.en : translations.Contact.name.es}
                     <input
                         type="text"
                         name="name"
@@ -70,7 +73,7 @@ export function ContactForm( {darkMode, isHorizontal} ) {
                 </label>
 
                 <label className="block mb-3">
-                    Email:
+                   {lang == "en" ? translations.Contact.email.en : translations.Contact.email.es}
                     <input
                         type="email"
                         name="email"
@@ -82,7 +85,7 @@ export function ContactForm( {darkMode, isHorizontal} ) {
                 </label>
 
                 <label className="block mb-3">
-                    Mensaje:
+                    {lang == "en" ? translations.Contact.message.en : translations.Contact.message.es}:
                     <textarea
                         name="message"
                         rows="4"
@@ -97,7 +100,7 @@ export function ContactForm( {darkMode, isHorizontal} ) {
                     type="submit"
                     className={`bg-amber-700 text-white px-4 py-2 rounded transition ${darkMode ? "bg-gray-600 hover:bg-gray-500  " : "bg-amber-700 hover:bg-amber-600"}`}
                 >
-                    Enviar
+                    {lang == "en" ? translations.Contact.send.en : translations.Contact.send.es}
                 </button>
 
                 <AnimatePresence>

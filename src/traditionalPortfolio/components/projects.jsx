@@ -1,6 +1,6 @@
 import { Gallery } from './Gallery';
 import { motion } from "framer-motion";
-export function Projects({darkMode}) {
+export function Projects({darkMode, isEng}) {
     return(<>
     {/* Projects Section */}
     <section id="projects" className="py-20">

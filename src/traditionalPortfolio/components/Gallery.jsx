@@ -7,7 +7,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export function Gallery({ projects = [], showGitHub = true }) {
+export function Gallery({ projects = [], showGitHub = true , isEng}) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (

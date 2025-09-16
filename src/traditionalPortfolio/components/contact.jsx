@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
 
-export function ContactForm() {
+export function ContactForm({ darkMode, isEng }) {
     const form = useRef();
     const [status, setStatus] = useState({ message: "", type: "" });
     const [formData, setFormData] = useState({
