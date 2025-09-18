@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
+import translations from "../components/translations";
+import { useLanguage } from "../../hooks/languageContext";
 
 export function ContactForm({ darkMode, isEng }) {
     const form = useRef();
@@ -10,6 +12,7 @@ export function ContactForm({ darkMode, isEng }) {
         email: "",
         message: "",
     });
+    
 
     const validateForm = () => {
         if (!formData.name.trim()) return "El nombre es obligatorio.";

@@ -23,7 +23,7 @@ export function Projects({darkMode, isEng}) {
             title: "Portfolio 3D",
             description: "Sitio interactivo en Three.js + React",
             technologies: ["React", "Three.js", "GSAP"],
-            image: "/projects/portfolio.jpg",
+            image: "./imgs/dobby-dancing.gif",
             link: "https://daniel-echeveste.github.io/ShaderLab",
             github: "https://github.com/miusuario/portfolio",
           },

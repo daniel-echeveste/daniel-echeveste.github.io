@@ -250,9 +250,93 @@ const translations = {
     en: "Projects",
     es: "Proyectos",
     SeeMore: {
-      en: "See More",
-      es: "Ver Más",
+      en: "Go to Project",
+      es: "Ver Proyecto",
     },
+    ProjectList: [
+      {
+        title: "Portfolio 3D",
+        description: {
+          en: (
+            <>
+              Work in this Website as an Ovan Developer <br></br>
+              <span className="font-bold">WEBGL</span> and{" "}
+              <span className="font-bold">SHADERS</span>, to create{" "}
+              <span className="font-bold">unique</span> and{" "}
+              <span className="font-bold">engaging</span> experiences for users.
+              <br />I have experience in creating responsive and user-friendly{" "}
+              <span className="font-bold">interfaces</span> as well as working
+              in <span className="font-bold">backend development</span> for web
+              and mobile applications.
+              <br />I am also a <span className="font-bold">
+                team player
+              </span>{" "}
+              and enjoy working in a collaborative environment,{" "}
+              <span className="font-bold">quick learner</span>, and always
+              looking for new challenges to improve my skills.
+            </>
+          ),
+          es: <></>,
+        },
+        technologies: ["React", "Three.js", "GSAP"],
+        image: "/imgs/Concho-Pijama.jpeg",
+        gif: "/imgs/dobby-dancing.gif",
+        link: "https://daniel-echeveste.github.io/ShaderLab",
+        github: "https://github.com/miusuario/portfolio",
+      },
+      {
+        title: "Weizenbaum Institute Site",
+        description: {
+          en: (
+            <>
+              <span className="font-bold">
+                Work in this Website as an Ovan Developer <br />
+              </span>
+            </>
+          ),
+          es: (
+            <>
+              <span className="font-bold">
+                Trabajé en este proyecto como desarrollador de Ovan <br />
+              </span>
+            </>
+          ),
+        },
+        technologies: ["Typo3", "Tailwind", "JS", "SCSS", "HTML", "Git", "Docker", "PHP"],
+        image: "/imgs/weizenbaum.png",
+        gif: "/imgs/weizenbaum.gif",
+        link: "https://www.weizenbaum-institut.de/en/",
+      },
+      {
+        title: "Example Project",
+        description: {
+          en: (
+            <>
+              Work in this Website as an Ovan Developer <br></br>
+              <span className="font-bold">WEBGL</span> and{" "}
+              <span className="font-bold">SHADERS</span>, to create{" "}
+              <span className="font-bold">unique</span> and{" "}
+              <span className="font-bold">engaging</span> experiences for users.
+              <br />I have experience in creating responsive and user-friendly{" "}
+              <span className="font-bold">interfaces</span> as well as working
+              in <span className="font-bold">backend development</span> for web
+              and mobile applications.
+              <br />I am also a <span className="font-bold">
+                team player
+              </span>{" "}
+              and enjoy working in a collaborative environment,{" "}
+              <span className="font-bold">quick learner</span>, and always
+              looking for new challenges to improve my skills.
+            </>
+          ),
+          es: <></>,
+        },
+        technologies: ["Next.js", "Tailwind", "Vercel"],
+        image: "/imgs/Concho-Pijama.jpeg",
+        gif: "/imgs/dobby-dancing.gif",
+        link: "https://daniel-echeveste.github.io/ShaderLab",
+      },
+    ],
   },
   Certifications: {
     en: "Certifications",
@@ -270,9 +354,15 @@ const translations = {
     message: { en: "Message", es: "Mensaje" },
     send: { en: "Send", es: "Enviar" },
     sending: { en: "Sending...", es: "Enviando..." },
-    success: { en: "Message sent successfully!", es: "¡Mensaje enviado con éxito!" },
-    error: { en: "Error sending message. Please try again.", es: "Error al enviar el mensaje. Por favor, inténtelo de nuevo." },
-  }
+    success: {
+      en: "Message sent successfully!",
+      es: "¡Mensaje enviado con éxito!",
+    },
+    error: {
+      en: "Error sending message. Please try again.",
+      es: "Error al enviar el mensaje. Por favor, inténtelo de nuevo.",
+    },
+  },
 };
 
 export default translations;

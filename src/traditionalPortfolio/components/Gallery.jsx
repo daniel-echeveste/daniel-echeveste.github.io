@@ -2,6 +2,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+import { useLanguage } from "../../hooks/languageContext";
+import translations from "./translations";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
@@ -10,6 +12,7 @@ import "swiper/css/pagination";
 export function Gallery({ projects = [], showGitHub = true , isEng}) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const { lang } = useLanguage();
   return (
     <div className="w-full max-w-6xl px-4 py-12 mx-auto">
     {/* Botones fuera del Swiper */}
@@ -71,7 +74,7 @@ export function Gallery({ projects = [], showGitHub = true , isEng}) {
                 rel="noopener noreferrer"
                 className="text-amber-600 hover:underline text-sm"
               >
-                Ver proyecto
+                {lang === "en" ? translations.Projects.SeeMore.en : translations.Projects.SeeMore.es}
               </a>
               {showGitHub && project.github && (
                 <a
