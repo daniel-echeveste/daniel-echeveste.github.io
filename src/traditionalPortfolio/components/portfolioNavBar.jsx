@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import translations from "./translations";
 import { useLanguage } from "../../hooks/languageContext";
@@ -13,6 +13,7 @@ export default function NavigationBar({
   onSectionChange,
   isWEBGL,
   onWebGLToggle,
+  
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const scrollToSection = (sectionId) => {
@@ -24,6 +25,8 @@ export default function NavigationBar({
   const { lang, toggleLang } = useLanguage();
   const sections = translations.sections;
 
+  const menuMobileRef =  useRef();
+
   const handleNavBarClick = (e, section) => {
     e.preventDefault();
     if (section === "webgl") {
@@ -34,7 +37,6 @@ export default function NavigationBar({
     } else {
       scrollToSection(section);
       console.log(section);
-      
     }
      // cerrar menú al hacer clic en un enlace
     setMenuOpen(false);
@@ -42,10 +44,9 @@ export default function NavigationBar({
  // Detectar clic fuera del menú hamburguesa
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // if (menuRef.current && !menuRef.current.contains(event.target)) {
-      //   setMenuOpen(false);
-      // }
-      setMenuOpen(false);
+      if (menuMobileRef.current && !menuMobileRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
     };
 
     if (menuOpen) {
@@ -141,6 +142,7 @@ export default function NavigationBar({
         <AnimatePresence>
           {menuOpen && (
             <motion.div
+              ref={menuMobileRef}
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
