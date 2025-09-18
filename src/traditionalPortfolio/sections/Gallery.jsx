@@ -9,15 +9,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export function Gallery({ projects = [], showGitHub = true, darkMode }) {
-  const [direction, setDirection] = useState("horizontal");
+  const [Mobile, setMobile] = useState(false);
 
   useEffect(() => {
     // Función para cambiar la dirección según el ancho
     const updateDirection = () => {
       if (window.innerWidth < 768) {
-        setDirection("horizontal");
+        setMobile(true);
       } else {
-        setDirection("horizontal");
+        setMobile(false);
       }
     };
 
@@ -39,10 +39,10 @@ export function Gallery({ projects = [], showGitHub = true, darkMode }) {
         grabCursor={true}
         centeredSlides={true}
         parallax={true}
-        direction={direction}
-        slidesPerView={direction === "vertical" ? 1.2 : 3}
+        direction="horizontal"
+        slidesPerView={Mobile ? 1.2 : 3}
         loop={true}
-        navigation={direction === "horizontal"}
+        navigation={true}
         pagination={{ clickable: true }}
         speed={2000}
         autoplay={{
@@ -58,7 +58,7 @@ export function Gallery({ projects = [], showGitHub = true, darkMode }) {
           modifier: 1,
           slideShadows: true,
         }}
-        className={`w-full ${direction === "vertical" ? "h-[70vh]" : "h-[500px]"
+        className={`w-full ${Mobile ? "h-[70vh]" : "h-[500px]"
           } overflow-visible relative ${darkMode ? "" : "light"}`}
       >
         {projects.map((project, index) => (
