@@ -15,7 +15,7 @@ export function Gallery({ projects = [], showGitHub = true, darkMode }) {
     // Función para cambiar la dirección según el ancho
     const updateDirection = () => {
       if (window.innerWidth < 768) {
-        setDirection("vertical");
+        setDirection("horizontal");
       } else {
         setDirection("horizontal");
       }

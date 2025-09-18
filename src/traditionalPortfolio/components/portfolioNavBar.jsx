@@ -210,7 +210,7 @@ export default function NavigationBar({
       {/* Botón para cambiar entre inglés/español */}
        <button
         onClick={toggleLang}
-        className={`fixed md:top-2 md:right-16 md:w-10 md:h-10 top-1 right-14 px-4 py-4 w-6 h-6 flex items-center justify-center 
+        className={`fixed md:top-2 md:right-16 md:w-10 md:h-10 top-1 right-24 px-4 py-4 w-6 h-6 flex items-center justify-center 
       text-white rounded-full shadow-md z-[100] transition duration-300 opacity-95 overflow-hidden
       ${
         darkMode

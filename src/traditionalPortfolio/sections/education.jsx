@@ -24,7 +24,7 @@ export function Education({ darkMode, isHorizontal }) {
       id="education"
       className={`py-20 text-amber-950 ${
         isHorizontal ? "min-h-screen " : ""
-      } max-h-screen ${darkMode ? "text-white" : "text-amber-950"}`}
+      } md:max-h-screen ${darkMode ? "text-white" : "text-amber-950"}`}
     >
       <div className="max-w-6xl mx-auto px-4 pt-20">
         <motion.h2
