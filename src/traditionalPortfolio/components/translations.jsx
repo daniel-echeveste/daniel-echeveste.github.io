@@ -255,43 +255,14 @@ const translations = {
     },
     ProjectList: [
       {
-        title: "Portfolio 3D",
-        description: {
-          en: (
-            <>
-              Work in this Website as an Ovan Developer <br></br>
-              <span className="font-bold">WEBGL</span> and{" "}
-              <span className="font-bold">SHADERS</span>, to create{" "}
-              <span className="font-bold">unique</span> and{" "}
-              <span className="font-bold">engaging</span> experiences for users.
-              <br />I have experience in creating responsive and user-friendly{" "}
-              <span className="font-bold">interfaces</span> as well as working
-              in <span className="font-bold">backend development</span> for web
-              and mobile applications.
-              <br />I am also a <span className="font-bold">
-                team player
-              </span>{" "}
-              and enjoy working in a collaborative environment,{" "}
-              <span className="font-bold">quick learner</span>, and always
-              looking for new challenges to improve my skills.
-            </>
-          ),
-          es: <></>,
-        },
-        technologies: ["React", "Three.js", "GSAP"],
-        image: "/imgs/Concho-Pijama.jpeg",
-        gif: "/imgs/dobby-dancing.gif",
-        link: "https://daniel-echeveste.github.io/ShaderLab",
-        github: "https://github.com/miusuario/portfolio",
-      },
-      {
         title: "Weizenbaum Institute Site",
         description: {
           en: (
             <>
               <span className="font-bold">
-                Work in this Website as an Ovan Developer <br />
+                Worked in this Website as an Ovan Developer <br />
               </span>
+
             </>
           ),
           es: (
@@ -302,39 +273,369 @@ const translations = {
             </>
           ),
         },
-        technologies: ["Typo3", "Tailwind", "JS", "SCSS", "HTML", "Git", "Docker", "PHP"],
+        technologies: [
+          "Typo3",
+          "Tailwind",
+          "JS",
+          "SCSS",
+          "HTML",
+          "Git",
+          "Docker",
+          "PHP",
+        ],
         image: "/imgs/weizenbaum.png",
         gif: "/imgs/weizenbaum.gif",
         link: "https://www.weizenbaum-institut.de/en/",
       },
       {
-        title: "Example Project",
+        title: "ALSTOM Ecodesign Configurator",
         description: {
           en: (
             <>
-              Work in this Website as an Ovan Developer <br></br>
-              <span className="font-bold">WEBGL</span> and{" "}
+              <span className="font-bold">
+                Worked in this Website as an Ovan Developer <br />
+              </span>
+              The application was developed as a content management system,
+              allowing editors to easily add content and media. To enable use
+              without a database or web server, the application was made
+              available offline The system was exhibited at InnoTrans, the
+              world's largest trade fair for transport technology, in Berlin.
+            </>
+          ),
+          es: (
+            <>
+            <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan<br />
+              </span>
+              La aplicación se desarrolló como un sistema de gestión de
+              contenidos, lo que permite a los editores añadir fácilmente
+              contenidos y media. Para poder utilizarla sin
+              necesidad de una base de datos o un servidor web, la aplicación se
+              diseñó para estar disponible sin conexión. El sistema se exhibió
+              en InnoTrans, la feria comercial más grande del mundo dedicada a
+              la tecnología del transporte, celebrada en Berlín. Traducción
+              realizada con la versión gratuita del traductor DeepL.com
+            </>
+          ),
+        },
+        technologies: ["Next.js", "Tailwind", "Vercel"],
+        image: "/imgs/Alstom-web-1.webp",
+        gif: "/imgs/Alstom.gif",
+        link: "https://daniel-echeveste.github.io/ShaderLab",
+      },
+       {
+        title: "Visceral Medicine 2024",
+        description: {
+          en: (
+            <>
+              <span className="font-bold">
+                Worked in this Website as an Ovan Developer <br />
+              </span>
+              The application was developed as a content management system,
+              allowing editors to easily add content and media. To enable use
+              without a database or web server, the application was made
+              available offline The system was exhibited at InnoTrans, the
+              world's largest trade fair for transport technology, in Berlin.
+            </>
+          ),
+          es: (
+            <>
+            <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan<br />
+              </span>
+              La aplicación se desarrolló como un sistema de gestión de
+              contenidos, lo que permite a los editores añadir fácilmente
+              contenidos y media. Para poder utilizarla sin
+              necesidad de una base de datos o un servidor web, la aplicación se
+              diseñó para estar disponible sin conexión. El sistema se exhibió
+              en InnoTrans, la feria comercial más grande del mundo dedicada a
+              la tecnología del transporte, celebrada en Berlín. Traducción
+              realizada con la versión gratuita del traductor DeepL.com
+            </>
+          ),
+        },
+        technologies: ["Next.js", "Tailwind", "Vercel"],
+        image: "/imgs/viszeralmedizin.png",
+        gif: "/imgs/viszeralmedizin.gif",
+        link: "https://daniel-echeveste.github.io/ShaderLab",
+      },
+        {
+        title: "Hamburg City Cleaning Trade Fair Application IFAT 2024",
+        description: {
+          en: (
+            <>
+              <span className="font-bold">
+                Worked in this Website as an Ovan Developer <br />
+              </span>
+              The application was developed as a content management system,
+              allowing editors to easily add content and media. To enable use
+              without a database or web server, the application was made
+              available offline The system was exhibited at InnoTrans, the
+              world's largest trade fair for transport technology, in Berlin.
+            </>
+          ),
+          es: (
+            <>
+            <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan<br />
+              </span>
+              La aplicación se desarrolló como un sistema de gestión de
+              contenidos, lo que permite a los editores añadir fácilmente
+              contenidos y media. Para poder utilizarla sin
+              necesidad de una base de datos o un servidor web, la aplicación se
+              diseñó para estar disponible sin conexión. El sistema se exhibió
+              en InnoTrans, la feria comercial más grande del mundo dedicada a
+              la tecnología del transporte, celebrada en Berlín. Traducción
+              realizada con la versión gratuita del traductor DeepL.com
+            </>
+          ),
+        },
+        technologies: ["Next.js", "Tailwind", "Vercel"],
+        image: "/imgs/hamburg.png",
+        gif: "/imgs/hamburg.gif",
+        link: "https://daniel-echeveste.github.io/ShaderLab",
+      },
+       {
+        title: "VDI Zentrum ",
+        description: {
+          en: (
+            <>
+              <span className="font-bold">
+                Worked in this Website as an Ovan Developer <br />
+              </span>
+              The application was developed as a content management system,
+              allowing editors to easily add content and media. To enable use
+              without a database or web server, the application was made
+              available offline The system was exhibited at InnoTrans, the
+              world's largest trade fair for transport technology, in Berlin.
+            </>
+          ),
+          es: (
+            <>
+            <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan<br />
+              </span>
+              La aplicación se desarrolló como un sistema de gestión de
+              contenidos, lo que permite a los editores añadir fácilmente
+              contenidos y media. Para poder utilizarla sin
+              necesidad de una base de datos o un servidor web, la aplicación se
+              diseñó para estar disponible sin conexión. El sistema se exhibió
+              en InnoTrans, la feria comercial más grande del mundo dedicada a
+              la tecnología del transporte, celebrada en Berlín. Traducción
+              realizada con la versión gratuita del traductor DeepL.com
+            </>
+          ),
+        },
+        technologies: ["Next.js", "Tailwind", "Vercel"],
+        image: "/imgs/vdi.png",
+        gif: "/imgs/vdi.gif",
+        link: "https://daniel-echeveste.github.io/ShaderLab",
+      },
+       {
+        title: "Axel Springer",
+        description: {
+          en: (
+            <>
+              <span className="font-bold">
+                Worked in this Website as an Ovan Developer <br />
+              </span>
+              The application was developed as a content management system,
+              allowing editors to easily add content and media. To enable use
+              without a database or web server, the application was made
+              available offline The system was exhibited at InnoTrans, the
+              world's largest trade fair for transport technology, in Berlin.
+            </>
+          ),
+          es: (
+            <>
+            <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan<br />
+              </span>
+              La aplicación se desarrolló como un sistema de gestión de
+              contenidos, lo que permite a los editores añadir fácilmente
+              contenidos y media. Para poder utilizarla sin
+              necesidad de una base de datos o un servidor web, la aplicación se
+              diseñó para estar disponible sin conexión. El sistema se exhibió
+              en InnoTrans, la feria comercial más grande del mundo dedicada a
+              la tecnología del transporte, celebrada en Berlín. Traducción
+              realizada con la versión gratuita del traductor DeepL.com
+            </>
+          ),
+        },
+        technologies: ["Next.js", "Tailwind", "Vercel"],
+        image: "/imgs/axelspringer.png",
+        gif: "/imgs/axelspringer.gif",
+        link: "https://daniel-echeveste.github.io/ShaderLab",
+      },
+       {
+        title: "WBM Wohnungsbaugesellschaft Berlin-Mitte mbH",
+        description: {
+          en: (
+            <>
+              <span className="font-bold">
+                Worked in this Website as an Ovan Developer <br />
+              </span>
+              The application was developed as a content management system,
+              allowing editors to easily add content and media. To enable use
+              without a database or web server, the application was made
+              available offline The system was exhibited at InnoTrans, the
+              world's largest trade fair for transport technology, in Berlin.
+            </>
+          ),
+          es: (
+            <>
+            <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan<br />
+              </span>
+              La aplicación se desarrolló como un sistema de gestión de
+              contenidos, lo que permite a los editores añadir fácilmente
+              contenidos y media. Para poder utilizarla sin
+              necesidad de una base de datos o un servidor web, la aplicación se
+              diseñó para estar disponible sin conexión. El sistema se exhibió
+              en InnoTrans, la feria comercial más grande del mundo dedicada a
+              la tecnología del transporte, celebrada en Berlín. Traducción
+              realizada con la versión gratuita del traductor DeepL.com
+            </>
+          ),
+        },
+        technologies: ["Next.js", "Tailwind", "Vercel"],
+        image: "/imgs/wbm.png",
+        gif: "/imgs/wbm.gif",
+        link: "https://daniel-echeveste.github.io/ShaderLab",
+      },
+       {
+        title: "Gegen das Vergessen",
+        description: {
+          en: (
+            <>
+              <span className="font-bold">
+                Worked in this Website as an Ovan Developer <br />
+              </span>
+              The application was developed as a content management system,
+              allowing editors to easily add content and media. To enable use
+              without a database or web server, the application was made
+              available offline The system was exhibited at InnoTrans, the
+              world's largest trade fair for transport technology, in Berlin.
+            </>
+          ),
+          es: (
+            <>
+            <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan<br />
+              </span>
+              La aplicación se desarrolló como un sistema de gestión de
+              contenidos, lo que permite a los editores añadir fácilmente
+              contenidos y media. Para poder utilizarla sin
+              necesidad de una base de datos o un servidor web, la aplicación se
+              diseñó para estar disponible sin conexión. El sistema se exhibió
+              en InnoTrans, la feria comercial más grande del mundo dedicada a
+              la tecnología del transporte, celebrada en Berlín. Traducción
+              realizada con la versión gratuita del traductor DeepL.com
+            </>
+          ),
+        },
+        technologies: ["Next.js", "Tailwind", "Vercel"],
+        image: "/imgs/gegendasvergessen.png",
+        gif: "/imgs/gegendasvergessen.gif",
+        link: "https://daniel-echeveste.github.io/ShaderLab",
+      }, {
+        title: "DGVS ",
+        description: {
+          en: (
+            <>
+              <span className="font-bold">
+                Worked in this Website as an Ovan Developer <br />
+              </span>
+              The application was developed as a content management system,
+              allowing editors to easily add content and media. To enable use
+              without a database or web server, the application was made
+              available offline The system was exhibited at InnoTrans, the
+              world's largest trade fair for transport technology, in Berlin.
+            </>
+          ),
+          es: (
+            <>
+            <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan<br />
+              </span>
+              La aplicación se desarrolló como un sistema de gestión de
+              contenidos, lo que permite a los editores añadir fácilmente
+              contenidos y media. Para poder utilizarla sin
+              necesidad de una base de datos o un servidor web, la aplicación se
+              diseñó para estar disponible sin conexión. El sistema se exhibió
+              en InnoTrans, la feria comercial más grande del mundo dedicada a
+              la tecnología del transporte, celebrada en Berlín. Traducción
+              realizada con la versión gratuita del traductor DeepL.com
+            </>
+          ),
+        },
+        technologies: ["Next.js", "Tailwind", "Vercel"],
+        image: "/imgs/dgvs.png",
+        gif: "/imgs/dgvs.gif",
+        link: "https://daniel-echeveste.github.io/ShaderLab",
+      }, {
+        title: "Pfandbrief Markt",
+        description: {
+          en: (
+            <>
+              <span className="font-bold">
+                Worked in this Website as an Ovan Developer <br />
+              </span>
+              The application was developed as a content management system,
+              allowing editors to easily add content and media. To enable use
+              without a database or web server, the application was made
+              available offline The system was exhibited at InnoTrans, the
+              world's largest trade fair for transport technology, in Berlin.
+            </>
+          ),
+          es: (
+            <>
+            <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan<br />
+              </span>
+              La aplicación se desarrolló como un sistema de gestión de
+              contenidos, lo que permite a los editores añadir fácilmente
+              contenidos y media. Para poder utilizarla sin
+              necesidad de una base de datos o un servidor web, la aplicación se
+              diseñó para estar disponible sin conexión. El sistema se exhibió
+              en InnoTrans, la feria comercial más grande del mundo dedicada a
+              la tecnología del transporte, celebrada en Berlín. Traducción
+              realizada con la versión gratuita del traductor DeepL.com
+            </>
+          ),
+        },
+        technologies: ["Next.js", "Tailwind", "Vercel"],
+        image: "/imgs/pfandbrief.png",
+        gif: "/imgs/pfandbrief.gif",
+        link: "https://daniel-echeveste.github.io/ShaderLab",
+      },
+      {
+        title: "Shader Lab ",
+        description: {
+          en: (
+            <>
+              Personal Project <br></br>
+              <span className="font-bold">WEBGL</span> {" "}
               <span className="font-bold">SHADERS</span>, to create{" "}
               <span className="font-bold">unique</span> and{" "}
               <span className="font-bold">engaging</span> experiences for users.
-              <br />I have experience in creating responsive and user-friendly{" "}
-              <span className="font-bold">interfaces</span> as well as working
-              in <span className="font-bold">backend development</span> for web
-              and mobile applications.
-              <br />I am also a <span className="font-bold">
-                team player
-              </span>{" "}
-              and enjoy working in a collaborative environment,{" "}
-              <span className="font-bold">quick learner</span>, and always
-              looking for new challenges to improve my skills.
+             
             </>
           ),
-          es: <></>,
+          es: <>
+              Proyecto Personal <br></br>
+              <span className="font-bold">WEBGL</span> {" "}
+              <span className="font-bold">SHADERS</span>, para crear{" "}
+              experiencias  {" "}
+              <span className="font-bold">unicas</span> e {" "}
+              <span className="font-bold">interactivas </span> para los usuarios.
+          </>,
         },
-        technologies: ["Next.js", "Tailwind", "Vercel"],
+        technologies: ["React", "Three.js", "GSAP"],
         image: "/imgs/Concho-Pijama.jpeg",
         gif: "/imgs/dobby-dancing.gif",
         link: "https://daniel-echeveste.github.io/ShaderLab",
+        github: "https://github.com/miusuario/portfolio",
       },
     ],
   },
