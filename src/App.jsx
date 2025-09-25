@@ -1,13 +1,9 @@
-import ReactDOM from "react-dom/client";
 import { useState, useEffect } from "react";
 import "./styles/style.css";
 import Portfolio from "./traditionalPortfolio/BasicPortfolio.jsx";
 import PortfolioHorizontal from "./traditionalPortfolio/BasicPortfolioHorizontal.jsx";
 import NavigationBar from "./traditionalPortfolio/components/portfolioNavBar";
 import { LanguageProvider } from "./hooks/languageContext.jsx";
-
-import { Canvas } from "@react-three/fiber";
-import Experience from "./experience/Experience.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 
 
