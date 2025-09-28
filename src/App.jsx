@@ -26,7 +26,7 @@ export default function App() {
     if (isWEBGL) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflow = "auto";
     }
   }, [isWEBGL]);
   return (

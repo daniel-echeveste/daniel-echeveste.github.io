@@ -1,7 +1,3 @@
-import { Education } from "./education";
-import { Experience } from "./experience";
-import { Projects } from "./projects";
-import { Skills } from "./skills";
 
 // translations.js
 const translations = {
@@ -610,7 +606,7 @@ const translations = {
         link: "https://daniel-echeveste.github.io/ShaderLab",
       },
       {
-        title: "Shader Lab ",
+        title: "Shaders Lab ",
         description: {
           en: (
             <>
@@ -632,10 +628,10 @@ const translations = {
           </>,
         },
         technologies: ["React", "Three.js", "GSAP"],
-        image: "/imgs/Concho-Pijama.jpeg",
-        gif: "/imgs/dobby-dancing.gif",
-        link: "https://daniel-echeveste.github.io/ShaderLab",
-        github: "https://github.com/miusuario/portfolio",
+        image: "/imgs/shaderslab.png",
+        gif: "/imgs/shaderslab.gif",
+        link: "https://daniel-echeveste.github.io/ShadersLab",
+        github: "https://github.com/daniel-echeveste",
       },
     ],
   },

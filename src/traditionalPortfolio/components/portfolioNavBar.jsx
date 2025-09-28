@@ -11,7 +11,6 @@ export default function NavigationBar({
   onHorizontalToggle,
   currentSection,
   onSectionChange,
-  isWEBGL,
   onWebGLToggle,
   
 }) {
@@ -19,11 +18,33 @@ export default function NavigationBar({
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      console.log("Scrolling to section:", sectionId);
+      console.log(element);
+      const behavior = Mobile?"auto":"smooth";
+      element.scrollIntoView({ block: "start", behavior: behavior});
+      // element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
   const { lang, toggleLang } = useLanguage();
   const sections = translations.sections;
+  const [Mobile, setMobile] = useState(false);
+   
+  
+    useEffect(() => {
+      // Función para cambiar la dirección según el ancho
+      const updateDirection = () => {
+        if (window.innerWidth < 768) {
+          setMobile(true);
+        } else {
+          setMobile(false);
+        }
+      };
+  
+      updateDirection(); // Ejecutar al cargar
+  
+      window.addEventListener("resize", updateDirection); // Ejecutar al redimensionar
+      return () => window.removeEventListener("resize", updateDirection); // Limpiar
+    }, []);
 
   const menuMobileRef =  useRef();
 
@@ -46,6 +67,7 @@ export default function NavigationBar({
     const handleClickOutside = (event) => {
       if (menuMobileRef.current && !menuMobileRef.current.contains(event.target)) {
         setMenuOpen(false);
+        
       }
     };
 

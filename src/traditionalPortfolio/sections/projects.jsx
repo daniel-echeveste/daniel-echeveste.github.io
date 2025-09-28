@@ -1,4 +1,4 @@
-import { Gallery } from './Gallery';
+import { Gallery } from '../components/Gallery';
 import { motion } from "framer-motion";
 import translations from "../components/translations";
 import { useLanguage } from "../../hooks/languageContext";
