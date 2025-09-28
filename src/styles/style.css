@@ -16,6 +16,9 @@
       0%   { opacity: 0; transform: scale(0.5); }
       100% { opacity: 0.7; transform: scale(1); }
     }
+  
+
+  
   }
   
   /* incluye utilidades */
@@ -42,6 +45,6 @@
     .swiper-pagination-bullet-active{
       @apply !bg-[#007aff];
     }
+   
     
   }
- 

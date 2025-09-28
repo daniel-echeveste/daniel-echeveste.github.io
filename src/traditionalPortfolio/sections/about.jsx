@@ -51,10 +51,12 @@ export function About({ darkMode, isHorizontal, onSectionChange }) {
                 {/* Texto */}
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.4 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    className="w-full md:w-2/3 h-full p-5 transition-all duration-300"
+                     animate={{ opacity: 1, y: 0 }}
+                    // final={{opacity: 1, y: 0}}
+                    // whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay:0  }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    className="w-full md:w-2/3 h-full p-5 "
                 >
                     <div className="text-center md:text-left">
                         <h1 className="text-5xl md:text-7xl font-bold mb-4">
@@ -64,7 +66,7 @@ export function About({ darkMode, isHorizontal, onSectionChange }) {
                         </h1>
                     </div>
 
-                    <div className="h-full hover:scale-100 transition-all duration-300">
+                    <div className="h-full hover:scale-101 transition-all duration-300">
                         <p className="text-xl md:text-2xl mb-6 font-bold text-center md:text-left">
                             Full Stack Developer | Frontend Developer
                         </p>
