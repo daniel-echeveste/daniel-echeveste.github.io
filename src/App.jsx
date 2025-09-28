@@ -5,6 +5,7 @@ import PortfolioHorizontal from "./traditionalPortfolio/BasicPortfolioHorizontal
 import NavigationBar from "./traditionalPortfolio/components/portfolioNavBar";
 import { LanguageProvider } from "./hooks/languageContext.jsx";
 import { motion, AnimatePresence } from "framer-motion";
+import WebglPlaceholder from "./3D assets/WEBGLPlaceholder.jsx";
 
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
 
         <AnimatePresence>
           {isWEBGL && (
+            
             <motion.div
               key="webgl"
               initial={{ clipPath: "circle(0% at 50% 50%)" }}
@@ -54,29 +56,18 @@ export default function App() {
               className="fixed top-0 left-0 w-screen h-screen z-10 bg-black"
               style={{ overflow: "hidden" }}
             >
-              {/* <Canvas
-                className="w-full h-full"
-                shadows
-                camera={{
-                  fov: 60,
-                  near: 0.1,
-                  far: 500,
-                  position: [200, 15, 150],
-                }}
-              >
-                <Experience
-                  darkMode={isDarkMode}
-                  onDarkModeToggle={() => setIsDarkMode(!isDarkMode)}
-                />
-              </Canvas> */}
+              
+              <WebglPlaceholder
+                toggleWebGL={setIsWebGL} 
+              />
 
               {/* IFRAME  */}
-              <iframe
+              {/* <iframe
                 src="/WEBGL"
                 className="w-full h-full"
                 style={{ border: "none" }}
                 title="3D Portfolio"
-              />
+              /> */}
             </motion.div>
           )}
         </AnimatePresence>
