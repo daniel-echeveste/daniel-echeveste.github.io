@@ -1,4 +1,3 @@
-
 // translations.js
 const translations = {
   sections: [
@@ -199,6 +198,7 @@ const translations = {
         ["JavaScript", "2 years"],
         ["HTML5", "2 years"],
         ["CSS3", "2 years"],
+        ["THREEJS", "2 years"],
       ],
       es: [
         ["TypeScript", "3 años"],
@@ -207,6 +207,7 @@ const translations = {
         ["JavaScript", "2 años"],
         ["HTML5", "2 años"],
         ["CSS3", "2 años"],
+        ["THREEJS", "2 años"],
       ],
     },
     Backend: {
@@ -216,6 +217,7 @@ const translations = {
         ["Express", "2 years"],
         ["MongoDB", "2 years"],
         ["SQL", "2 years"],
+        ["Java", "2 years"],
         ["REST APIs", "2 years"],
       ],
       es: [
@@ -224,6 +226,7 @@ const translations = {
         ["Express", "2 años"],
         ["MongoDB", "2 años"],
         ["SQL", "2 años"],
+        ["Java", "2 años"],
         ["REST APIs", "2 años"],
       ],
     },
@@ -258,7 +261,11 @@ const translations = {
               <span className="font-bold">
                 Worked in this Website as an Ovan Developer <br />
               </span>
-
+              Through this comprehensive modernization and adaptation, the
+              website was not only aesthetically improved but also functionally
+              optimized. This made it possible to meet the demanding
+              requirements of information dissemination from various sectors.
+              Apache Solr is used to optimize the search function.
             </>
           ),
           es: (
@@ -266,6 +273,11 @@ const translations = {
               <span className="font-bold">
                 Trabajé en este proyecto como desarrollador de Ovan <br />
               </span>
+              Gracias a esta modernización y adaptación integral, el sitio web
+              no solo mejoró estéticamente, sino que también se optimizó
+              funcionalmente. Esto permitió satisfacer los exigentes requisitos
+              de difusión de información de diversos sectores. Se utiliza Apache
+              Solr para optimizar la función de búsqueda.
             </>
           ),
         },
@@ -300,17 +312,18 @@ const translations = {
           ),
           es: (
             <>
-            <span className="font-bold">
-                Trabajé en este sitio web como desarrollador de Ovan<br />
+              <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan
+                <br />
               </span>
               La aplicación se desarrolló como un sistema de gestión de
               contenidos, lo que permite a los editores añadir fácilmente
-              contenidos y media. Para poder utilizarla sin
-              necesidad de una base de datos o un servidor web, la aplicación se
-              diseñó para estar disponible sin conexión. El sistema se exhibió
-              en InnoTrans, la feria comercial más grande del mundo dedicada a
-              la tecnología del transporte, celebrada en Berlín. Traducción
-              realizada con la versión gratuita del traductor DeepL.com
+              contenidos y media. Para poder utilizarla sin necesidad de una
+              base de datos o un servidor web, la aplicación se diseñó para
+              estar disponible sin conexión. El sistema se exhibió en InnoTrans,
+              la feria comercial más grande del mundo dedicada a la tecnología
+              del transporte, celebrada en Berlín. Traducción realizada con la
+              versión gratuita del traductor DeepL.com
             </>
           ),
         },
@@ -319,7 +332,7 @@ const translations = {
         gif: "/imgs/Alstom.gif",
         link: "https://daniel-echeveste.github.io/ShaderLab",
       },
-       {
+      {
         title: "Visceral Medicine 2024",
         description: {
           en: (
@@ -327,26 +340,23 @@ const translations = {
               <span className="font-bold">
                 Worked in this Website as an Ovan Developer <br />
               </span>
-              The application was developed as a content management system,
-              allowing editors to easily add content and media. To enable use
-              without a database or web server, the application was made
-              available offline The system was exhibited at InnoTrans, the
-              world's largest trade fair for transport technology, in Berlin.
+              The website was developed according to the mobile-first principle,
+              meaning it is primarily optimized for mobile devices and then
+              scaled to larger screens. To ensure search performance,
+              pre-sorting is performed each time data is compared with the API.
             </>
           ),
           es: (
             <>
-            <span className="font-bold">
-                Trabajé en este sitio web como desarrollador de Ovan<br />
+              <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan
+                <br />
               </span>
-              La aplicación se desarrolló como un sistema de gestión de
-              contenidos, lo que permite a los editores añadir fácilmente
-              contenidos y media. Para poder utilizarla sin
-              necesidad de una base de datos o un servidor web, la aplicación se
-              diseñó para estar disponible sin conexión. El sistema se exhibió
-              en InnoTrans, la feria comercial más grande del mundo dedicada a
-              la tecnología del transporte, celebrada en Berlín. Traducción
-              realizada con la versión gratuita del traductor DeepL.com
+              El sitio web se desarrolló según el principio «mobile-first», lo
+              que significa que está optimizado principalmente para dispositivos
+              móviles y luego se adapta a pantallas más grandes. Para garantizar
+              el rendimiento de la búsqueda, se realiza una clasificación previa
+              cada vez que se comparan los datos con la API.
             </>
           ),
         },
@@ -355,7 +365,7 @@ const translations = {
         gif: "/imgs/viszeralmedizin.gif",
         link: "https://daniel-echeveste.github.io/ShaderLab",
       },
-        {
+      {
         title: "Hamburg City Cleaning Trade Fair Application IFAT 2024",
         description: {
           en: (
@@ -363,26 +373,22 @@ const translations = {
               <span className="font-bold">
                 Worked in this Website as an Ovan Developer <br />
               </span>
-              The application was developed as a content management system,
-              allowing editors to easily add content and media. To enable use
-              without a database or web server, the application was made
-              available offline The system was exhibited at InnoTrans, the
-              world's largest trade fair for transport technology, in Berlin.
+              The application interface has been designed intuitively to allow
+              users to navigate easily. Interactive elements such as touch
+              gestures are used to provide an engaging and user-friendly
+              experience.
             </>
           ),
           es: (
             <>
-            <span className="font-bold">
-                Trabajé en este sitio web como desarrollador de Ovan<br />
+              <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan
+                <br />
               </span>
-              La aplicación se desarrolló como un sistema de gestión de
-              contenidos, lo que permite a los editores añadir fácilmente
-              contenidos y media. Para poder utilizarla sin
-              necesidad de una base de datos o un servidor web, la aplicación se
-              diseñó para estar disponible sin conexión. El sistema se exhibió
-              en InnoTrans, la feria comercial más grande del mundo dedicada a
-              la tecnología del transporte, celebrada en Berlín. Traducción
-              realizada con la versión gratuita del traductor DeepL.com
+              La interfaz de la aplicación se ha diseñado de forma intuitiva
+              para que los usuarios puedan navegar fácilmente. Se utilizan
+              elementos interactivos, como gestos táctiles, para proporcionar
+              una experiencia atractiva y fácil de usar.
             </>
           ),
         },
@@ -391,7 +397,7 @@ const translations = {
         gif: "/imgs/hamburg.gif",
         link: "https://daniel-echeveste.github.io/ShaderLab",
       },
-       {
+      {
         title: "VDI Zentrum ",
         description: {
           en: (
@@ -399,26 +405,24 @@ const translations = {
               <span className="font-bold">
                 Worked in this Website as an Ovan Developer <br />
               </span>
-              The application was developed as a content management system,
-              allowing editors to easily add content and media. To enable use
-              without a database or web server, the application was made
-              available offline The system was exhibited at InnoTrans, the
-              world's largest trade fair for transport technology, in Berlin.
+              As part of the project, new templates and content elements were
+              developed in TYPO3. In addition, special modules were implemented
+              that enable quantitative evaluation of methods. Furthermore,
+              interactive graphics were integrated to ensure a visually
+              appealing user navigation through the website.
             </>
           ),
           es: (
             <>
-            <span className="font-bold">
-                Trabajé en este sitio web como desarrollador de Ovan<br />
+              <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan
+                <br />
               </span>
-              La aplicación se desarrolló como un sistema de gestión de
-              contenidos, lo que permite a los editores añadir fácilmente
-              contenidos y media. Para poder utilizarla sin
-              necesidad de una base de datos o un servidor web, la aplicación se
-              diseñó para estar disponible sin conexión. El sistema se exhibió
-              en InnoTrans, la feria comercial más grande del mundo dedicada a
-              la tecnología del transporte, celebrada en Berlín. Traducción
-              realizada con la versión gratuita del traductor DeepL.com
+              Como parte del proyecto, se desarrollaron nuevas plantillas y
+              elementos de contenido en TYPO3. Además, se implementaron módulos
+              especiales que permiten la evaluación cuantitativa de los métodos.
+              Por otra parte, se integraron gráficos interactivos para
+              garantizar una navegación visualmente atractiva por el sitio web.
             </>
           ),
         },
@@ -427,7 +431,7 @@ const translations = {
         gif: "/imgs/vdi.gif",
         link: "https://daniel-echeveste.github.io/ShaderLab",
       },
-       {
+      {
         title: "Axel Springer",
         description: {
           en: (
@@ -435,26 +439,20 @@ const translations = {
               <span className="font-bold">
                 Worked in this Website as an Ovan Developer <br />
               </span>
-              The application was developed as a content management system,
-              allowing editors to easily add content and media. To enable use
-              without a database or web server, the application was made
-              available offline The system was exhibited at InnoTrans, the
-              world's largest trade fair for transport technology, in Berlin.
+              The website was built with WordPress and its advanced block editor
+              technology. By using intuitive blocks in WordPress, we created an
+              attractive and user-friendly site.
             </>
           ),
           es: (
             <>
-            <span className="font-bold">
-                Trabajé en este sitio web como desarrollador de Ovan<br />
+              <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan
+                <br />
               </span>
-              La aplicación se desarrolló como un sistema de gestión de
-              contenidos, lo que permite a los editores añadir fácilmente
-              contenidos y media. Para poder utilizarla sin
-              necesidad de una base de datos o un servidor web, la aplicación se
-              diseñó para estar disponible sin conexión. El sistema se exhibió
-              en InnoTrans, la feria comercial más grande del mundo dedicada a
-              la tecnología del transporte, celebrada en Berlín. Traducción
-              realizada con la versión gratuita del traductor DeepL.com
+              El sitio web se creó con WordPress y su avanzada tecnología de
+              editor de bloques. Mediante el uso de bloques intuitivos en
+              WordPress, creamos un sitio atractivo y fácil de usar.
             </>
           ),
         },
@@ -463,7 +461,7 @@ const translations = {
         gif: "/imgs/axelspringer.gif",
         link: "https://daniel-echeveste.github.io/ShaderLab",
       },
-       {
+      {
         title: "WBM Wohnungsbaugesellschaft Berlin-Mitte mbH",
         description: {
           en: (
@@ -471,26 +469,27 @@ const translations = {
               <span className="font-bold">
                 Worked in this Website as an Ovan Developer <br />
               </span>
-              The application was developed as a content management system,
-              allowing editors to easily add content and media. To enable use
-              without a database or web server, the application was made
-              available offline The system was exhibited at InnoTrans, the
-              world's largest trade fair for transport technology, in Berlin.
+              First, the TYPO3 system was updated to the latest version . During
+              this process, all extensions and the general code base were
+              thoroughly tested, optimized, and cleaned up. Given the enormous
+              demand for housing in Berlin, it is crucial that the system
+              reliably receives and processes a large number of requests and
+              integrates seamlessly with the client's ERP system.
             </>
           ),
           es: (
             <>
-            <span className="font-bold">
-                Trabajé en este sitio web como desarrollador de Ovan<br />
+              <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan
+                <br />
               </span>
-              La aplicación se desarrolló como un sistema de gestión de
-              contenidos, lo que permite a los editores añadir fácilmente
-              contenidos y media. Para poder utilizarla sin
-              necesidad de una base de datos o un servidor web, la aplicación se
-              diseñó para estar disponible sin conexión. El sistema se exhibió
-              en InnoTrans, la feria comercial más grande del mundo dedicada a
-              la tecnología del transporte, celebrada en Berlín. Traducción
-              realizada con la versión gratuita del traductor DeepL.com
+              En primer lugar, se actualizó el sistema TYPO3 a la última
+              versión. Durante este proceso, se comprobaron, optimizaron y
+              limpiaron minuciosamente todas las extensiones y el código base
+              general. Dada la enorme demanda de viviendas en Berlín, es
+              fundamental que el sistema reciba y procese de forma fiable un
+              gran número de solicitudes y se integre a la perfección con el
+              sistema ERP del cliente.
             </>
           ),
         },
@@ -499,7 +498,7 @@ const translations = {
         gif: "/imgs/wbm.gif",
         link: "https://daniel-echeveste.github.io/ShaderLab",
       },
-       {
+      {
         title: "Gegen das Vergessen",
         description: {
           en: (
@@ -507,26 +506,23 @@ const translations = {
               <span className="font-bold">
                 Worked in this Website as an Ovan Developer <br />
               </span>
-              The application was developed as a content management system,
-              allowing editors to easily add content and media. To enable use
-              without a database or web server, the application was made
-              available offline The system was exhibited at InnoTrans, the
-              world's largest trade fair for transport technology, in Berlin.
+              The website is characterized by a striking red animated thread,
+              present on almost every page and serving as a consistent design
+              element. This not only serves aesthetic purposes but also as a
+              visual guide for engaging user navigation.
             </>
           ),
           es: (
             <>
-            <span className="font-bold">
-                Trabajé en este sitio web como desarrollador de Ovan<br />
+              <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan
+                <br />
               </span>
-              La aplicación se desarrolló como un sistema de gestión de
-              contenidos, lo que permite a los editores añadir fácilmente
-              contenidos y media. Para poder utilizarla sin
-              necesidad de una base de datos o un servidor web, la aplicación se
-              diseñó para estar disponible sin conexión. El sistema se exhibió
-              en InnoTrans, la feria comercial más grande del mundo dedicada a
-              la tecnología del transporte, celebrada en Berlín. Traducción
-              realizada con la versión gratuita del traductor DeepL.com
+              El sitio web se caracteriza por un llamativo hilo rojo animado,
+              presente en casi todas las páginas y que sirve como elemento de
+              diseño coherente. Esto no solo tiene fines estéticos, sino que
+              también sirve como guía visual para facilitar la navegación del
+              usuario.
             </>
           ),
         },
@@ -534,7 +530,8 @@ const translations = {
         image: "/imgs/gegendasvergessen.png",
         gif: "/imgs/gegendasvergessen.gif",
         link: "https://daniel-echeveste.github.io/ShaderLab",
-      }, {
+      },
+      {
         title: "DGVS ",
         description: {
           en: (
@@ -542,26 +539,26 @@ const translations = {
               <span className="font-bold">
                 Worked in this Website as an Ovan Developer <br />
               </span>
-              The application was developed as a content management system,
-              allowing editors to easily add content and media. To enable use
-              without a database or web server, the application was made
-              available offline The system was exhibited at InnoTrans, the
-              world's largest trade fair for transport technology, in Berlin.
+              The site's technical implementation was based on a "mobile-first"
+              approach. Editors were provided with a comprehensive toolkit with
+              various blocks to flexibly design all content. The Microsoft
+              Dynamics 365 API was integrated for both the seminars and the
+              member area to enable efficient data synchronization.
             </>
           ),
           es: (
             <>
-            <span className="font-bold">
-                Trabajé en este sitio web como desarrollador de Ovan<br />
+              <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan
+                <br />
               </span>
-              La aplicación se desarrolló como un sistema de gestión de
-              contenidos, lo que permite a los editores añadir fácilmente
-              contenidos y media. Para poder utilizarla sin
-              necesidad de una base de datos o un servidor web, la aplicación se
-              diseñó para estar disponible sin conexión. El sistema se exhibió
-              en InnoTrans, la feria comercial más grande del mundo dedicada a
-              la tecnología del transporte, celebrada en Berlín. Traducción
-              realizada con la versión gratuita del traductor DeepL.com
+              La implementación técnica del sitio se basó en un enfoque
+              «mobile-first». Se proporcionó a los editores un completo conjunto
+              de herramientas con diversos bloques para diseñar de forma
+              flexible todo el contenido. Se integró la API de Microsoft
+              Dynamics 365 tanto para los seminarios como para el área de
+              miembros, con el fin de permitir una sincronización eficiente de
+              los datos.
             </>
           ),
         },
@@ -569,7 +566,8 @@ const translations = {
         image: "/imgs/dgvs.png",
         gif: "/imgs/dgvs.gif",
         link: "https://daniel-echeveste.github.io/ShaderLab",
-      }, {
+      },
+      {
         title: "Pfandbrief Markt",
         description: {
           en: (
@@ -577,26 +575,25 @@ const translations = {
               <span className="font-bold">
                 Worked in this Website as an Ovan Developer <br />
               </span>
-              The application was developed as a content management system,
-              allowing editors to easily add content and media. To enable use
-              without a database or web server, the application was made
-              available offline The system was exhibited at InnoTrans, the
-              world's largest trade fair for transport technology, in Berlin.
+              The homepage offers editorial contributions from the community,
+              interviews, external content, surveys, market charts, and the
+              Issuer Finder. The article overview page offers filter options for
+              publications, formats, and topics. Authors have access to an
+              author gallery that can also be searched and filtered.
             </>
           ),
           es: (
             <>
-            <span className="font-bold">
-                Trabajé en este sitio web como desarrollador de Ovan<br />
+              <span className="font-bold">
+                Trabajé en este sitio web como desarrollador de Ovan
+                <br />
               </span>
-              La aplicación se desarrolló como un sistema de gestión de
-              contenidos, lo que permite a los editores añadir fácilmente
-              contenidos y media. Para poder utilizarla sin
-              necesidad de una base de datos o un servidor web, la aplicación se
-              diseñó para estar disponible sin conexión. El sistema se exhibió
-              en InnoTrans, la feria comercial más grande del mundo dedicada a
-              la tecnología del transporte, celebrada en Berlín. Traducción
-              realizada con la versión gratuita del traductor DeepL.com
+              La página de inicio ofrece contribuciones editoriales de la
+              comunidad, entrevistas, contenido externo, encuestas, gráficos de
+              mercado y el buscador de emisores. La página de resumen de
+              artículos ofrece opciones de filtrado por publicaciones, formatos
+              y temas. Los autores tienen acceso a una galería de autores que
+              también se puede buscar y filtrar.
             </>
           ),
         },
@@ -611,21 +608,22 @@ const translations = {
           en: (
             <>
               Personal Project <br></br>
-              <span className="font-bold">WEBGL</span> {" "}
+              <span className="font-bold">WEBGL</span>{" "}
               <span className="font-bold">SHADERS</span>, to create{" "}
               <span className="font-bold">unique</span> and{" "}
               <span className="font-bold">engaging</span> experiences for users.
-             
             </>
           ),
-          es: <>
+          es: (
+            <>
               Proyecto Personal <br></br>
-              <span className="font-bold">WEBGL</span> {" "}
+              <span className="font-bold">WEBGL</span>{" "}
               <span className="font-bold">SHADERS</span>, para crear{" "}
-              experiencias  {" "}
-              <span className="font-bold">unicas</span> e {" "}
-              <span className="font-bold">interactivas </span> para los usuarios.
-          </>,
+              experiencias <span className="font-bold">unicas</span> e{" "}
+              <span className="font-bold">interactivas </span> para los
+              usuarios.
+            </>
+          ),
         },
         technologies: ["React", "Three.js", "GSAP"],
         image: "/imgs/shaderslab.png",

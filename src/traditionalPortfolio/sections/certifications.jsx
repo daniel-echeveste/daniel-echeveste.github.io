@@ -10,18 +10,7 @@ export function Certifications({ darkMode, isHorizontal }) {
       date: "Jun 2025",
       url: "https://threejs-journey.com/certificate/view/41769",
     },
-    {
-      name: "THREE.JS",
-      issuer: "Bruno Simon",
-      date: "Jun 2025",
-      url: "https://threejs-journey.com/certificate/view/41769",
-    },
-    {
-      name: "THREE.JS",
-      issuer: "Bruno Simon",
-      date: "Jun 2025",
-      url: "https://threejs-journey.com/certificate/view/41769",
-    },
+    
   ];
   const { lang } = useLanguage();
   return (
