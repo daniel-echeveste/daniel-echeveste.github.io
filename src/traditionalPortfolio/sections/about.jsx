@@ -20,7 +20,7 @@ export function About({ darkMode, isHorizontal, onSectionChange }) {
         <section
             id="about"
             className={`min-h-screen flex items-center justify-center pt-16 px-4 md:px-20 xl:px-80 ${
-                darkMode ? "bg-gray-900 text-white" : "bg-amber-200 text-yellow-950"
+                darkMode ? "bg-gray-900 text-white" : "bg-stone-100 text-stone-950"
             } transition-colors duration-600`}
         >
             <motion.div
@@ -86,7 +86,7 @@ export function About({ darkMode, isHorizontal, onSectionChange }) {
                                     src={
                                         darkMode
                                             ? "/icons/linkedin-white.svg"
-                                            : "/icons/linkedin-brown2.svg"
+                                            : "/icons/linkedin-black.svg"
                                     }
                                     className="w-10 transition-all duration-300"
                                 />
@@ -96,7 +96,7 @@ export function About({ darkMode, isHorizontal, onSectionChange }) {
                                     src={
                                         darkMode
                                             ? "/icons/github-white2.svg"
-                                            : "/icons/github-brown.svg"
+                                            : "/icons/github-black.svg"
                                     }
                                     className="w-10 transition-all duration-300"
                                 />
@@ -108,7 +108,7 @@ export function About({ darkMode, isHorizontal, onSectionChange }) {
                             className={`px-6 py-3 rounded-full text-lg transition-all duration-300 ml-[50%] translate-x-[-50%] md:translate-x-0 ${
                                 darkMode
                                     ? "bg-gray-700 text-white hover:bg-gray-600"
-                                    : "bg-amber-800 hover:bg-amber-700 text-amber-100"
+                                    : "bg-stone-800 hover:bg-stone-700 text-stone-100"
                             }`}
                         >
                             Contact Me

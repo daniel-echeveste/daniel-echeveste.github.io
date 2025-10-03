@@ -22,9 +22,9 @@ export function Education({ darkMode, isHorizontal }) {
   return (
     <section
       id="education"
-      className={`py-20 text-amber-950 ${
+      className={`py-20 text-neutral-950 ${
         isHorizontal ? "min-h-screen " : ""
-      } md:max-h-screen ${darkMode ? "text-white" : "text-amber-950"}`}
+      } md:max-h-screen ${darkMode ? "text-white" : "text-neutral-950"}`}
     >
       <div className="max-w-6xl mx-auto px-4 pt-20">
         <motion.h2
@@ -46,11 +46,12 @@ export function Education({ darkMode, isHorizontal }) {
         >
           {/* CARD 1 */}
           <motion.div
+          
             variants={cardVariants}
-            className={`rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 ${
+            className={`rounded-lg overflow-hidden hover:scale-105 shadow-md transition-all duration-300 ${
               darkMode
                 ? "bg-gray-800 hover:bg-gray-700"
-                : "bg-amber-500 hover:bg-amber-600"
+                : "hover:bg-neutral-100 hover:shadow-2xl "
             }`}
           >
             <div className="p-6">
@@ -87,7 +88,7 @@ export function Education({ darkMode, isHorizontal }) {
               </div>
               <p
                 className={`mt-4 ${
-                  darkMode ? "text-gray-300" : "text-amber-800"
+                  darkMode ? "text-gray-300" : "text-neutral-800"
                 }`}
               >
                {lang == "en"
@@ -100,10 +101,10 @@ export function Education({ darkMode, isHorizontal }) {
           {/* CARD 2 */}
           <motion.div
             variants={cardVariants}
-            className={`rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 ${
+            className={`rounded-lg overflow-hidden hover:scale-105 shadow-md transition-all duration-300 ${
               darkMode
                 ? "bg-gray-800 hover:bg-gray-700"
-                : "bg-amber-500 hover:bg-amber-600"
+                : "hover:bg-neutral-100 hover:shadow-2xl"
             }`}
           >
             <div className="p-6">
@@ -140,7 +141,7 @@ export function Education({ darkMode, isHorizontal }) {
               </div>
               <p
                 className={`mt-4 ${
-                  darkMode ? "text-gray-300" : "text-amber-800"
+                  darkMode ? "text-gray-300" : "text-neutral-800"
                 }`}
               >
                 {lang == "en"

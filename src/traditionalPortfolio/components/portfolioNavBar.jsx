@@ -85,7 +85,7 @@ export default function NavigationBar({
   return (
     <div
       className={`text-white font-sans text-lg ${
-        darkMode ? "bg-gray-900" : "bg-amber-950"
+        darkMode ? "bg-gray-900" : "bg-neutral-950"
       }`}
     >
       <nav
@@ -93,7 +93,7 @@ export default function NavigationBar({
       ${
         darkMode
           ? "bg-gray-900/80 drop-shadow-[0_2px_20px_rgba(255,255,255,0.2)]"
-          : "bg-amber-950/80 drop-shadow-[0_2px_20px_#461901]"
+          : "bg-neutral-950/80 drop-shadow-[0_2px_20px_#461901]"
       } 
        z-[100]`}
       >
@@ -104,7 +104,7 @@ export default function NavigationBar({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 1 }}
-          className="hover:text-amber-400 transition-colors ml-10"
+          className="hover:text-neutral-400 transition-colors ml-10"
         >
           3D Portfolio
         </motion.a>
@@ -130,11 +130,11 @@ export default function NavigationBar({
                 className={` transition-colors rounded-xl py-3 px-2 ${
                   darkMode
                     ? isHorizontal && currentSection === section.id
-                      ? "hover:bg-gray-800 hover:text-amber-300 text-amber-400 "
+                      ? "hover:bg-gray-800 hover:text-neutral-300 text-neutral-400 "
                       : "hover:bg-gray-800 hover:text-white text-white/80"
                     : isHorizontal && currentSection === section.id
-                    ? "hover:bg-amber-700 hover:text-amber-400 text-amber-400"
-                    : "hover:bg-amber-700 hover:text-white text-amber-50/80"
+                    ? "hover:bg-neutral-700 hover:text-neutral-400 text-neutral-400"
+                    : "hover:bg-neutral-700 hover:text-white text-neutral-50/80"
                 } `}
               >
                  {lang === "en" ? section.en : section.es} 
@@ -152,8 +152,8 @@ export default function NavigationBar({
               className={`${
                 darkMode
                   ? "bg-gray-700 hover:bg-gray-600"
-                  : "bg-amber-800 hover:bg-amber-700"
-              } hidden md:inline-flex z-[100] hover:bg-amber-700 rounded-2xl px-4 py-2 items-center transition-all duration-300 hover:opacity-100`}
+                  : "bg-neutral-800 hover:bg-neutral-700"
+              } hidden md:inline-flex z-[100] hover:bg-neutral-700 rounded-2xl px-4 py-2 items-center transition-all duration-300 hover:opacity-100`}
             >
               <span className="hidden l:inline-flex "> {lang === "en" ? "Download Resume " : "Descargar CV"}</span>
               <img src="/icons/download-white.svg" className="w-6 ml-2" />
@@ -170,7 +170,7 @@ export default function NavigationBar({
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.4 }}
               className={`${
-                darkMode ? "bg-gray-900" : "bg-amber-950/80"
+                darkMode ? "bg-gray-900" : "bg-neutral-950/80"
               } md:hidden fixed top-[40px] left-0 w-full  px-6 py-4 space-y-4`}
             >
               {sections.map((section) => (
@@ -181,7 +181,7 @@ export default function NavigationBar({
                   className={`block text-lg rounded-xl py-2 px-4 transition-colors ${
                     darkMode
                       ? "hover:bg-gray-800 text-white/90"
-                      : "hover:bg-amber-800 text-white"
+                      : "hover:bg-neutral-800 text-white"
                   }`}
                 >
                    {lang === "en" ? section.en : section.es}
@@ -276,8 +276,8 @@ export default function NavigationBar({
         className={`${
           darkMode
             ? "bg-gray-700 hover:bg-gray-600"
-            : "bg-amber-800 hover:bg-amber-700"
-        } hidden fixed top-2 right-20 px-4 py-2 bg-amber-800 text-white rounded-full shadow-md z-[100] hover:bg-amber-700 transition duration-300 opacity-95`}
+            : "bg-neutral-800 hover:bg-neutral-700"
+        } hidden fixed top-2 right-20 px-4 py-2 bg-neutral-800 text-white rounded-full shadow-md z-[100] hover:bg-neutral-700 transition duration-300 opacity-95`}
       >
         {isHorizontal ? "Horizontal" : "Vertical"}
       </button>

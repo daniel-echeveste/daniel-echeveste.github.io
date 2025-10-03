@@ -73,7 +73,7 @@ export function Gallery({ projects = [], showGitHub = true, darkMode }) {
             className={`w-80 rounded-xl p-4 shadow-lg flex flex-col justify-between ${
               darkMode
                 ? "bg-gray-800 hover:bg-gray-700"
-                : "bg-amber-900 hover:bg-amber-600"
+                : "bg-neutral-900 hover:bg-neutral-600"
             } overflow-hidden`}
           >
             {({ isActive }) => (
@@ -90,17 +90,31 @@ export function Gallery({ projects = [], showGitHub = true, darkMode }) {
               data-swiper-parallax="-10%"
               className="w-full h-40 scale-150 rounded parallax-bg object-cover object-top mb-10"
             /> */}
-            <div className="mt-6 pt-2">
+            <div className="mt-6 pt-2 ">
               <h3
-                className={`text-xl font-semibold mb-1 ${
-                  darkMode ? "text-white" : "text-amber-100"
+                className={`text-xl font-semibold ${
+                  darkMode ? "text-white" : "text-neutral-100"
                 }`}
               >
                 {project.title}
               </h3>
+               {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`hover:underline text-sm ${
+                  darkMode ? "text-white" : "text-neutral-100"
+                }`}
+              >
+                {lang === "en"
+                  ? translations.Projects.SeeMore.en
+                  : translations.Projects.SeeMore.es}
+              </a>
+               )}
               <p
-                className={`text-sm opacity-90  ${
-                  darkMode ? "text-white" : "text-amber-100"
+                className={`text-sm opacity-90 overflow-auto max-h-30  ${
+                  darkMode ? "text-white scrollbar-blue" : "text-neutral-100 scrollbar-light"
                 }`}
               >
                 {lang === "en"
@@ -118,32 +132,7 @@ export function Gallery({ projects = [], showGitHub = true, darkMode }) {
                 </span>
               ))}
             </div>
-            <div className="mt-4 flex gap-3" data-swiper-parallax="2">
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`hover:underline text-sm ${
-                  darkMode ? "text-white" : "text-amber-100"
-                }`}
-              >
-                {lang === "en"
-                  ? translations.Projects.SeeMore.en
-                  : translations.Projects.SeeMore.es}
-              </a>
-              {showGitHub && project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`hover:underline text-sm ${
-                    darkMode ? "text-white" : "text-amber-100"
-                  }`}
-                >
-                  GitHub
-                </a>
-              )}
-            </div>
+           
               </>
               
             )}

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import RoundImage from "../components/roundImage";
 import translations from "../components/translations";
 import { useLanguage } from "../../hooks/languageContext";
+import TiltCard from "../components/TiltCard";
 
 export function Experience({ darkMode, isHorizontal }) {
   const containerVariants = {
@@ -25,10 +26,11 @@ export function Experience({ darkMode, isHorizontal }) {
     <section
       id="experience"
       className={`py-20 ${isHorizontal ? "min-h-screen" : ""} ${
-        darkMode ? "text-white" : "text-amber-950"
+        darkMode ? "text-white" : "text-neutral-950 "
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 pt-20">
+
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,6 +50,7 @@ export function Experience({ darkMode, isHorizontal }) {
           viewport={{ once: true, amount: 0.2 }}
           className="space-y-10"
         >
+          
           {/* CARD 1 */}
           <motion.div variants={cardVariants} className="w-full">
             <div className="w-full flex flex-col md:flex-row items-center md:items-start p-4 gap-6">
@@ -65,10 +68,10 @@ export function Experience({ darkMode, isHorizontal }) {
               </div>
 
               <div
-                className={`w-full md:w-5/6 hover:scale-105 transition-all duration-300 p-4 rounded-2xl ${
+                className={`w-full md:w-5/6 hover:scale-105 shadow-md transition-all duration-300 p-4 rounded-2xl ${
                   darkMode
                     ? "bg-gray-800 hover:bg-gray-700"
-                    : "hover:bg-amber-600"
+                    : "hover:bg-neutral-100 hover:shadow-2xl "
                 }`}
               >
                 <h3 className="text-2xl font-bold">Full Stack Developer</h3>
@@ -102,10 +105,10 @@ export function Experience({ darkMode, isHorizontal }) {
               </div>
 
               <div
-                className={`w-full md:w-5/6 hover:scale-105 transition-all duration-300 p-4 rounded-2xl ${
+                className={`w-full md:w-5/6 hover:scale-105 shadow-lg transition-all duration-300 p-4 rounded-2xl ${
                   darkMode
                     ? "bg-gray-800 hover:bg-gray-700"
-                    : "hover:bg-amber-600"
+                    : "hover:bg-neutral-100 hover:shadow-2xl"
                 }`}
               >
                 <h3 className="text-2xl font-bold">Full Stack Developer</h3>

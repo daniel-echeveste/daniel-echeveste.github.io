@@ -54,7 +54,7 @@ export default function RoundImage({ src1, src2, alt, strength, parallax, darkMo
             ref={containerRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className={`relative aspect-square w-full fg ${darkMode ? "bg-white" : "bg-amber-200"} rounded-full overflow-hidden `}
+            className={`relative aspect-square w-full fg ${darkMode ? "bg-gray-950" : "bg-neutral-200"} rounded-full overflow-hidden `}
         >
             <motion.div
                 style={{ rotateX, rotateY }}

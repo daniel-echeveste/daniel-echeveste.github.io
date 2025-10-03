@@ -52,13 +52,13 @@ export function ContactForm( {darkMode, isHorizontal} ) {
     };
 
     return (
-        <section id="contact" className={` py-20 max-h-screen ${isHorizontal ? "min-h-screen ":""} ${darkMode ? "text-white" : "text-amber-950"}`}>
+        <section id="contact" className={` py-20 max-h-screen ${isHorizontal ? "min-h-screen ":""} ${darkMode ? "text-white" : "text-neutral-950"}`}>
             <div className="max-w-6xl mx-auto px-4 pt-20">  
             <h2 className="text-4xl font-bold text-center mb-12" >{lang == "en" ? translations.Contact.en : translations.Contact.es}</h2>
             <form
                 ref={form}
                 onSubmit={sendEmail}
-                className={`max-w-6xl mx-auto p-6  rounded-xl shadow-lg ${darkMode ? "text-white bg-gray-800" : "text-amber-50 bg-amber-950"}`}
+                className={`max-w-6xl mx-auto p-6  rounded-xl shadow-lg ${darkMode ? "text-white bg-gray-800" : "text-neutral-50 bg-neutral-950"}`}
             >
                 <label className="block mb-3">
                    {lang == "en" ? translations.Contact.name.en : translations.Contact.name.es}
@@ -67,7 +67,7 @@ export function ContactForm( {darkMode, isHorizontal} ) {
                         name="name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className={`w-full mt-1 p-2 rounded border ${darkMode ? "bg-white text-gray-950" : "bg-amber-50 text-amber-950"}`}
+                        className={`w-full mt-1 p-2 rounded border ${darkMode ? "bg-white text-gray-950" : "bg-neutral-50 text-neutral-950"}`}
                         required
                     />
                 </label>
@@ -79,7 +79,7 @@ export function ContactForm( {darkMode, isHorizontal} ) {
                         name="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className={`w-full mt-1 p-2 rounded border ${darkMode ? "bg-white text-gray-950" : "bg-amber-50 text-amber-950"}`}
+                        className={`w-full mt-1 p-2 rounded border ${darkMode ? "bg-white text-gray-950" : "bg-neutral-50 text-neutral-950"}`}
                         required
                     />
                 </label>
@@ -91,14 +91,14 @@ export function ContactForm( {darkMode, isHorizontal} ) {
                         rows="4"
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className={`w-full mt-1 p-2 rounded border ${darkMode ? "bg-white text-gray-950" : "bg-amber-50 text-amber-950"}`}
+                        className={`w-full mt-1 p-2 rounded border ${darkMode ? "bg-white text-gray-950" : "bg-neutral-50 text-neutral-950"}`}
                         required
                     />
                 </label>
 
                 <button
                     type="submit"
-                    className={`bg-amber-700 text-white px-4 py-2 rounded transition ${darkMode ? "bg-gray-600 hover:bg-gray-500  " : "bg-amber-700 hover:bg-amber-600"}`}
+                    className={` text-white px-4 py-2 rounded transition ${darkMode ? "bg-gray-600 hover:bg-gray-500  " : "bg-neutral-700 hover:bg-neutral-600"}`}
                 >
                     {lang == "en" ? translations.Contact.send.en : translations.Contact.send.es}
                 </button>

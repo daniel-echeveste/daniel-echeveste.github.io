@@ -11,7 +11,7 @@ import { ContactForm } from './sections/contact';
 export default function Portfolio({ darkMode,isHorizontal }) {
   return (
 
-    <div className={`min-h-screen ${darkMode ? "bg-gray-900" : "bg-amber-200"} text-white font-sans w-full`}>
+    <div className={`min-h-screen ${darkMode ? "bg-gray-900" : "bg-neutral-100"} text-white font-sans w-full`}>
 
       {/* <FootprintTrail /> */}
       {/* About Section */}

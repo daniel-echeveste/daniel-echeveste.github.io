@@ -4,47 +4,92 @@
 /* bloque theme para inyectar tus variables y keyframes */
 @theme {
 
-  
+
   --breakpoint-l: 1500px;
 
 
-    /* define animación */
-    --animate-footstep: footstep 0.8s ease-out forwards;
-    
-    /* define keyframes */
-    @keyframes footstep {
-      0%   { opacity: 0; transform: scale(0.5); }
-      100% { opacity: 0.7; transform: scale(1); }
-    }
-  
+  /* define animación */
+  --animate-footstep: footstep 0.8s ease-out forwards;
 
-  
-  }
-  
-  /* incluye utilidades */
-  @import "tailwindcss/utilities";
+  /* define keyframes */
+  @keyframes footstep {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
 
-  @layer utilities {
-    .light .swiper-button-prev  {
-      @apply  !text-amber-300 ;
+    100% {
+      opacity: 0.7;
+      transform: scale(1);
     }
-  
-    .light .swiper-button-next {
-      @apply  !text-amber-300;
-    }
-     .swiper-button-prev  {
-      @apply  !text-[#007aff] ;
-    }
-  
-     .swiper-button-next {
-      @apply  !text-[#007aff];
-    }
-    .light .swiper-pagination-bullet-active{
-      @apply !bg-amber-300;
-    }
-    .swiper-pagination-bullet-active{
-      @apply !bg-[#007aff];
-    }
-   
-    
   }
+
+
+
+}
+
+/* incluye utilidades */
+@import "tailwindcss/utilities";
+
+@layer utilities {
+  .light .swiper-button-prev {
+    @apply !text-neutral-300;
+  }
+
+  .light .swiper-button-next {
+    @apply !text-neutral-300;
+  }
+
+  .swiper-button-prev {
+    @apply !text-[#007aff];
+  }
+
+  .swiper-button-next {
+    @apply !text-[#007aff];
+  }
+
+  .light .swiper-pagination-bullet-active {
+    @apply !bg-neutral-300;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply !bg-[#007aff];
+
+  }
+
+  .scrollbar-blue {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0.21, 0.034, 064.665, 0.5) rgba(255, 255, 255, 0.01);
+  }
+  .scrollbar-light {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.959) rgba(99, 99, 99, 0.01);
+  }
+  .scrollbar-blue::-webkit-scrollbar-button {
+    display: none;
+  }
+  /* WebKit (Chrome, Edge, Safari) */
+  .scrollbar-blue::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .scrollbar-blue::-webkit-scrollbar-track {
+    display: none;
+    background: rgba(0, 69, 255, 0.2);
+  }
+
+  .scrollbar-blue::-webkit-scrollbar-thumb {
+    background: rgba(0, 25, 91, 0.7);
+    border-radius: 2px;
+    box-shadow: 0 -1px 0 rgb(195 188 188);
+  }
+
+  .scrollbar-blue::-webkit-scrollbar-thumb:hover {
+    /* si quieres un hover */
+    filter: brightness(0.95);
+  }
+
+}

@@ -330,7 +330,7 @@ const translations = {
         technologies: ["Next.js", "Tailwind", "Vercel"],
         image: "/imgs/Alstom-web-1.webp",
         gif: "/imgs/Alstom.gif",
-        link: "https://daniel-echeveste.github.io/ShaderLab",
+        
       },
       {
         title: "Visceral Medicine 2024",
@@ -363,7 +363,7 @@ const translations = {
         technologies: ["Next.js", "Tailwind", "Vercel"],
         image: "/imgs/viszeralmedizin.png",
         gif: "/imgs/viszeralmedizin.gif",
-        link: "https://daniel-echeveste.github.io/ShaderLab",
+        link: "https://www.viszeralmedizin.com/",
       },
       {
         title: "Hamburg City Cleaning Trade Fair Application IFAT 2024",
@@ -395,7 +395,6 @@ const translations = {
         technologies: ["Next.js", "Tailwind", "Vercel"],
         image: "/imgs/hamburg.png",
         gif: "/imgs/hamburg.gif",
-        link: "https://daniel-echeveste.github.io/ShaderLab",
       },
       {
         title: "VDI Zentrum ",
@@ -429,7 +428,7 @@ const translations = {
         technologies: ["Next.js", "Tailwind", "Vercel"],
         image: "/imgs/vdi.png",
         gif: "/imgs/vdi.gif",
-        link: "https://daniel-echeveste.github.io/ShaderLab",
+        link: "https://www.ressource-deutschland.de/",
       },
       {
         title: "Axel Springer",
@@ -459,7 +458,7 @@ const translations = {
         technologies: ["Next.js", "Tailwind", "Vercel"],
         image: "/imgs/axelspringer.png",
         gif: "/imgs/axelspringer.gif",
-        link: "https://daniel-echeveste.github.io/ShaderLab",
+        link: "https://www.axelspringer.com/de/",
       },
       {
         title: "WBM Wohnungsbaugesellschaft Berlin-Mitte mbH",
@@ -496,7 +495,7 @@ const translations = {
         technologies: ["Next.js", "Tailwind", "Vercel"],
         image: "/imgs/wbm.png",
         gif: "/imgs/wbm.gif",
-        link: "https://daniel-echeveste.github.io/ShaderLab",
+        link: "https://wbm.de/",
       },
       {
         title: "Gegen das Vergessen",
@@ -529,7 +528,7 @@ const translations = {
         technologies: ["Next.js", "Tailwind", "Vercel"],
         image: "/imgs/gegendasvergessen.png",
         gif: "/imgs/gegendasvergessen.gif",
-        link: "https://daniel-echeveste.github.io/ShaderLab",
+        link: "https://www.dgvs-gegen-das-vergessen.de/",
       },
       {
         title: "DGVS ",
@@ -565,7 +564,7 @@ const translations = {
         technologies: ["Next.js", "Tailwind", "Vercel"],
         image: "/imgs/dgvs.png",
         gif: "/imgs/dgvs.gif",
-        link: "https://daniel-echeveste.github.io/ShaderLab",
+        link: "https://www.dgvs.de/",
       },
       {
         title: "Pfandbrief Markt",
@@ -600,7 +599,7 @@ const translations = {
         technologies: ["Next.js", "Tailwind", "Vercel"],
         image: "/imgs/pfandbrief.png",
         gif: "/imgs/pfandbrief.gif",
-        link: "https://daniel-echeveste.github.io/ShaderLab",
+        link: "https://pfandbrief.market/en/",
       },
       {
         title: "Shaders Lab ",

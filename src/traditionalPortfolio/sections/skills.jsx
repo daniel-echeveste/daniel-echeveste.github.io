@@ -29,7 +29,7 @@ export function Skills({ darkMode, isHorizontal }) {
   };
 
   return (
-    <section id="skills" className={`py-20 ${isHorizontal ? "min-h-screen" : ""} max-h-screen ${darkMode ? "text-white" : "text-amber-950"}`}>
+    <section id="skills" className={`py-20 ${isHorizontal ? "min-h-screen" : ""} max-h-screen ${darkMode ? "text-white" : "text-neutral-950"}`}>
       <div className="max-w-6xl mx-auto px-4 pt-20">
         {/* Título con animación scroll */}
         <motion.h2
@@ -48,7 +48,7 @@ export function Skills({ darkMode, isHorizontal }) {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.2 }}
-          className={`max-w-6xl mx-auto mt-10 p-4 ${darkMode ? "bg-gray-700" : "bg-amber-800"} shadow-lg hover:scale-100 hover:shadow-xl transition-all duration-300 rounded-xl`}
+          className={`max-w-6xl mx-auto mt-10 p-4 ${darkMode ? "bg-gray-700" : "bg-neutral-100"} shadow-xl hover:scale-100  transition-all duration-300 rounded-xl`}
         >
           {/* Tabs */}
           <div className="flex justify-center mb-5">
@@ -57,8 +57,8 @@ export function Skills({ darkMode, isHorizontal }) {
                 key={key}
                 onClick={() => setActiveTab(key)}
                 className={`px-4 py-2 mx-4 rounded-full font-semibold transition ${activeTab === key
-                  ? (darkMode ? "bg-gray-950 text-gray-100" : "bg-amber-600 text-amber-100")
-                  : (darkMode ? "bg-gray-800 text-gray-100 hover:bg-gray-950" : "bg-amber-950 text-amber-100 hover:bg-amber-600")
+                  ? (darkMode ? "bg-gray-950 text-gray-100" : "bg-neutral-600 text-neutral-100")
+                  : (darkMode ? "bg-gray-800 text-gray-100 hover:bg-gray-950" : "bg-neutral-950 text-neutral-100 hover:bg-neutral-600")
                   }`}
               >
                 {label}
@@ -67,7 +67,7 @@ export function Skills({ darkMode, isHorizontal }) {
           </div>
 
           {/* Cabecera de columnas */}
-          <div className={`w-full flex justify-between mb-4 font-bold pl-5 ${darkMode ? "text-white" : "text-amber-100"}`}>
+          <div className={`w-full flex justify-between mb-4 font-bold pl-5 ${darkMode ? "text-white" : "text-neutral-900"}`}>
             <div className="w-1/2">Skill</div>
             <div className="w-1/2">Experience</div>
           </div>
@@ -81,14 +81,14 @@ export function Skills({ darkMode, isHorizontal }) {
               animate="show"
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className={`pl-5 space-y-2 ${darkMode ? "text-white" : "text-amber-100"}`}
+              className={`pl-5 space-y-2 ${darkMode ? "text-white" : "text-neutral-900"}`}
             >
               { 
                 translations.Skills[activeTab][lang].map(([skill, years], index) => (
                 <motion.li
                   variants={itemVariants}
                   key={skill}
-                  className={`flex justify-between ${darkMode ? "text-white" : "text-amber-100"}`}
+                  className={`flex justify-between ${darkMode ? "text-white" : "text-neutral-900"}`}
                 >
                   <div className="w-1/2">{skill}</div>
                   <div className="w-1/2">{years}</div>
