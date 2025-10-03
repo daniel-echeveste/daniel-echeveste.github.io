@@ -10,7 +10,7 @@ export function Footer({ darkMode, isHorizontal }) {
             
             <li className="mt-4 text-gray-400"> 
                 navigation
-                <ul>
+                <ul className="flex justify-center flex-wrap mt-2">
                     <a href="#about" className="text-gray-400 hover:underline mx-2">About</a>
                     <a href="#skills" className="text-gray-400 hover:underline mx-2">skills</a>
                     <a href="#projects" className="text-gray-400 hover:underline mx-2">Projects</a>
